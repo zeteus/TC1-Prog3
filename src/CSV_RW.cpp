@@ -1,12 +1,27 @@
 #include "../include/CSV_RW.hpp"
 
 void CSV_RW::lineBreak(){
+    // TODO: Apagar a última vírgula
     *this->fileptr << '\n';
 }
 
-template <typename type>
+//TODO
+/* template <typename type>
 void CSV_RW::writeValue(type v){
     this->fileptr << v << ',';
+} */
+
+void CSV_RW::writeValue(int v){
+    *this->fileptr << v << ',';
+}
+void CSV_RW::writeValue(char v){
+    *this->fileptr << v << ',';
+}
+void CSV_RW::writeValue(string v){
+    *this->fileptr << v << ',';
+}
+void CSV_RW::writeValue(float v){
+    *this->fileptr << v << ',';
 }
 
     //Construtor e descontrutor

@@ -34,8 +34,13 @@ class CSV_RW{
 
         void lineBreak();
         string readValue();
-        template <typename type>
-        void writeValue(type v);
+        //TODO
+        /* template <typename type>
+        void writeValue(type v); */
+        void writeValue(int v);
+        void writeValue(char v);
+        void writeValue(string v);
+        void writeValue(float v);
 
 };
 #endif

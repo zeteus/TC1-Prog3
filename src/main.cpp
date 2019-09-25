@@ -4,5 +4,5 @@
 
 int main() {
     CSV_RW file = CSV_RW("output.csv");
-    file.writeValue<int>(10);
+    file.writeValue(10);
 }
