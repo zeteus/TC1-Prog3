@@ -1,8 +1,9 @@
 {
     "version": "0.2.0",
     "configurations": [
+
         {
-            "name": "C++ Debug (gdb)",
+            "name": "C++ Debug (gdb) TC1-PROG3",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/bin/main",
