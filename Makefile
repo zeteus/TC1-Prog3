@@ -1,10 +1,10 @@
-CXX		  := g++
-CXX_FLAGS := -Wall -Wextra -std=c++17 -ggdb
+CXX		  	:= g++
+CXX_FLAGS 	:= -Wall -Wextra -std=c++17 -ggdb
 
-BIN		:= bin
-SRC		:= src
-INCLUDE	:= include
-LIB		:= lib
+BIN			:= bin
+SRC			:= src
+INCLUDE		:= include
+LIB			:= lib
 
 LIBRARIES	:=
 EXECUTABLE	:= main
@@ -13,7 +13,7 @@ EXECUTABLE	:= main
 all: $(BIN)/$(EXECUTABLE)
 
 run: clean all
-	clear
+	#clear
 	./$(BIN)/$(EXECUTABLE)
 
 $(BIN)/$(EXECUTABLE): $(SRC)/*.cpp

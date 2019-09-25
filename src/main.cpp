@@ -1,5 +1,8 @@
 #include <iostream>
+#include "../include/defines.h"
+#include "../include/CSV_RW.hpp"
 
 int main() {
-    std::cout << "Hello Easy C++ project!" << std::endl;
+    CSV_RW file = CSV_RW("output.csv");
+    file.writeValue<int>(10);
 }
