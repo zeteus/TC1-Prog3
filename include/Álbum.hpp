@@ -2,40 +2,45 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <list>
 #include "Artista.hpp"
+#include "Música.hpp"
 
-using namespace std::string;
-using namespace ios::ofstream;
+class Artista;  //evita include loop
 
 class Album {
 
 private:
-    Artista* artist;
-public:
+    std::string name;
     int duration;
-    int yearLaunch;
+    int launchYear;
     int musicAmount;
-    string name;
+
+    Artista* artist;
+    std::list<Musica*> musics;
+
+    // setters
+    void setArtist(Artista* _artist);
+    void setDuration(int _duration);
+    void setLaunchYear(int _launchYear);
+    void setMusicAmount(int _musicAmount);
+    void setName(std::string _name);
+public:
     
-    // Constructor
-    Album(Artista* _artist);
+    // Constructors
+    Album(Artista* _artist, int _duration, int _yearLaunch, int _musicAmount, std::string _name);
     Album();
     // Destructor
     ~Album();
 
     // Functions
-    void imprimeNoArquivo(ofstream &_outfile);
+    void imprimeNoArquivo(std::ofstream &_outfile);
 
     // getters
-    Artista* getArtista();
+    Artista* getArtist();
     int getDuration();
-    int getYearLaunch();
+    int getLaunchYear();
     int getMusicAmount();
-    string getName();
-    // setters
-    void setArtista(Artista* _artist);
-    void setDuration(int _duration);
-    void setYearLaunch(int _yearLaunch);
-    void setMusicAmount(int _musicAmount);
-    void setName(string _name);
+    std::string getName();
+
 };

@@ -2,6 +2,8 @@
 #include "Assinante.hpp"
 #include <list>
 
+class Assinante;    //evita include loop
+
 class PlataformaDigital {
 
 private:

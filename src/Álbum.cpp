@@ -2,66 +2,38 @@
 #include <string>
 #include "Álbum.hpp"
 
-Album::Album(Artista* _artist, int _duration, int _yearLaunch, int _musicAmount, string _name) {
-    Album::setName(_name);
-    Album::setArtista(_artist);
-    Album::setDuration(_duration);
-    Album::setYearLaunch(_yearLaunch);
-    Album::setMusicAmount(_musicAmount);
+Album::Album(Artista* _artist, int _duration, int _yearLaunch, int _musicAmount, std::string _name) {
+    this->setName(_name);
+    this->setArtist(_artist);
+    this->setDuration(_duration);
+    this->setLaunchYear(_yearLaunch);
+    this->setMusicAmount(_musicAmount);
 }
 
-Album::Album() {
-
-}
+Album::Album() {}
 
 Album::~Album() {
-
+    musics.clear();  //deleta todos os elementos da lista e libera o espaço da memória
 }
 
-Artist* Album::getArtista() {
-    return *this->artist;
+void Album::imprimeNoArquivo(std::ofstream &_outfile) {
+    _outfile << "NOME:" << this->getName() << std::endl;
+    _outfile << "DURACAO:" << this->getDuration() << std::endl;
+    _outfile << "ANO DE LANCAMENTO:" << this->getLaunchYear() << std::endl;
+    _outfile << "QTD MUSICAS:" << this->getMusicAmount() << std::endl;
+    _outfile << "ARTISTA:" << this->getArtist() << std::endl;
+    _outfile << "______________________________________" << std::endl;
 }
 
-void Album::imprimeNoArquivo(ofstream &_outfile) {
-    _outfile << "DURACAO:" << this->duration << endl;
-    _outfile << "ANO DE LANCAMENTO:" << this->yearLaunch << endl;
-    _outfile << "QTD MUSICAS:" << this->musicAmount << endl;
-    _outfile << "NOME:" << this->name << endl;
-    _outfile << "ARTISTA:" << *this->artist << endl;
-    _outfile << "______________________________________" << endl;
-}
+    //Setters e getters
+Artista* Album::getArtist() {return this->artist;}
+int Album::getDuration() {return this->duration;}
+int Album::getLaunchYear() {return this->launchYear;}
+int Album::getMusicAmount() {return this->musicAmount;}
+std::string Album::getName() {return this->name;}
 
-int getDuration() {
-    return this->duration;
-}
-
-int getYearLaunch() {
-    return this->yearLaunch;
-}
-
-int getMusicAmount() {
-    return this->musicAmount;
-}
-
-string getName() {
-    return this->name;
-}
-
-void Album::setArtista(Artista* _artist) {
-    this->artist = _artist;
-
-void setDuration(int _duration) {
-    this->artist = _duration;
-}
-
-void setYearLaunch(int _yearLaunch) {
-    this->artist = _yearLaunch;
-}
-
-void setMusicAmount(int _musicAmount) {
-    this->artist = _musicAmount;
-}
-
-void setName(string _name){
-    this->artist = _name;
-}
+void Album::setArtist(Artista* _artist) {this->artist = _artist;}
+void Album::setDuration(int _duration) {this->duration = _duration;}
+void Album::setLaunchYear(int _launchYear) {this->launchYear = _launchYear;}
+void Album::setMusicAmount(int _musicAmount) {this->musicAmount = _musicAmount;}
+void Album::setName(std::string _name) {this->name = _name;}
