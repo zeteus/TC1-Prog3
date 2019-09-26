@@ -13,15 +13,16 @@ Album::Album(Artista* _artist, int _duration, int _yearLaunch, int _musicAmount,
 Album::Album() {}
 
 Album::~Album() {
-    musics.clear();  //deleta todos os elementos da lista e libera o espaço da memória
+    musics.clear(); //deleta todos os elementos da lista e libera o espaço da memória
+                    //torna uma composição
 }
 
 void Album::imprimeNoArquivo(std::ofstream &_outfile) {
-    _outfile << "NOME:" << this->getName() << std::endl;
-    _outfile << "DURACAO:" << this->getDuration() << std::endl;
-    _outfile << "ANO DE LANCAMENTO:" << this->getLaunchYear() << std::endl;
-    _outfile << "QTD MUSICAS:" << this->getMusicAmount() << std::endl;
-    _outfile << "ARTISTA:" << this->getArtist() << std::endl;
+    _outfile << "ÁLBUM " << this->getName() << std::endl;
+    _outfile << "|DURACAO:" << this->getDuration() << std::endl;
+    _outfile << "|ANO DE LANCAMENTO:" << this->getLaunchYear() << std::endl;
+    _outfile << "|QTD MUSICAS:" << this->getMusicAmount() << std::endl;
+    _outfile << "|ARTISTA:" << this->getArtist() << std::endl;
     _outfile << "______________________________________" << std::endl;
 }
 

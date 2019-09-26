@@ -2,8 +2,9 @@
 #include "Produtor.hpp"
 #include "Podcast.hpp"
 #include <list>
+#include <fstream>
 
-class Podcaster: private Produtor {
+class Podcaster: public Produtor {
 
 private:
     std::list<Podcast*> podcasts;
