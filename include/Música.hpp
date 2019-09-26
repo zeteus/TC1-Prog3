@@ -3,6 +3,8 @@
 
 class Musica: private Midia {
 
+private:
+
 public:
     Musica();
     ~Musica();

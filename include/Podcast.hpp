@@ -3,6 +3,8 @@
 
 class Podcast: private Midia {
 
+private:
+
 public:
     Podcast();
     ~Podcast();

@@ -4,6 +4,8 @@
 
 class Produtor: private Usuario {
 
+private:
+
 public:
     Produtor();
     ~Produtor();

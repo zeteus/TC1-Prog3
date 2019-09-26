@@ -3,6 +3,10 @@
 
 class Artista: private Produtor {
 
+private:
+
+private:
+
 public:
     Artista();
     ~Artista();

@@ -1,6 +1,5 @@
 #include "../include/defines.h"     //corzinhas
-#include "../include/Usuário.hpp"
-#include "../include/Assinante.hpp"
+#include "../include/PlataformaDigital.hpp"
 #include <iostream>
 
 using std::cerr;
@@ -9,4 +8,5 @@ using std::string;
 
 int main() {
 
+    return 0;
 }
