@@ -6,7 +6,7 @@
 class Assinante: private Usuario {
 
 private:
-    PlataformaDigital* plataforma;
+    PlataformaDigital* platform;
 public:
     Assinante();
     ~Assinante();

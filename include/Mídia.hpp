@@ -9,7 +9,7 @@ private:
             Genero();
             ~Genero();
     };
-    Genero* genero;
+    Genero* genre;
 
 public:
     Midia();
