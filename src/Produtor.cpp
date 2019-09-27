@@ -1,12 +1,20 @@
-#include "Produtor.hpp"
+#include "../include/Produtor.hpp"
 
-Produtor::Produtor() {
+Produtor::Produtor() {}
 
+Produtor::Produtor(std::string _name){
+    this->setName(_name);
 }
 
 Produtor::~Produtor() {
     this->launchedProducts.clear(); //forma a composição
 }
+
+
+void Produtor::printOnFile(std::ofstream &outfile){}
+
+void Produtor::loadFile(std::ifstream &infile){}
+
 
     // Setters and Getters
 

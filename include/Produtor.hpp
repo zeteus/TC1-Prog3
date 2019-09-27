@@ -6,7 +6,8 @@
 #include <list>
 #include <iostream>
 
-class Produtor: private Usuario {
+
+class Produtor: public Usuario {
 
 private:
     std::list<Midia*> launchedProducts;
@@ -15,12 +16,14 @@ protected:
 
 public:
     Produtor();
-    Produtor(std::string _nome);
+    Produtor(std::string _name);
     ~Produtor();
-    
+
     void createProduct();
     void printLaunchedProducts();
     std::list<Midia*> getLaunchedProducts();
+
+    // Overloading, virtual para evitar chamar o da classe-mãe
     virtual void printOnFile(std::ofstream &outfile);
     virtual void loadFile(std::ifstream &infile);
 

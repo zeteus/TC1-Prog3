@@ -1,9 +1,13 @@
 #include "Artista.hpp"
 
-Artista::Artista() {
+Artista::Artista() {}
 
+Artista::~Artista() {}
+
+// Overloading
+void Artista::printOnFile(std::ofstream &_outfile) {
+    
 }
-
-Artista::~Artista() {
-
+void Artista::loadFile(std::ifstream &_infile) {
+    
 }

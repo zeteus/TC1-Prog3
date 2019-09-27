@@ -19,7 +19,7 @@ private:
     Artista* artist;
     std::list<Musica*> musics;
 
-    // setters
+    // Setters
     void setArtist(Artista* _artist);
     void setDuration(int _duration);
     void setLaunchYear(int _launchYear);
@@ -33,10 +33,10 @@ public:
     // Destructor
     ~Album();
 
-    // Functions
-    void imprimeNoArquivo(std::ofstream &_outfile);
+    // Overloading, virtual para evitar chamar o da classe-mãe
+    virtual void printOnFile(std::ofstream &_outfile);
 
-    // getters
+    // Getters
     Artista* getArtist();
     int getDuration();
     int getLaunchYear();
