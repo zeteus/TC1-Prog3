@@ -9,7 +9,9 @@ class Podcaster: public Produtor {
 private:
     std::list<Podcast*> podcasts;
 public:
+    // Constructor
     Podcaster();
+    // Destructor
     ~Podcaster();
 
     // Overloading, virtual para evitar chamar o da classe-mãe

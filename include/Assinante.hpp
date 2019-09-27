@@ -9,9 +9,15 @@ class Assinante: private Usuario {
 
 private:
     PlataformaDigital* platform;
+
 public:
+    // Constructor
     Assinante();
+    // Destructor
     ~Assinante();
+
+    // Getters
+    PlataformaDigital* getPlataformaDigital();
 
     // Overloading, virtual para evitar chamar o da classe-mãe
     virtual void printOnFile(std::ofstream &_outfile);

@@ -11,8 +11,13 @@ class Artista: public Produtor {
 private:
     std::list<Album*> albums;
 public:
+    // Constructor
     Artista();
+    // Destructor
     ~Artista();
+
+    // Getters
+    std::list<Album*> getAlbums();
 
     // Overloading, virtual para evitar chamar o da classe-mãe
     virtual void printOnFile(std::ofstream &_outfile);
