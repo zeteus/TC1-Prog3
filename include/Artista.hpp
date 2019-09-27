@@ -16,6 +16,9 @@ public:
     // Destructor
     ~Artista();
 
+    // Functions
+    void addAlbum();
+
     // Getters
     std::list<Album*> getAlbums();
 

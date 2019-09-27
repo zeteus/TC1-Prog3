@@ -7,24 +7,35 @@ protected:
     std::string name;
 private:
     bool explict;
-    // Setters
-    void setExplicit(bool expl);
-    void setName(std::string name);
-    void setProductQnt(int qtd);
 
     class Genero {
         private:
             Midia* midia;
             std::string name;
-            std::string abrev;
+            std::string abreviation;
+            
+            // Setters
+            void setName(std::string name);
+            void setAbreviation(std::string abreviation);
         public:
             // Constructors
             Genero();
             Genero(std::string name, std::string sigla);
             // Destructor
             ~Genero();
+
+            // Getters
+            Midia* getMidia();
+            std::string getName();
+            std::string getAbreviation();
     };
+
     Genero* genre;
+    // Setters
+    void setExplicit(bool expl);
+    void setName(std::string name);
+    void setProductQnt(int qtd);
+    void setGenre(Genero *genre);
 
 public:
     static int productQnt;
@@ -39,6 +50,7 @@ public:
     std::string getName();
     bool getExplicit();
     int getProductQnt();
+    Genero* getGenre();
 
     // Functions
     virtual void printProductInfo();

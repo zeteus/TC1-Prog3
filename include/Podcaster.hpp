@@ -8,11 +8,18 @@ class Podcaster: public Produtor {
 
 private:
     std::list<Podcast*> podcasts;
+
+    // Functions
+    void addPodcast(/*TODO:*/);
+
 public:
     // Constructor
     Podcaster();
     // Destructor
     ~Podcaster();
+
+    // Getters
+    std::list<Podcast*> getPodcasts();
 
     // Overloading, virtual para evitar chamar o da classe-mãe
     virtual void printOnFile(std::ofstream &_outfile);

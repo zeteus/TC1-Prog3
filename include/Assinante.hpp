@@ -10,6 +10,8 @@ class Assinante: private Usuario {
 private:
     PlataformaDigital* platform;
 
+    // Setters
+    void setDigitalPlatform(PlataformaDigital *platform);
 public:
     // Constructor
     Assinante();
@@ -17,7 +19,7 @@ public:
     ~Assinante();
 
     // Getters
-    PlataformaDigital* getPlataformaDigital();
+    PlataformaDigital* getDigitalPlatform();
 
     // Overloading, virtual para evitar chamar o da classe-mãe
     virtual void printOnFile(std::ofstream &_outfile);

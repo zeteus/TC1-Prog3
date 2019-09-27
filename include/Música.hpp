@@ -8,7 +8,12 @@ private:
     int duration;
     int launchYear;
 
+    // Fuctions
     void formattedDuration();
+
+    // Setters
+    void setDuration(int duration);
+    void setLaunchYear(int launchYear);
 
 public:
     // Constructor
