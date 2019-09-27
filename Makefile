@@ -1,5 +1,5 @@
 CXX		  	:= g++
-CXX_FLAGS 	:= -Wall -Wextra -std=c++17 -ggdb -g
+CXX_FLAGS 	:= -std=c++17 -ggdb -g #-Wall -Wextra 
 
 BIN			:= bin
 SRC			:= src
@@ -21,3 +21,4 @@ $(BIN)/$(EXECUTABLE): $(SRC)/*.cpp
 
 clean:
 	-rm $(BIN)/*
+	make

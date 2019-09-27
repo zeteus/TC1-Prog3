@@ -20,11 +20,7 @@ public:
     Musica();
     // Destructor
     ~Musica();
-    
 
-    // Setters
-    void setDuration(int _duration);
-    void setLaunchYear(int _launchYear);
     // Getters
     int getDuration();
     int getLaunchYear();
