@@ -25,8 +25,8 @@ public:
     int getLaunchYear();
 
     // Functions
-    void printProductInfo();
     // Overloading, virtual para evitar chamar o da classe-mãe
+    void printProductInfo();
     virtual void printOnFile(std::ofstream &_outfile);
     virtual void loadFile(std::ifstream &_infile);
 };

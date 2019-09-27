@@ -33,8 +33,7 @@ public:
     // Destructor
     ~Album();
 
-    // Overloading, virtual para evitar chamar o da classe-mãe
-    virtual void printOnFile(std::ofstream &_outfile);
+    void printOnFile(std::ofstream &_outfile);
 
     // Getters
     Artista* getArtist();
