@@ -13,6 +13,8 @@ private:
     std::list<Midia*> launchedProducts;
 protected:
     std::string biografy;
+    // Setter
+    void setBiografy(std::string biografy);
 
 public:
     // Constructors
@@ -28,9 +30,7 @@ public:
     // Overloading, virtual para evitar chamar o da classe-mãe
     virtual void printOnFile(std::ofstream &outfile);
     virtual void loadFile(std::ifstream &infile);
-
-    // Setters and Getters
-    void setBiografy(std::string biografy);
+    // Getters
     std::string getBiografy();
     std::list<Midia*> getLaunchedProducts();
 };

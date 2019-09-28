@@ -6,11 +6,10 @@ class Midia {
 protected: 
     std::string name;
 private:
-    bool explict;
+    bool isExplicit;
 
     class Genero {
         private:
-            Midia* midia;
             std::string name;
             std::string abreviation;
             
@@ -25,17 +24,18 @@ private:
             ~Genero();
 
             // Getters
-            Midia* getMidia();
             std::string getName();
             std::string getAbreviation();
     };
 
     Genero* genre;
+
     // Setters
-    void setExplicit(bool expl);
+    void setIsExplicit(bool expl);
     void setName(std::string name);
-    void setProductQnt(int qtd);
+    void setProductQnt(int qnt);
     void setGenre(Genero *genre);
+    void setGenre(std::string genreName);
 
 public:
     static int productQnt;
@@ -48,7 +48,7 @@ public:
 
     // Getters
     std::string getName();
-    bool getExplicit();
+    bool getIsExplicit();
     int getProductQnt();
     Genero* getGenre();
 
