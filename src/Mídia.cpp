@@ -1,5 +1,7 @@
 #include "Mídia.hpp"
 
+int Midia::productQnt = 0;      // Iniciando a variável estática ao carregar a classe
+
 // Constructors
 Midia::Midia() {}
 Midia::Midia(std::string name, bool expl, std::string genre){
@@ -38,7 +40,7 @@ Midia::Genero* Midia::getGenre() {return this->genre;}
 //---------GENERO ".cpp"
 // Constructors
 Midia::Genero::Genero() {}
-Midia::Genero::Genero(std::string name, std::string abreviation){
+Midia::Genero::Genero(std::string name, std::string abreviation) {
     this->setName(name);
     this->setAbreviation(abreviation);
 }
