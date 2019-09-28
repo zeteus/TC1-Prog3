@@ -10,25 +10,28 @@ Midia::Midia(std::string name, bool expl, std::string genre){
 }
 
 // Destructor
-Midia::~Midia() {}
+Midia::~Midia() {
+    this->genre->~Genero();    // Destroi o genero de dentro, para não perde referência
+    this->setProductQnt(this->getProductQnt() - 1);
+}
 
 void Midia::printProductInfo() {}
 void Midia::printOnFile(std::ofstream &_outfile) {}
 void Midia::loadFile(std::ifstream &_infile) {}
 
 // Setters
+void Midia::setProductQnt(int qnt) {Midia::productQnt = qnt;}
 void Midia::setIsExplicit(bool expl) {this->isExplicit = expl;}
 void Midia::setName(std::string name) {this->name = name;}
-void Midia::setProductQnt(int qnt) {Midia::productQnt = qnt;}
 void Midia::setGenre(Genero *genre) {this->genre = genre;}
-void Midia::setGenre(std::string genreName) {
+void Midia::setGenre(std::string genreName) {           // legibilizar o constructor
     Genero *genre = new Genero(genreName, genreName);   //? Como gerar a abreviação?
     this->genre = genre;
 }
 
 // Getters
-bool Midia::getIsExplicit() {return this->isExplicit;}
 int Midia::getProductQnt() {return Midia::productQnt;}
+bool Midia::getIsExplicit() {return this->isExplicit;}
 std::string Midia::getName() {return this->name;}
 Midia::Genero* Midia::getGenre() {return this->genre;}
 
