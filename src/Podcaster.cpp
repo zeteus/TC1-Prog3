@@ -1,6 +1,6 @@
 #include "Podcaster.hpp"
 
-Podcaster::Podcaster() {}
+Podcaster::Podcaster(std::string name, int code) {}
 
 Podcaster::~Podcaster() {}
 

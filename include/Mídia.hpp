@@ -3,16 +3,15 @@
 #include <iostream>
 #include <list>
 
+#include "PlataformaDigital.hpp"
 #include "Assinante.hpp"
+#include "Produtor.hpp"
 
+class PlataformaDigital;
+class Produtores;
 class Assinante;    // forward declaration
 
 class Midia {
-protected: 
-    std::string name;
-private:
-    bool isExplicit;
-
     class Genero {
         private:
             std::string name;
@@ -35,37 +34,40 @@ private:
             std::string getName();
             std::string getAbreviation();
     };
+protected: 
+    std::string name;
+    int codigo;
 
+    // Relações
     std::list<Assinante*> assinantes;
+    std::list<Produtores*> produtores;
     Genero* genre;
+    PlataformaDigital* plataforma;
 
     // Setters
-    void setIsExplicit(bool expl);
     void setName(std::string name);
-    void setProductQnt(int qnt);
+    static void setProductQnt(int qnt);
     void setGenre(Genero *genre);
-    void setGenre(std::string genreName);
 
 public:
     static int productQnt;
+
     // Constructors
     Midia();
-    Midia(std::string name, bool expl, std::string genre);
+    Midia(std::string name, int cod, Genero *genre);
     // Destructor
     ~Midia();
 
 
     // Getters
     std::string getName();
-    bool getIsExplicit();
     int getProductQnt();
     Genero* getGenre();
 
     // Functions
-    virtual void printProductInfo();
-    void printProductQnt();
+    virtual void printProductInfo() = 0;
+    static void printProductQnt();
+    virtual void printOnFile(std::ofstream &_outfile) = 0;
+    virtual void loadFile(std::ifstream &_infile) = 0;
 
-    // Overloading, virtual para evitar chamar o da classe-mãe
-    virtual void printOnFile(std::ofstream &_outfile);
-    virtual void loadFile(std::ifstream &_infile);
 };

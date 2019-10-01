@@ -10,23 +10,28 @@ class PlataformaDigital; // forward declaration
 
 class Assinante: private Usuario {
 
-private:
+public:
+    
     PlataformaDigital* platform;
-
     std::list<Midia*> midias;
 
-    // Setters
-    void setDigitalPlatform(PlataformaDigital *platform);
-public:
+    void imprimeFavoritos();
+    void inserirFavorito(Midia* favorite);
+    void removerFavorito(Midia* favorite);
+
     // Constructor
     Assinante();
+    Assinante(std::string name, int codigo);
     // Destructor
     ~Assinante();
 
+    // Setters
+    void setDigitalPlatform(PlataformaDigital *platform);
     // Getters
     PlataformaDigital* getDigitalPlatform();
+    std::list<Midia*> getFavoritos();
 
-    // Overloading, virtual para evitar chamar o da classe-mãe
-    virtual void printOnFile(std::ofstream &_outfile);
-    virtual void loadFile(std::ifstream &_infile);
+    // Overloading
+    void printOnFile(std::ofstream &_outfile);
+    void loadFile(std::ifstream &_infile);
 };

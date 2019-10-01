@@ -1,11 +1,7 @@
 #include "Álbum.hpp"
 
 Album::Album(Artista* _artist, int _duration, int _yearLaunch, int _musicAmount, std::string _name) {
-    this->setName(_name);
-    this->setArtist(_artist);
-    this->setDuration(_duration);
-    this->setLaunchYear(_yearLaunch);
-    this->setMusicAmount(_musicAmount);
+    
 }
 
 Album::Album() {}

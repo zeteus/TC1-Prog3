@@ -14,7 +14,7 @@ private:
 
 public:
     // Constructor
-    Podcaster();
+    Podcaster(std::string name, int code);
     // Destructor
     ~Podcaster();
 

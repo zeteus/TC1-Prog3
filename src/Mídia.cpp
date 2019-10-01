@@ -4,11 +4,7 @@ int Midia::productQnt = 0;      // Iniciando a variável estática ao carregar a
 
 // Constructors
 Midia::Midia() {}
-Midia::Midia(std::string name, bool expl, std::string genre){
-    this->setName(name);
-    this->setIsExplicit(expl);
-    this->setGenre(genre);
-    this->setProductQnt(this->getProductQnt() + 1);
+Midia::Midia(std::string name, int cod, Genero *genre){
 }
 
 // Destructor
@@ -23,17 +19,11 @@ void Midia::loadFile(std::ifstream &_infile) {}
 
 // Setters
 void Midia::setProductQnt(int qnt) {Midia::productQnt = qnt;}
-void Midia::setIsExplicit(bool expl) {this->isExplicit = expl;}
 void Midia::setName(std::string name) {this->name = name;}
 void Midia::setGenre(Genero *genre) {this->genre = genre;}
-void Midia::setGenre(std::string genreName) {           // legibilizar o constructor
-    Genero *genre = new Genero(genreName, genreName);   //? Como gerar a abreviação?
-    this->genre = genre;
-}
 
 // Getters
 int Midia::getProductQnt() {return Midia::productQnt;}
-bool Midia::getIsExplicit() {return this->isExplicit;}
 std::string Midia::getName() {return this->name;}
 Midia::Genero* Midia::getGenre() {return this->genre;}
 

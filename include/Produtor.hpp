@@ -6,6 +6,7 @@
 #include <list>
 #include <iostream>
 
+class Midia;    // Forward declaration
 
 class Produtor: public Usuario {
 

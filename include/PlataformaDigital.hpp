@@ -15,8 +15,6 @@ private:
     std::list<Assinante*> subscribers;
     std::list<Midia*> registeredProducts;
 
-    // Setters
-    void setName(std::string name);
 public:
     // Constructors
     PlataformaDigital();
@@ -24,21 +22,23 @@ public:
     // Destructor
     ~PlataformaDigital();
 
+    //Setters
+    void setName(std::string name);
     //Getters
     std::string getName();
     std::list<Assinante*> getSubscribers();
     std::list<Midia*> getRegisteredProducts();
 
     // Functions
-    void printOnFile(std::ofstream &_outfile);
-    void loadFile(std::ifstream &_infile);
     void printProducts(std::string genre);
     void printSubscribers();
-    void insertSubscriber();
-    void removeSubscriber();
-    int insertProduct(Midia* newProduct, std::string producerName);
-    int selectSubscriber();
+    void insertSubscriber(Assinante* subscribers);
+    void removeSubscriber(Assinante* subscribers);
+    int  insertProduct(Midia* newProduct, std::string producerName);
+    int  selectSubscriber();
     void insertProductSubscriber();
+    void printOnFile(std::ofstream &_outfile);
+    void loadFile(std::ifstream &_infile);
     void exportLibrary();
     void generateReports();
 };

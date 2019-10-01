@@ -22,7 +22,6 @@ public:
     // Getters
     std::list<Album*> getAlbums();
 
-    // Overloading, virtual para evitar chamar o da classe-mãe
-    virtual void printOnFile(std::ofstream &_outfile);
-    virtual void loadFile(std::ifstream &_infile);
+    void printOnFile(std::ofstream &_outfile);
+    void loadFile(std::ifstream &_infile);
 };
