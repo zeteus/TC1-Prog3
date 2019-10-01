@@ -6,7 +6,7 @@
 #include "Artista.hpp"
 #include "Música.hpp"
 
-class Artista;  //evita include loop
+class Artista;  // forward declaration
 
 class Album {
 

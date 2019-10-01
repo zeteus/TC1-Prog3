@@ -4,7 +4,7 @@
 #include <list>
 #include <fstream>
 
-class Album;    //evita include loop
+class Album;    // forward declaration
 
 class Artista: public Produtor {
 

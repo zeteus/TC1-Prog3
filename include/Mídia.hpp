@@ -1,6 +1,11 @@
 #pragma once
 
 #include <iostream>
+#include <list>
+
+#include "Assinante.hpp"
+
+class Assinante;    // forward declaration
 
 class Midia {
 protected: 
@@ -12,6 +17,9 @@ private:
         private:
             std::string name;
             std::string abreviation;
+
+            std::list<Midia*> midias;
+
             
             // Setters
             void setName(std::string name);
@@ -28,6 +36,7 @@ private:
             std::string getAbreviation();
     };
 
+    std::list<Assinante*> assinantes;
     Genero* genre;
 
     // Setters

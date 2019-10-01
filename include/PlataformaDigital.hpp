@@ -1,10 +1,12 @@
 #pragma once
+
 #include "Assinante.hpp"
 #include "Mídia.hpp"
 #include <iostream>
 #include <list>
 
-class Assinante;    //evita include loop
+class Midia;
+class Assinante;    // forward declaration
 
 class PlataformaDigital {
 

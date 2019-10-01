@@ -1,14 +1,19 @@
 #pragma once
 
+#include <list>
 #include "Usuário.hpp"
 #include "PlataformaDigital.hpp"
+#include "Mídia.hpp"
 
-class PlataformaDigital; //evita include loop
+class Midia;
+class PlataformaDigital; // forward declaration
 
 class Assinante: private Usuario {
 
 private:
     PlataformaDigital* platform;
+
+    std::list<Midia*> midias;
 
     // Setters
     void setDigitalPlatform(PlataformaDigital *platform);
