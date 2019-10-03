@@ -2,18 +2,27 @@
 
 #include "Assinante.hpp"
 #include "Mídia.hpp"
+#include "Produtor.hpp"
+#include "Mídia.hpp"
 #include <iostream>
 #include <list>
 
+class Genero;
+class Produtor;
 class Midia;
-class Assinante;    // forward declaration
+class Assinante;    // forward declarations
 
 class PlataformaDigital {
 
 private:
+    // Attributes
     std::string name;
+
+    // Relations
     std::list<Assinante*> subscribers;
     std::list<Midia*> registeredProducts;
+    std::list<Produtor*> producers;
+    std::list<Genero*> genres;
 
 public:
     // Constructors
@@ -32,13 +41,12 @@ public:
     // Functions
     void printProducts(std::string genre);
     void printSubscribers();
-    void insertSubscriber(Assinante* subscribers);
-    void removeSubscriber(Assinante* subscribers);
-    int  insertProduct(Midia* newProduct, std::string producerName);
-    int  selectSubscriber();
-    void insertProductSubscriber();
-    void printOnFile(std::ofstream &_outfile);
-    void loadFile(std::ifstream &_infile);
+    void insertSubscriber(Assinante* subscriber);
+    void removeSubscriber(Assinante* subscriber);
+    void insertProduct(Midia* newProduct, std::list<Produtor*> producers);
     void exportLibrary();
     void generateReports();
+
+    void printOnFile(std::ofstream &_outfile);
+    void loadFile(std::ifstream &_infile);
 };

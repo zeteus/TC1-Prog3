@@ -1,4 +1,5 @@
 #pragma once
+
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -6,16 +7,19 @@
 #include "Artista.hpp"
 #include "Música.hpp"
 
-class Artista;  // forward declaration
+class Musica;
+class Artista;  // forward declarations
 
 class Album {
 
 private:
+    // Attributes
     std::string name;
     int duration;
     int launchYear;
     int musicAmount;
 
+    // Relations
     Artista* artist;
     std::list<Musica*> musics;
 
@@ -25,15 +29,13 @@ private:
     void setLaunchYear(int _launchYear);
     void setMusicAmount(int _musicAmount);
     void setName(std::string _name);
-public:
-    
+
+public:    
     // Constructors
     Album(Artista* _artist, int _duration, int _yearLaunch, int _musicAmount, std::string _name);
     Album();
     // Destructor
     ~Album();
-
-    void printOnFile(std::ofstream &_outfile);
 
     // Getters
     Artista* getArtist();
@@ -42,4 +44,6 @@ public:
     int getMusicAmount();
     std::string getName();
 
+    // Overloading
+    void printOnFile(std::ofstream &_outfile);
 };

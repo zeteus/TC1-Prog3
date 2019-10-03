@@ -1,20 +1,23 @@
 #pragma once
 
 #include <list>
+#include <iostream>
 #include "Usuário.hpp"
 #include "PlataformaDigital.hpp"
 #include "Mídia.hpp"
 
 class Midia;
-class PlataformaDigital; // forward declaration
+class PlataformaDigital; // forward declarations
 
-class Assinante: private Usuario {
+class Assinante: public Usuario {
 
-public:
-    
+private:
+    // Relations
     PlataformaDigital* platform;
     std::list<Midia*> midias;
 
+public:
+    // Functions
     void imprimeFavoritos();
     void inserirFavorito(Midia* favorite);
     void removerFavorito(Midia* favorite);

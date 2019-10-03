@@ -2,36 +2,35 @@
 
 #include "Usuário.hpp"
 #include "Mídia.hpp"
+#include "PlataformaDigital.hpp"
 #include <fstream>
 #include <list>
 #include <iostream>
 
-class Midia;    // Forward declaration
+class PlataformaDigital;
+class Midia;    // Forward declarations
 
 class Produtor: public Usuario {
 
 private:
+    // Relações
     std::list<Midia*> launchedProducts;
-protected:
-    std::string biografy;
-    // Setter
-    void setBiografy(std::string biografy);
 
 public:
+    // Functions
+    void createProduct();
+    void printLaunchedProducts();
+
+    // Getters
+    std::list<Midia*> getLaunchedProducts();
+
     // Constructors
     Produtor();
     Produtor(std::string _name);
     // Destructor
     ~Produtor();
 
-    // Functions
-    void createProduct();
-    void printLaunchedProducts();
-
-    // Overloading, virtual para evitar chamar o da classe-mãe
+    // Overloading, virtual para evitar ser chamado pelos herdeiros
     virtual void printOnFile(std::ofstream &outfile);
     virtual void loadFile(std::ifstream &infile);
-    // Getters
-    std::string getBiografy();
-    std::list<Midia*> getLaunchedProducts();
 };

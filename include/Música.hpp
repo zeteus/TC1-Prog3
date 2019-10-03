@@ -1,15 +1,19 @@
 #pragma once
+
 #include "Mídia.hpp"
+#include "Álbum.hpp"
+#include <list>
 #include <iostream>
 
 class Musica: public Midia {
 
 private:
+    // Attributes
     int duration;
     int launchYear;
 
     // Fuctions
-    void formattedDuration();
+    void formatDuration();
 
     // Setters
     void setDuration(int duration);
@@ -18,6 +22,7 @@ private:
 public:
     // Constructor
     Musica();
+    Musica(std::string name, bool expl, std::string genre, int duration, int yr);
     // Destructor
     ~Musica();
 
@@ -25,9 +30,8 @@ public:
     int getDuration();
     int getLaunchYear();
 
-    // Functions
-    // Overloading, virtual para evitar chamar o da classe-mãe
+    // Overloading
     void printProductInfo();
-    virtual void printOnFile(std::ofstream &_outfile);
-    virtual void loadFile(std::ifstream &_infile);
+    void printOnFile(std::ofstream &_outfile);
+    void loadFile(std::ifstream &_infile);
 };

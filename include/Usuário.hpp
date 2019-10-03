@@ -5,23 +5,22 @@
 
 class Usuario {
 
+protected:
+    std::string name;
+    int code;
+
+    // Setters
+    void setCode(int cod);
+    void setName(std::string _name);
+
 public:
-    // Virtual para evitar chamar o da classe-mãe
+    // Virtual puta para evitar ser chamado
     virtual void printOnFile(std::ofstream &outfile) = 0;
     virtual void loadFile(std::ifstream &infile) = 0;
 
     // Getters
     virtual std::string getName();
-    virtual int getCodigo();
-
-protected:
-    std::string name;
-    int codigo;
-
-    // Setters
-    virtual void setCodigo(int cod);
-    virtual void setName(std::string _name);
-
+    virtual int getCode();
 };
 
 // Não tem construtor, jamais será instânciado

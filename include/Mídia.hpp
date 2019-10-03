@@ -14,11 +14,13 @@ class Assinante;    // forward declaration
 class Midia {
     class Genero {
         private:
+            // Attributes
             std::string name;
             std::string abreviation;
 
+            // Relations
             std::list<Midia*> midias;
-
+            PlataformaDigital* platform;
             
             // Setters
             void setName(std::string name);
@@ -34,11 +36,12 @@ class Midia {
             std::string getName();
             std::string getAbreviation();
     };
-protected: 
+protected:
+    // Attributes
     std::string name;
-    int codigo;
+    int code;
 
-    // Relações
+    // Relations
     std::list<Assinante*> assinantes;
     std::list<Produtores*> produtores;
     Genero* genre;
@@ -46,10 +49,13 @@ protected:
 
     // Setters
     void setName(std::string name);
+    void setCode(int code);
     static void setProductQnt(int qnt);
     void setGenre(Genero *genre);
+    void setPlatform(PlataformaDigital* platform);
 
 public:
+    // Attribute
     static int productQnt;
 
     // Constructors
@@ -64,9 +70,8 @@ public:
     int getProductQnt();
     Genero* getGenre();
 
-    // Functions
+    // Functions, virtual evita ser chamado pelos herdeiros
     virtual void printProductInfo() = 0;
-    static void printProductQnt();
     virtual void printOnFile(std::ofstream &_outfile) = 0;
     virtual void loadFile(std::ifstream &_infile) = 0;
 
