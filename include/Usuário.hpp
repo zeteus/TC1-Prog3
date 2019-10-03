@@ -6,6 +6,7 @@
 class Usuario {
 
 protected:
+    // Attributes
     std::string name;
     int code;
 

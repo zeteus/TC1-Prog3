@@ -8,9 +8,10 @@
 class Podcast: public Midia {
 
 private:
+    // Attribute
     int seasonsQnt;
 
-    //Setters
+    // Setters
     void setSeasonsQnt(int qnt);
 
 public:
