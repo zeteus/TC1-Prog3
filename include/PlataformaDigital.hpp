@@ -1,11 +1,12 @@
 #pragma once
 
+#include <iostream>
+#include <list>
+
 #include "Assinante.hpp"
 #include "Mídia.hpp"
 #include "Produtor.hpp"
 #include "Mídia.hpp"
-#include <iostream>
-#include <list>
 
 class Genero;
 class Produtor;

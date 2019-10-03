@@ -1,11 +1,12 @@
 #pragma once
 
-#include "Usuário.hpp"
-#include "Mídia.hpp"
-#include "PlataformaDigital.hpp"
 #include <fstream>
 #include <list>
 #include <iostream>
+
+#include "Usuário.hpp"
+#include "Mídia.hpp"
+#include "PlataformaDigital.hpp"
 
 class PlataformaDigital;
 class Midia;    // Forward declarations

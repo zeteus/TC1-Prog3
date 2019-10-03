@@ -2,6 +2,7 @@
 
 #include <list>
 #include <iostream>
+
 #include "Usuário.hpp"
 #include "PlataformaDigital.hpp"
 #include "Mídia.hpp"

@@ -1,9 +1,10 @@
 #pragma once
 
+#include <iostream>
+#include <list>
+
 #include "Mídia.hpp"
 #include "Álbum.hpp"
-#include <list>
-#include <iostream>
 
 class Musica: public Midia {
 

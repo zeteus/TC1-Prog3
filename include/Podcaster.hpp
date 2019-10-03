@@ -1,8 +1,10 @@
 #pragma once
-#include "Produtor.hpp"
-#include "Podcast.hpp"
+
 #include <list>
 #include <fstream>
+
+#include "Produtor.hpp"
+#include "Podcast.hpp"
 
 class Podcaster: public Produtor {
 

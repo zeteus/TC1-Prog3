@@ -1,8 +1,9 @@
 #pragma once
 
+#include <iostream>
+
 #include "Mídia.hpp"
 #include "Podcaster.hpp"
-#include <iostream>
 
 class Podcast: public Midia {
 
