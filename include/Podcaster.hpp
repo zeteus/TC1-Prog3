@@ -9,8 +9,8 @@
 class Podcaster: public Produtor {
 
 private:
+    // Relation
     std::list<Podcast*> podcasts;
-
 
 public:
     // Constructor
