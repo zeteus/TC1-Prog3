@@ -20,8 +20,8 @@ public:
     virtual void loadFile(std::ifstream &infile) = 0;
 
     // Getters
-    virtual std::string getName();
-    virtual int getCode();
+    std::string getName();
+    int getCode();
 };
 
 // Não tem construtor, jamais será instânciado

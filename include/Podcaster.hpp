@@ -6,6 +6,8 @@
 #include "Produtor.hpp"
 #include "Podcast.hpp"
 
+class Podcast;  // Forward declaration
+
 class Podcaster: public Produtor {
 
 private:
