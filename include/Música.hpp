@@ -6,6 +6,8 @@
 #include "Mídia.hpp"
 #include "Álbum.hpp"
 
+class Album;    // Forward declaration
+
 class Musica: public Midia {
 
 private:
@@ -13,8 +15,12 @@ private:
     int duration;
     int launchYear;
 
+    // Relation
+    std::list<Album*> albums;
+
     // Fuctions
     void formatDuration();
+    void addAlbum(Album* album);
 
     // Setters
     void setDuration(int duration);

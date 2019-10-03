@@ -32,6 +32,10 @@ class Midia {
             // Destructor
             ~Genero();
 
+            // Functions
+            void addMidia(Midia* midia);
+            void removeMidia(Midia* midia);
+
             // Getters
             std::string getName();
             std::string getAbreviation();
@@ -74,5 +78,7 @@ public:
     virtual void printProductInfo() = 0;
     virtual void printOnFile(std::ofstream &_outfile) = 0;
     virtual void loadFile(std::ifstream &_infile) = 0;
-
+    virtual void addSubscriber(Assinante* subscriber);
+    virtual void removeSubscriber(Assinante* subscriber);
+    virtual void addProducer(Produtor* producer);
 };

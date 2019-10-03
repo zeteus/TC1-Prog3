@@ -44,7 +44,12 @@ public:
     void printSubscribers();
     void insertSubscriber(Assinante* subscriber);
     void removeSubscriber(Assinante* subscriber);
-    void insertProduct(Midia* newProduct, std::list<Produtor*> producers);
+    void insertProducer(Midia* newProduct, std::list<Produtor*> producers);
+    void removeProducer(Produtor* producer);
+    void addGenre(Genero* genre);
+    void removeGenre(Genero* genre);
+    void addMidia(Midia* midia);
+    void removeMidia(Midia* midia);
     void exportLibrary();
     void generateReports();
 

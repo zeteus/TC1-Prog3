@@ -27,6 +27,11 @@ int Midia::getProductQnt() {return Midia::productQnt;}
 std::string Midia::getName() {return this->name;}
 Midia::Genero* Midia::getGenre() {return this->genre;}
 
+// Functions
+void Midia::addSubscriber(Assinante* subscriber){};
+void Midia::removeSubscriber(Assinante* subscriber){};
+void Midia::addProducer(Produtor* producer){};
+
 //---------GENERO ".cpp"
 // Constructors
 Midia::Genero::Genero() {}

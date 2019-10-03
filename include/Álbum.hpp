@@ -45,6 +45,9 @@ public:
     int getMusicAmount();
     std::string getName();
 
+    // Functions
+    void addMusic(Musica* music);
+
     // Overloading
     void printOnFile(std::ofstream &_outfile);
 };
