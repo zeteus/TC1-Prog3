@@ -26,4 +26,8 @@ public:
     // Overloading, virtual para evitar dos herdeiros chamarem
     virtual void printOnFile(std::ofstream &_outfile);
     virtual void loadFile(std::ifstream &_infile);
+
+    // Funcions
+    void addPodcast(Podcast* podcast);
+    void removePodcast(Podcast* podcast);
 };

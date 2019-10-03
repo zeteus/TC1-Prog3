@@ -21,7 +21,8 @@ public:
     ~Artista();
 
     // Functions
-    void addAlbum();
+    void addAlbum(Album* album);
+    void removeAlbum(Album* album);
 
     // Getters
     std::list<Album*> getAlbums();

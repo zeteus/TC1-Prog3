@@ -21,6 +21,8 @@ public:
     // Functions
     void createProduct();
     void printLaunchedProducts();
+    void addLaunchedProducts(Midia* launchedProducts);
+    void removeLaunchedProducts(Midia* launchedProducts);
 
     // Getters
     std::list<Midia*> getLaunchedProducts();
