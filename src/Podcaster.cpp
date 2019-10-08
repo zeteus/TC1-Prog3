@@ -1,20 +1,19 @@
 #include "Podcaster.hpp"
 
+// Constructor
 Podcaster::Podcaster(std::string name, int code) {
     this->setNome();
     this->setCodigo();
 }
-
+// Destructor
 Podcaster::~Podcaster() {}
 
 // Overloading
 void Podcaster::printarNoArquivo(std::ofstream &_outfile) {
     // TODO
 }
-void Podcaster::loadFile(std::ifstream &_infile) {
-    // TODO
-}
 
+// Functions
 void addPodcast(Podcast* podcast) {
     this->podcasts.push_back(podcast);
 }

@@ -1,23 +1,19 @@
 #include "Produtor.hpp"
 
+// Constructors
 Produtor::Produtor() {}
-
-Produtor::Produtor(std::string _name){
-    this->setNome();
+Produtor::Produtor(std::string _name, int  codigo){
+    this->setNome(_name);
+    this->setCodigo(codigo);
 }
-
+// Destructor
 Produtor::~Produtor() {
     this->produtosDesenvolvidos.clear(); //forma a composição
 }
 
-
+// Functions
 void Produtor::printarNoArquivo(std::ofstream &outfile) {
     // fazer uma funcao pra printar aqui em amigo
-    // TODO
-}
-
-void Produtor::loadFile(std::ifstream &infile) {
-    // fazer uma funcao pra dar load aqui meu amigo
     // TODO
 }
 

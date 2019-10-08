@@ -4,17 +4,14 @@
 #include <iostream>
 
 #include "Usuário.hpp"
-#include "PlataformaDigital.hpp"
 #include "Mídia.hpp"
 
 class Midia;
-class PlataformaDigital; // forward declarations
 
 class Assinante: public Usuario {
 
 private:
     // Relations
-    PlataformaDigital* plataforma;
     std::list<Midia*> favoritos;
 
     // Setters
@@ -32,10 +29,8 @@ public:
     ~Assinante();
 
     // Getters
-    PlataformaDigital* getDigitalPlatform();
     std::list<Midia*> getFavoritos();
 
     // Overloading
     void printarNoArquivo(std::ofstream &_outfile);
-    void loadFile(std::ifstream &_infile);
 };

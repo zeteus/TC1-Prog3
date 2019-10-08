@@ -6,9 +6,7 @@
 
 #include "Usuário.hpp"
 #include "Mídia.hpp"
-#include "PlataformaDigital.hpp"
 
-class PlataformaDigital;
 class Midia;    // Forward declarations
 
 class Produtor: public Usuario {
@@ -34,5 +32,4 @@ public:
 
     // Overloading, virtual para evitar ser chamado pelos herdeiros
     virtual void printarNoArquivo(std::ofstream &outfile);
-    virtual void loadFile(std::ifstream &infile);
 };

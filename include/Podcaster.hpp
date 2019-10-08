@@ -20,14 +20,13 @@ public:
     // Destructor
     ~Podcaster();
 
+    // Funcions
+    void addPodcast(Podcast* podcast);
+    void removePodcast(Podcast* podcast);
+
     // Getters
     std::list<Podcast*> getPodcasts();
 
     // Overloading, virtual para evitar dos herdeiros chamarem
     virtual void printarNoArquivo(std::ofstream &_outfile);
-    virtual void loadFile(std::ifstream &_infile);
-
-    // Funcions
-    void addPodcast(Podcast* podcast);
-    void removePodcast(Podcast* podcast);
 };

@@ -1,12 +1,12 @@
 #include "Assinante.hpp"
 
+// Constructor
 Assinante::Assinante() {}
-
 Assinante::Assinante(std::string name, int codigo) {
     this->setNome(name);
     this->setCodigo(codigo);
 }
-
+// Destructor
 Assinante::~Assinante() {
 
 }
@@ -27,13 +27,8 @@ void Assinante::removeFavorito(Midia* favorito) {
     this->favoritos.remove(favorito);
 }
 
-// Setters
-void Assinante::setDigitalPlatform(PlataformaDigital *plataforma) {this->plataforma = plataforma;}
-
 // Getters
-PlataformaDigital* Assinante::getPlataformaDigital() {return this->plataforma;}
 std::list<Midia*> Assinante::getFavoritos() {return this->favoritos;}
 
 // Arquivo TODO:
 void Assinante::printarNoArquivo(std::ofstream &_outfile){}
-void Assinante::loadFile(std::ifstream &_infile){}
