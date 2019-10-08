@@ -15,17 +15,16 @@ class Produtor: public Usuario {
 
 private:
     // Relações
-    std::list<Midia*> launchedProducts;
+    std::list<Midia*> produtosDesenvolvidos;
 
 public:
     // Functions
-    void createProduct();
-    void printLaunchedProducts();
-    void addLaunchedProducts(Midia* launchedProducts);
-    void removeLaunchedProducts(Midia* launchedProducts);
+    void imprimeProdutosDesenvolvidos();
+    void addProdutoDesenvolvido(Midia* produtoDesenvolvido);
+    void removeProdutosDesenvolvidos(Midia* produtosDesenvolvidos);
 
     // Getters
-    std::list<Midia*> getLaunchedProducts();
+    std::list<Midia*> getProdutosDesenvolvidos();
 
     // Constructors
     Produtor();
@@ -34,6 +33,6 @@ public:
     ~Produtor();
 
     // Overloading, virtual para evitar ser chamado pelos herdeiros
-    virtual void printOnFile(std::ofstream &outfile);
+    virtual void printarNoArquivo(std::ofstream &outfile);
     virtual void loadFile(std::ifstream &infile);
 };

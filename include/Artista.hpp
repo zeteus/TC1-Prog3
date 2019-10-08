@@ -14,20 +14,18 @@ private:
     // Relation
     std::list<Album*> albums;
 
+    // Functions
+    void addAlbum(Album* album);
+
 public:
     // Constructor
     Artista(std::string name, int code);
     // Destructor
     ~Artista();
 
-    // Functions
-    void addAlbum(Album* album);
-    void removeAlbum(Album* album);
-
     // Getters
     std::list<Album*> getAlbums();
 
     // Overloading
-    void printOnFile(std::ofstream &_outfile);
-    void loadFile(std::ifstream &_infile);
+    void printarNoArquivo(std::ofstream &_outfile);
 };

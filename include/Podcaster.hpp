@@ -24,7 +24,7 @@ public:
     std::list<Podcast*> getPodcasts();
 
     // Overloading, virtual para evitar dos herdeiros chamarem
-    virtual void printOnFile(std::ofstream &_outfile);
+    virtual void printarNoArquivo(std::ofstream &_outfile);
     virtual void loadFile(std::ifstream &_infile);
 
     // Funcions

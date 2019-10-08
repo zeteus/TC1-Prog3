@@ -15,21 +15,21 @@ class Album {
 
 private:
     // Attributes
-    std::string name;
-    int duration;
-    int launchYear;
-    int musicAmount;
+    std::string nome;
+    int duracao;
+    int anoLancamento;
+    int quantidadeMusicas;
 
     // Relations
-    Artista* artist;
+    Artista* artista;
     std::list<Musica*> musics;
 
     // Setters
-    void setArtist(Artista* _artist);
-    void setDuration(int _duration);
-    void setLaunchYear(int _launchYear);
-    void setMusicAmount(int _musicAmount);
-    void setName(std::string _name);
+    void setArtista(Artista* _artista);
+    void setDuracao(int _duration);
+    void setAnoLancamento(int _launchYear);
+    void setQuantidadeMusicas(int _musicAmount);
+    void setNome(std::string _name);
 
 public:    
     // Constructors
@@ -39,15 +39,15 @@ public:
     ~Album();
 
     // Getters
-    Artista* getArtist();
-    int getDuration();
-    int getLaunchYear();
-    int getMusicAmount();
-    std::string getName();
+    Artista* getArtista();
+    int getDuracao();
+    int getAnoLancamento();
+    int getQuantidadeMusicas();
+    std::string getNome();
 
     // Functions
     void addMusic(Musica* music);
 
     // Overloading
-    void printOnFile(std::ofstream &_outfile);
+    void printarNoArquivo(std::ofstream &_outfile);
 };

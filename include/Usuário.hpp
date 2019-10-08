@@ -7,21 +7,21 @@ class Usuario {
 
 protected:
     // Attributes
-    std::string name;
-    int code;
+    std::string nome;
+    int codigo;
 
     // Setters
-    void setCode(int cod);
-    void setName(std::string _name);
+    void setCodigo(int cod);
+    void setNome(std::string _name);
 
 public:
     // Virtual puta para evitar ser chamado
-    virtual void printOnFile(std::ofstream &outfile) = 0;
+    virtual void printarNoArquivo(std::ofstream &outfile) = 0;
     virtual void loadFile(std::ifstream &infile) = 0;
 
     // Getters
-    std::string getName();
-    int getCode();
-};
+    std::string getNome();
+    int getCodigo();
+};//henrique esteve aqui
 
 // Não tem construtor, jamais será instânciado

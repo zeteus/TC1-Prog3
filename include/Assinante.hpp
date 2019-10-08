@@ -14,14 +14,16 @@ class Assinante: public Usuario {
 
 private:
     // Relations
-    PlataformaDigital* platform;
-    std::list<Midia*> midias;
+    PlataformaDigital* plataforma;
+    std::list<Midia*> favoritos;
 
+    // Setters
+    void setDigitalPlatform(PlataformaDigital *platform);
 public:
     // Functions
-    void printFavorites();
-    void insertFavorite(Midia* favorite);
-    void removeFavorite(Midia* favorite);
+    void printFavoritos();
+    void insertFavorito(Midia* favorito);
+    void removeFavorito(Midia* favorito);
 
     // Constructor
     Assinante();
@@ -29,13 +31,11 @@ public:
     // Destructor
     ~Assinante();
 
-    // Setters
-    void setDigitalPlatform(PlataformaDigital *platform);
     // Getters
     PlataformaDigital* getDigitalPlatform();
     std::list<Midia*> getFavoritos();
 
     // Overloading
-    void printOnFile(std::ofstream &_outfile);
+    void printarNoArquivo(std::ofstream &_outfile);
     void loadFile(std::ifstream &_infile);
 };

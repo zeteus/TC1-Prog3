@@ -33,9 +33,9 @@ public:
     ~PlataformaDigital();
 
     //Setters
-    void setName(std::string name);
+    void setNome(std::string name);
     //Getters
-    std::string getName();
+    std::string getNome();
     std::list<Assinante*> getSubscribers();
     std::list<Midia*> getRegisteredProducts();
 
@@ -53,6 +53,6 @@ public:
     void exportLibrary();
     void generateReports();
 
-    void printOnFile(std::ofstream &_outfile);
+    void printarNoArquivo(std::ofstream &_outfile);
     void loadFile(std::ifstream &_infile);
 };

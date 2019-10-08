@@ -26,7 +26,7 @@ public:
 
     // Overloading
     void printProductInfo();
-    void printOnFile(std::ofstream &_outfile);
+    void printarNoArquivo(std::ofstream &_outfile);
     void loadFile(std::ifstream &_infile);
     void addSubscriber(Assinante* subscriber);
     void removeSubscriber(Assinante* subscriber);

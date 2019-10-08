@@ -23,7 +23,7 @@ class Midia {
             PlataformaDigital* platform;
             
             // Setters
-            void setName(std::string name);
+            void setNome(std::string name);
             void setAbreviation(std::string abreviation);
         public:
             // Constructors
@@ -37,7 +37,7 @@ class Midia {
             void removeMidia(Midia* midia);
 
             // Getters
-            std::string getName();
+            std::string getNome();
             std::string getAbreviation();
     };
 protected:
@@ -52,7 +52,7 @@ protected:
     PlataformaDigital* plataforma;
 
     // Setters
-    void setName(std::string name);
+    void setNome(std::string name);
     void setCode(int code);
     static void setProductQnt(int qnt);
     void setGenre(Genero *genre);
@@ -70,13 +70,13 @@ public:
 
 
     // Getters
-    std::string getName();
+    std::string getNome();
     int getProductQnt();
     Genero* getGenre();
 
     // Functions, virtual evita ser chamado pelos herdeiros
     virtual void printProductInfo() = 0;
-    virtual void printOnFile(std::ofstream &_outfile) = 0;
+    virtual void printarNoArquivo(std::ofstream &_outfile) = 0;
     virtual void loadFile(std::ifstream &_infile) = 0;
     virtual void addSubscriber(Assinante* subscriber);
     virtual void removeSubscriber(Assinante* subscriber);

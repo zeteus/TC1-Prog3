@@ -14,17 +14,17 @@ Midia::~Midia() {
 }
 
 void Midia::printProductInfo() {}
-void Midia::printOnFile(std::ofstream &_outfile) {}
+void Midia::printarNoArquivo(std::ofstream &_outfile) {}
 void Midia::loadFile(std::ifstream &_infile) {}
 
 // Setters
 void Midia::setProductQnt(int qnt) {Midia::productQnt = qnt;}
-void Midia::setName(std::string name) {this->name = name;}
+void Midia::setNome(std::string name) {this->name = name;}
 void Midia::setGenre(Genero *genre) {this->genre = genre;}
 
 // Getters
 int Midia::getProductQnt() {return Midia::productQnt;}
-std::string Midia::getName() {return this->name;}
+std::string Midia::getNome() {return this->name;}
 Midia::Genero* Midia::getGenre() {return this->genre;}
 
 // Functions
@@ -36,7 +36,7 @@ void Midia::addProducer(Produtor* producer){};
 // Constructors
 Midia::Genero::Genero() {}
 Midia::Genero::Genero(std::string name, std::string abreviation) {
-    this->setName(name);
+    this->setNome(name);
     this->setAbreviation(abreviation);
 }
 
@@ -44,9 +44,9 @@ Midia::Genero::Genero(std::string name, std::string abreviation) {
 Midia::Genero::~Genero() {}
 
 // Setters
-void Midia::Genero::setName(std::string name) {this->name = name;}
+void Midia::Genero::setNome(std::string name) {this->name = name;}
 void Midia::Genero::setAbreviation(std::string abreviation) {this->abreviation = abreviation;}
 
 // Getters
-std::string Midia::Genero::getName() {return this->name;}
+std::string Midia::Genero::getNome() {return this->name;}
 std::string Midia::Genero::getAbreviation() {return this->abreviation;}
