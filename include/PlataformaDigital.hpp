@@ -8,22 +8,17 @@
 #include "Produtor.hpp"
 #include "Mídia.hpp"
 
-class Genero;
-class Produtor;
-class Midia;
-class Assinante;    // forward declarations
-
 class PlataformaDigital {
 
 private:
-    // Attributes
-    std::string name;
+    // Attribute
+    std::string nome;
 
     // Relations
-    std::list<Assinante*> subscribers;
-    std::list<Midia*> registeredProducts;
-    std::list<Produtor*> producers;
-    std::list<Genero*> genres;
+    std::list<Assinante*> assinantes;
+    std::list<Midia*> produtosRegistrados;
+    std::list<Produtor*> produtores;
+    std::list<Midia::Genero*> generos;
 
 public:
     // Constructors
@@ -46,8 +41,8 @@ public:
     void removeSubscriber(Assinante* subscriber);
     void insertProducer(Midia* newProduct, std::list<Produtor*> producers);
     void removeProducer(Produtor* producer);
-    void addGenre(Genero* genre);
-    void removeGenre(Genero* genre);
+    void addGenre(Midia::Genero* genre);
+    void removeGenre(Midia::Genero* genre);
     void addMidia(Midia* midia);
     void removeMidia(Midia* midia);
     void exportLibrary();

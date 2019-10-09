@@ -9,34 +9,36 @@
 class Assinante;    // forward declaration
 
 class Midia {
-    protected:
+    public:
         class Genero {
-            private:
-                // Attributes
-                std::string nome;
-                std::string sigla;
+        private:
+            // Attributes
+            std::string nome;
+            std::string sigla;
 
-                // Relations
-                std::list<Midia*> midias;
-                
-                // Setters
-                void setNome(std::string name);
-                void setSigla(std::string Sigla);
-            public:
-                // Constructors
-                Genero();
-                Genero(std::string name, std::string sigla);
-                // Destructor
-                ~Genero();
+            // Relations
+            std::list<Midia*> midias;
+            
+            // Setters
+            void setNome(std::string name);
+            void setSigla(std::string Sigla);
+        public:
+            // Constructors
+            Genero();
+            Genero(std::string name, std::string sigla);
+            // Destructor
+            ~Genero();
 
-                // Functions
-                void addMidia(Midia* midia);
-                void removeMidia(Midia* midia);
+            // Functions
+            void addMidia(Midia* midia);
+            void removeMidia(Midia* midia);
 
-                // Getters
-                std::string getNome();
-                std::string getSigla();
-        };
+            // Getters
+            std::string getNome();
+            std::string getSigla();
+    };
+
+    protected:
     // Attributes
     std::string nome;
     int codigo;
