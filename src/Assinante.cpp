@@ -13,9 +13,9 @@ Assinante::~Assinante() {
 
 // Functions
 void Assinante::printFavoritos() {
-    std::list<Midia*>::iterator aux;
-    for(aux = this->favoritos.begin(); aux != this->favoritos.end(); aux++){
-        (*aux)->imprimeInfoProduto();
+    std::list<Midia*>::iterator it;
+    for(it = this->favoritos.begin(); it != this->favoritos.end(); it++){
+        (*it)->printInfoProduto();
     }
 }
 

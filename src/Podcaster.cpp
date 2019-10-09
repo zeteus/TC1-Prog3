@@ -2,8 +2,8 @@
 
 // Constructor
 Podcaster::Podcaster(std::string name, int code) {
-    this->setNome();
-    this->setCodigo();
+    this->setNome(name);
+    this->setCodigo(code);
 }
 // Destructor
 Podcaster::~Podcaster() {}
@@ -14,10 +14,13 @@ void Podcaster::printarNoArquivo(std::ofstream &_outfile) {
 }
 
 // Functions
-void addPodcast(Podcast* podcast) {
+void Podcaster::addPodcast(Podcast* podcast) {
     this->podcasts.push_back(podcast);
 }
 
-void removePodcast(Podcast* podcast) {
+void Podcaster::removePodcast(Podcast* podcast) {
     this->podcasts.remove(podcast);
 }
+
+// Getter
+std::list<Podcast*> Podcaster::getPodcasts() {return this->podcasts;}

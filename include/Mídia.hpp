@@ -73,8 +73,8 @@ public:
     int getCodigo();
     int getDuracao();
     int getAnoLancamento();
-    int getQtdProdutos();
     Midia::Genero* getGenero();
+    int getQtdProdutos();
 
     // Functions, virtual evita ser chamado pelos herdeiros
     void addAssinante(Assinante *subscriber);

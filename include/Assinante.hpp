@@ -14,8 +14,6 @@ private:
     // Relations
     std::list<Midia*> favoritos;
 
-    // Setters
-    void setDigitalPlatform(PlataformaDigital *platform);
 public:
     // Functions
     void printFavoritos();

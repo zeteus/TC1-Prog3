@@ -24,7 +24,7 @@ public:
     void addPodcast(Podcast* podcast);
     void removePodcast(Podcast* podcast);
 
-    // Getters
+    // Getter
     std::list<Podcast*> getPodcasts();
 
     // Overloading, virtual para evitar dos herdeiros chamarem

@@ -2,8 +2,8 @@
 
 
 // Setters
-void Usuario::setNome(std::string _name) {this->name = _name;}
-void Usuario::setCodigo(int cod) {this->code = cod;}
+void Usuario::setNome(std::string _name) {this->nome = _name;}
+void Usuario::setCodigo(int cod) {this->codigo = cod;}
 // Getters
-std::string Usuario::getNome() {return this->name;}
-int Usuario::getCodigo() {return this->code;}
+std::string Usuario::getNome() {return this->nome;}
+int Usuario::getCodigo() {return this->codigo;}

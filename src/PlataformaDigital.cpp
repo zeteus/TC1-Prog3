@@ -12,14 +12,14 @@ PlataformaDigital::~PlataformaDigital() {}
 void PlataformaDigital::printProdutos(std::string _genre) {
     std::list<Midia*>::iterator it;
     for(it = this->produtosRegistrados.begin(); it != this->produtosRegistrados.end(); it++){
-        (*it)->printInfoProduto;
+        (*it)->printInfoProduto();
     }
 }
 
-void PlataformaDigital::printProdutos(std::string _genre) {
+void PlataformaDigital::printAssinantes() {
     std::list<Assinante*>::iterator it;
     for(it = this->assinantes.begin(); it != this->assinantes.end(); it++){
-        (*it)->printFavoritos;
+        (*it)->printFavoritos();
     }
 }
 void PlataformaDigital::addAssinante(Assinante *_subscriber) {
