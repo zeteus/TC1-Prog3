@@ -24,14 +24,14 @@ std::list<Midia*> Produtor::getProdutosDesenvolvidos() {
 void Produtor::imprimeProdutosDesenvolvidos() {
     std::list<Midia*>::iterator aux;
     for(aux = this->produtosDesenvolvidos.begin(); aux != this->produtosDesenvolvidos.end(); aux++){
-        (*aux)->imprimeInfoProduto();
+        (*aux)->printInfoProduto();
     }
 }
 
-void addProdutoDesenvolvido(Midia* produtoDesenvolvido) {
+void Produtor::addProdutoDesenvolvido(Midia* produtoDesenvolvido) {
     this->produtosDesenvolvidos.push_back(produtoDesenvolvido);
 }
 
-void removeProdutosDesenvolvidos(Midia* produtosDesenvolvidos) {
+void Produtor::removeProdutosDesenvolvidos(Midia* produtoDesenvolvido) {
     this->produtosDesenvolvidos.remove(produtoDesenvolvido);
 }

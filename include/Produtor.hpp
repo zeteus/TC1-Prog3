@@ -26,7 +26,7 @@ public:
 
     // Constructors
     Produtor();
-    Produtor(std::string _name);
+    Produtor(std::string _name, int codigo);
     // Destructor
     ~Produtor();
 

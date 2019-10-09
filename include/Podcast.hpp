@@ -9,26 +9,22 @@ class Podcast: public Midia {
 
 private:
     // Attribute
-    int seasonsQnt;
+    int quantidadeTemporadas;
 
     // Setters
-    void setSeasonsQnt(int qnt);
+    void setQtdTemporadas(int qnt);
 
 public:
     // Getters
-    int getSeasonsQnt();
+    int getQtdTemporadas();
 
     // Constructor
     Podcast();
-    Podcast(std::string name, bool expl, std::string genre, int seasonsQnt);
+    Podcast(std::string name, Genero* genre, int seasonsQnt);
     // Destructor
     ~Podcast();
 
     // Overloading
     void printProductInfo();
     void printarNoArquivo(std::ofstream &_outfile);
-    void loadFile(std::ifstream &_infile);
-    void addSubscriber(Assinante* subscriber);
-    void removeSubscriber(Assinante* subscriber);
-    void addProducer(Produtor* producer);
 };

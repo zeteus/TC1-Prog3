@@ -3,64 +3,61 @@
 #include <iostream>
 #include <list>
 
-#include "PlataformaDigital.hpp"
 #include "Assinante.hpp"
 #include "Produtor.hpp"
 
-class PlataformaDigital;
-class Produtores;
 class Assinante;    // forward declaration
 
 class Midia {
-    class Genero {
-        private:
-            // Attributes
-            std::string name;
-            std::string abreviation;
+    protected:
+        class Genero {
+            private:
+                // Attributes
+                std::string nome;
+                std::string sigla;
 
-            // Relations
-            std::list<Midia*> midias;
-            PlataformaDigital* platform;
-            
-            // Setters
-            void setNome(std::string name);
-            void setAbreviation(std::string abreviation);
-        public:
-            // Constructors
-            Genero();
-            Genero(std::string name, std::string sigla);
-            // Destructor
-            ~Genero();
+                // Relations
+                std::list<Midia*> midias;
+                
+                // Setters
+                void setNome(std::string name);
+                void setSigla(std::string Sigla);
+            public:
+                // Constructors
+                Genero();
+                Genero(std::string name, std::string sigla);
+                // Destructor
+                ~Genero();
 
-            // Functions
-            void addMidia(Midia* midia);
-            void removeMidia(Midia* midia);
+                // Functions
+                void addMidia(Midia* midia);
+                void removeMidia(Midia* midia);
 
-            // Getters
-            std::string getNome();
-            std::string getAbreviation();
-    };
-protected:
+                // Getters
+                std::string getNome();
+                std::string getSigla();
+        };
     // Attributes
-    std::string name;
-    int code;
+    std::string nome;
+    int codigo;
+    int duracao;
+    int anoLancamento;
 
     // Relations
     std::list<Assinante*> assinantes;
-    std::list<Produtores*> produtores;
-    Genero* genre;
-    PlataformaDigital* plataforma;
+    Midia::Genero* genero;
 
     // Setters
-    void setNome(std::string name);
-    void setCode(int code);
-    static void setProductQnt(int qnt);
-    void setGenre(Genero *genre);
-    void setPlatform(PlataformaDigital* platform);
+    void setNome(std::string _name);
+    void setCodigo(int _code);
+    void setDuracao(int _duracao);
+    void setAnoLancamento(int _launchYear);
+    void setGenero(Midia::Genero *genre);
+    static void setQtdProdutos(int qnt);
 
 public:
     // Attribute
-    static int productQnt;
+    static int qtdProdutos;
 
     // Constructors
     Midia();
@@ -71,14 +68,15 @@ public:
 
     // Getters
     std::string getNome();
-    int getProductQnt();
-    Genero* getGenre();
+    int getCodigo();
+    int getDuracao();
+    int getAnoLancamento();
+    int getQtdProdutos();
+    Midia::Genero* getGenero();
 
     // Functions, virtual evita ser chamado pelos herdeiros
-    virtual void printProductInfo() = 0;
+    void addAssinante(Assinante *subscriber);
+    void removeAssinante(Assinante *subscriber);
+    virtual void printInfoProduto() = 0;
     virtual void printarNoArquivo(std::ofstream &_outfile) = 0;
-    virtual void loadFile(std::ifstream &_infile) = 0;
-    virtual void addSubscriber(Assinante* subscriber);
-    virtual void removeSubscriber(Assinante* subscriber);
-    virtual void addProducer(Produtor* producer);
 };

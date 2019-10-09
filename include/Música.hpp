@@ -21,7 +21,7 @@ private:
 public:
     // Constructor
     Musica();
-    Musica(std::string name, std::string genre, int duration, int yr);
+    Musica(std::string name, Genero* genre, int duration, int yr);
     // Destructor
     ~Musica();
 

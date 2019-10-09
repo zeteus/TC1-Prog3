@@ -2,7 +2,7 @@
 
 // Constructors
 Musica::Musica() {}
-Musica::Musica(std::string name, std::string genre, int duration, int yr) {
+Musica::Musica(std::string name, Genero* genre, int duration, int yr) {
     this->setNome(name);
     this->setGenero(genre);
     this->setDuracao(duration);
@@ -13,7 +13,7 @@ Musica::~Musica() {}
 
 // Functions
 void Musica::formataDuracao() {
-    // TODO
+    // TODO 
 }
 void Musica::addAlbum(Album *album) {
     this->albums.push_back(album);

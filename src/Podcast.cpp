@@ -1,16 +1,21 @@
 #include "Podcast.hpp"
 
-Podcast::Podcast() {
-
+// Constructors
+Podcast::Podcast() {}
+Podcast::Podcast(std::string name, Genero* genre, int seasonsQnt) {
+    this->setNome(name);
+    this->setGenero(genre);
+    this->setQtdTemporadas(seasonsQnt);
 }
+// Destrutor
+Podcast::~Podcast() {}
 
-Podcast::~Podcast() {
+// Setter
+void Podcast::setQtdTemporadas(int _qnt) {this->quantidadeTemporadas = _qnt;}
 
-}
+// Getter
+int Podcast::getQtdTemporadas() {return this->quantidadeTemporadas;}
 
+// Overloading
 void Podcast::printarNoArquivo(std::ofstream &_outfile){};
-void Podcast::loadFile(std::ifstream &_infile){};
 void Podcast::printProductInfo(){};
-void Podcast::addSubscriber(Assinante* subscriber){};
-void Podcast::removeSubscriber(Assinante* subscriber){};
-void Podcast::addProducer(Produtor* producer){};
