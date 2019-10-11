@@ -3,6 +3,11 @@
 #include <iostream>
 #include <list>
 
+#include "Artista.hpp"
+#include "Álbum.hpp"
+#include "Música.hpp"
+#include "Podcast.hpp"
+#include "Podcaster.hpp"
 #include "Assinante.hpp"
 #include "Mídia.hpp"
 #include "Produtor.hpp"

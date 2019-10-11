@@ -12,6 +12,11 @@ Assinante::~Assinante() {
 }
 
 // Functions
+void Assinante::printAssinante() {
+    std::cout << "Nome: " << this->getNome() << std::endl;
+    std::cout << "Código: " << this->getCodigo() << std::endl;
+}
+
 void Assinante::printFavoritos() {
     std::list<Midia*>::iterator it;
     for(it = this->favoritos.begin(); it != this->favoritos.end(); it++){
@@ -19,7 +24,7 @@ void Assinante::printFavoritos() {
     }
 }
 
-void Assinante::insertFavorito(Midia* favorito) {
+void Assinante::inserirFavorito(Midia* favorito) {
     this->favoritos.push_back(favorito);
 }
 

@@ -2,9 +2,7 @@
 
 // Constructors
 Musica::Musica() {}
-Musica::Musica(std::string name, Genero* genre, int duration, int yr) {
-    this->setNome(name);
-    this->setGenero(genre);
+Musica::Musica(std::string name, Genero* genre, int duration, int yr) : Midia(name, rand(), genre) {
     this->setDuracao(duration);
     this->setAnoLancamento(yr);
 }
@@ -20,5 +18,11 @@ void Musica::addAlbum(Album *album) {
 }
 
 // Overloading , TODO:
-void Musica::printInfoProduto() {}
-void Musica::printarNoArquivo(std::ofstream &_outfile){}
+void Musica::printInfoProduto() {
+    std::cout << "Nome: " << this->getNome() << std::endl;
+    std::cout << "Codigo: " << this->getCodigo() << std::endl;
+    std::cout << "Genero: " <<  this->getGenero()->getNome() << std::endl;
+    std::cout << "Duração: " << this->getDuracao() << std::endl;
+    std::cout << "Ano de Lançamento: " << this->getAnoLancamento() << std::endl;
+}
+void Musica::printarNoArquivo(std::ofstream &_outfile) {}

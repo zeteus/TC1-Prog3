@@ -19,6 +19,8 @@ void PlataformaDigital::printProdutos(std::string _genre) {
 void PlataformaDigital::printAssinantes() {
     std::list<Assinante*>::iterator it;
     for(it = this->assinantes.begin(); it != this->assinantes.end(); it++){
+        (*it)->printAssinante();
+        std::cout << "Favoritos: " << std::endl;
         (*it)->printFavoritos();
     }
 }

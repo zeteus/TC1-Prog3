@@ -16,8 +16,9 @@ private:
 
 public:
     // Functions
+    void printAssinante();
     void printFavoritos();
-    void insertFavorito(Midia* favorito);
+    void inserirFavorito(Midia* favorito);
     void removeFavorito(Midia* favorito);
 
     // Constructor

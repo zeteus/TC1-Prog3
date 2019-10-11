@@ -25,6 +25,6 @@ public:
     ~Podcast();
 
     // Overloading
-    void printProductInfo();
+    void printInfoProduto();
     void printarNoArquivo(std::ofstream &_outfile);
 };
