@@ -6,6 +6,11 @@
 #include <iostream>
 #include <fstream>
 
-// Carrega todos os gêneros na memória, nos vetores 'sigla' e 'nome'
-void carregaGenero(std::string filepath, std::list<std::string> genero[2]);
-void carregaMidia(std::string filepath, std::list<std::string> &nomeMidia, std::list<std::string> &album, std::list<std::string> &anoPublicacao, std::list<std::string> &generoMidia, std::list<int> &codigoMidia, std::list<std::list<int>> &produtorMidia, std::list<int> &duracao, std::list<int> &qntSeasons, std::list<char> &tipoMidia);
+using std::string;
+using std::getline;
+using std::list;
+
+// Carrega todos os gêneros na memória
+void carregaGenero(string filepath, list<string> genero[2]);
+// Carrega todas as mídias na memória
+void carregaMidia(string filepath, list<string> &nomeMidia, list<string> &album, list<string> &anoPublicacao, list<string> &generoMidia, list<int> &codigoMidia, list<list<int>> &produtorMidia, list<int> &duracao, list<int> &qntSeasons, list<char> &tipoMidia);

@@ -60,7 +60,6 @@ int main(int argc, char* argv[]) {
     cout << pathMidias << endl;
     cout << pathGeneros << endl;
 
-    cout << "Lendo arquivo gêneros..." << endl;
 
                     //sigla e nome
     list<string> genero[2], nomeMidia, album, anoPublicacao, generoMidia;
@@ -68,7 +67,10 @@ int main(int argc, char* argv[]) {
     list<char> tipoMidia;
     list<list<int>> produtorMidia;
 
+    cout << "Lendo arquivo gêneros..." << endl;
     carregaGenero(pathGeneros, genero);
+    cout << "Lido!" << endl;
+    cout << "Lendo arquivo mídias..." << endl;
     carregaMidia(pathMidias, nomeMidia, album, anoPublicacao, generoMidia, codigoMidia, produtorMidia, duracao, qntSeasons, tipoMidia);
 
     for(int i = 0; i < 2; i++){

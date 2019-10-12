@@ -1,7 +1,7 @@
 #include "file.hpp"
 
 // Carrega todos os gêneros na memória, nos vetores 'sigla' e 'nome'
-void carregaGenero(std::string filepath, std::list<std::string> genero[2]) {
+void carregaGenero(string filepath, list<string> genero[2]) {
     std::ifstream infile;
     infile.open(filepath, std::ios::in);
     if(!infile.is_open()){
@@ -9,18 +9,19 @@ void carregaGenero(std::string filepath, std::list<std::string> genero[2]) {
         exit(1);
     }
 
-    std::string str;
+    string str;
     getline(infile, str);   //ignora a primeira linha
     while(!infile.eof()){
-        std::getline(infile, str, ';');
+        getline(infile, str, ';');
         genero[0].push_back(str);
-        std::getline(infile, str, '\n');
+        getline(infile, str, '\n');
         genero[1].push_back(str);
     }
 
     infile.close();
 }
-void carregaMidia(std::string filepath, std::list<std::string> &nomeMidia, std::list<std::string> &album, std::list<std::string> &anoPublicacao, std::list<std::string> &generoMidia, std::list<int> &codigoMidia, std::list<std::list<int>> &produtorMidia, std::list<int> &duracao, std::list<int> &qntSeasons, std::list<char> &tipoMidia) {
+void carregaMidia(string filepath, list<string> &nomeMidia, list<string> &album, list<string> &anoPublicacao, list<string> &generoMidia, list<int> &codigoMidia, list<list<int>> &produtorMidia, list<int> &duracao, list<int> &qntSeasons, list<char> &tipoMidia) {
+    std::cout << "Chegou aqui porra";
     std::ifstream infile;
     infile.open(filepath, std::ios::in);
     if(!infile.is_open()){
@@ -28,40 +29,44 @@ void carregaMidia(std::string filepath, std::list<std::string> &nomeMidia, std::
         exit(1);
     }
 
-    std::string str, str2;
-    std::list<int> produtores;
+    std::cout << "Chegou aqui caralho";
+
+    string str;
+    list<int> produtores;
     int num;
+    float fl;
     char ch;
     getline(infile, str);   //ignora a primeira linha
     while(!infile.eof()){
-        std::getline(infile, str, ';');
-        std::cout << str;
-        codigoMidia.push_back(stoi(str));
-        std::getline(infile, str, ';');
+        infile >> num;      // lê o primeiro nº o código
+        codigoMidia.push_back(num);
+        infile.ignore();    // ignora o ';'
+        getline(infile, str, ';'); // pega tudo até o próximo ';', o nome
         nomeMidia.push_back(str);
-        std::getline(infile, str, ';');
-        tipoMidia.push_back(str[0]);
-        std::getline(infile, str, ';');
-        std::cout << str;
-
-        while(std::getline(infile, str2, ','))
-        std::cout << str2;
-            produtores.push_back(stoi(str2));
-        produtorMidia.push_back(produtores);
-
-        std::getline(infile, str, ';');
-        std::cout << str;
-        duracao.push_back(stoi(str));
-        std::getline(infile, str, ';'); //TODO: Ajeitar pra pegar só o primeiro
-        generoMidia.push_back(str);
-        std::getline(infile, str, ';');
-        std::cout << str;
-        qntSeasons.push_back(stoi(str));
-        std::getline(infile, str, ';');
+        infile >> ch;       // lê o próximo char, o tipo
+        tipoMidia.push_back(ch);
+        infile.ignore();    // ignora o ';'
+        infile >> num;      // lê o próximo nº, o produtor
+        produtores.push_back(num);
+        infile >> ch;       // lê o próximo char, para testar.
+        while(ch == ','){   // para múltiplos produtores
+            infile >> num;  // lê o próximo nº, o produtor adicional
+            produtores.push_back(num);
+            infile >> ch;   // lê o próximo char, para testar.
+            std::cout << ch;
+        }                   // o próximo ';' já está skipado
+        produtorMidia.push_back(produtores); // adiciona a lista montada na lista de lista
+        infile >> fl;       // lê o próximo nº, duração
+        infile.ignore();    // ignora o ';'
+        getline(infile, str, ';');  // lê tudo até o próximo ';', os gêneros
+        // TODO: Fazer pegar apenas o primeiro gênero.
+        infile >> num;      // lê o próximo nº, a temporada
+        infile.ignore();    // ignora o ';'
+        getline(infile, str, ';');  // lê tudo até o próximo ';', o álbum
         album.push_back(str);
-        std::getline(infile, str, ';');
+        getline(infile, str, ';');  // lê tudo até o próximo ';', o ano de publicação
         anoPublicacao.push_back(str);
-        produtores.clear();
+
     }
 
     infile.close();
