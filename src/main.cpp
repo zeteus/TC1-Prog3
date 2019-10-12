@@ -1,4 +1,5 @@
-#include "../include/defines.h"     //corzinhas bonitas
+#include "defines.h"     //corzinhas bonitas
+#include "file.hpp"     // manipulação de arquivo
 #include "../include/PlataformaDigital.hpp"
 #include <iostream>
 
@@ -51,6 +52,16 @@ int main(int argc, char* argv[]) {
     cout << pathMidias << endl;
     cout << pathGeneros << endl;
 
+    cout << "Lendo arquivo gêneros..." << endl;
 
-    return 69; //lmao
+    std::list<string> nome, sigla;
+
+    carregaGenero(pathGeneros, sigla, nome);
+
+    std::list<string>::iterator it1, it2;
+    for(it1 = sigla.begin(), it2 = nome.begin(); it1 != sigla.end() && it2 != nome.end(); it1++, it2++){
+        cout << (*it1) << '\0' << (*it2)/*  << endl */;
+    }
+
+    return 0;
 }
