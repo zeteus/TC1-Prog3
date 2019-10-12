@@ -54,14 +54,17 @@ int main(int argc, char* argv[]) {
 
     cout << "Lendo arquivo gêneros..." << endl;
 
-    std::list<string> nome, sigla;
+    std::list<string> genero[2], midia[9];
 
-    carregaGenero(pathGeneros, sigla, nome);
+    carregaGenero(pathGeneros, genero);
 
-    std::list<string>::iterator it1, it2;
-    for(it1 = sigla.begin(), it2 = nome.begin(); it1 != sigla.end() && it2 != nome.end(); it1++, it2++){
-        cout << (*it1) << '\0' << (*it2)/*  << endl */;
+    std::list<string>::iterator it;
+    for(it = genero->begin(); it != genero->end(); it++){
+        cout << (*it)[0] << ';' << (*it)[1] << endl;
     }
+
+    for(int i = 0; i < 2; i++)
+        genero[i].clear();
 
     return 0;
 }
