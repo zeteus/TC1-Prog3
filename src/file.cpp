@@ -20,8 +20,7 @@ void carregaGenero(std::string filepath, std::list<std::string> genero[2]) {
 
     infile.close();
 }
-
-void carregaMidia(std::string filepath, std::list<std::string> &codigoMidia, std::list<std::string> &nomeMidia, std::list<std::string> &tipoMidia, std::list<std::string> &produtores, std::list<std::string> &duracao, std::list<std::string> &genero, std::list<std::string> &season, std::list<std::string> &album, std::list<std::string> &publicacao) {
+void carregaMidia(std::string filepath, std::list<std::string> &nomeMidia, std::list<std::string> &album, std::list<std::string> &anoPublicacao, std::list<std::string> &generoMidia, std::list<int> &codigoMidia, std::list<std::list<int>> &produtorMidia, std::list<int> &duracao, std::list<int> &qntSeasons, std::list<char> &tipoMidia) {
     std::ifstream infile;
     infile.open(filepath, std::ios::in);
     if(!infile.is_open()){
@@ -29,10 +28,40 @@ void carregaMidia(std::string filepath, std::list<std::string> &codigoMidia, std
         exit(1);
     }
 
-    std::string str;
+    std::string str, str2;
+    std::list<int> produtores;
+    int num;
+    char ch;
     getline(infile, str);   //ignora a primeira linha
     while(!infile.eof()){
+        std::getline(infile, str, ';');
+        std::cout << str;
+        codigoMidia.push_back(stoi(str));
+        std::getline(infile, str, ';');
+        nomeMidia.push_back(str);
+        std::getline(infile, str, ';');
+        tipoMidia.push_back(str[0]);
+        std::getline(infile, str, ';');
+        std::cout << str;
 
+        while(std::getline(infile, str2, ','))
+        std::cout << str2;
+            produtores.push_back(stoi(str2));
+        produtorMidia.push_back(produtores);
+
+        std::getline(infile, str, ';');
+        std::cout << str;
+        duracao.push_back(stoi(str));
+        std::getline(infile, str, ';'); //TODO: Ajeitar pra pegar só o primeiro
+        generoMidia.push_back(str);
+        std::getline(infile, str, ';');
+        std::cout << str;
+        qntSeasons.push_back(stoi(str));
+        std::getline(infile, str, ';');
+        album.push_back(str);
+        std::getline(infile, str, ';');
+        anoPublicacao.push_back(str);
+        produtores.clear();
     }
 
     infile.close();

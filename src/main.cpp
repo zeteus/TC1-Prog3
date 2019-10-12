@@ -7,6 +7,14 @@ using std::cerr;
 using std::cout;
 using std::endl;
 using std::string;
+using std::list;
+
+template <typename typeA>
+void printList(list<typeA> a) {
+    typename list<typeA>::iterator it;
+    for(it = a.begin(); it != a.end(); it++)
+        cout << *it << endl;
+}
 
 int main(int argc, char* argv[]) {
     if(argc != 9){
@@ -54,14 +62,20 @@ int main(int argc, char* argv[]) {
 
     cout << "Lendo arquivo gêneros..." << endl;
 
-    std::list<string> genero[2], midia[9];
+                    //sigla e nome
+    list<string> genero[2], nomeMidia, album, anoPublicacao, generoMidia;
+    list<int> codigoMidia, duracao, qntSeasons;
+    list<char> tipoMidia;
+    list<list<int>> produtorMidia;
 
     carregaGenero(pathGeneros, genero);
+    carregaMidia(pathMidias, nomeMidia, album, anoPublicacao, generoMidia, codigoMidia, produtorMidia, duracao, qntSeasons, tipoMidia);
 
-    std::list<string>::iterator it;
-    for(it = genero->begin(); it != genero->end(); it++){
-        cout << (*it)[0] << ';' << (*it)[1] << endl;
+    for(int i = 0; i < 2; i++){
+        printList(genero[i]);
+        cout << endl;
     }
+
 
     for(int i = 0; i < 2; i++)
         genero[i].clear();
