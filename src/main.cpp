@@ -71,13 +71,13 @@ int main(int argc, char* argv[]) {
     carregaGenero(pathGeneros, genero);
     cout << "Lido!" << endl;
     cout << "Lendo arquivo mídias..." << endl;
-    cout << "Chegou aqui desgraça" << endl;
+        cout << "Chegou aqui desgraça" << endl;
     carregaMidia(pathMidias, nomeMidia, album, anoPublicacao, generoMidia, codigoMidia, produtorMidia, duracao, qntSeasons, tipoMidia);
 
-    for(int i = 0; i < 2; i++){
-        printList(genero[i]);
-        cout << endl;
-    }
+    // for(int i = 0; i < 2; i++){
+    //     printList(genero[i]);
+    //     cout << endl;
+    // }
 
 
     for(int i = 0; i < 2; i++)
