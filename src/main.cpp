@@ -67,12 +67,13 @@ int main(int argc, char* argv[]) {
 
     PlataformaDigital plat;
 
-    cout << "Lendo arquivos de entrada..." << endl;
-    plat.loadFileUsuarios(usuario);
+    cout << "Lendo arquivos de entradas..." << endl;
+    // plat.loadFileUsuarios(usuario);
     plat.loadFileGeneros(generos);
-    plat.loadFileMidias(midia);
-    plat.loadFileFavoritos(favoritos);
+    // plat.loadFileMidias(midia);
+    // plat.loadFileFavoritos(favoritos);
 
+    plat.printGeneros();
 
     return 0;
 }

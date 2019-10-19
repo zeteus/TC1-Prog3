@@ -6,7 +6,28 @@ PlataformaDigital::PlataformaDigital(std::string _name) {
     this->setNome(_name);
 }
 // Destructor
-PlataformaDigital::~PlataformaDigital() {}
+PlataformaDigital::~PlataformaDigital() {
+    std::list<Midia::Genero*>::iterator itGeneros;
+    for(itGeneros = this->generos.begin(); itGeneros != this->generos.end(); itGeneros++)
+        delete (*itGeneros);
+    this->generos.clear();
+    std::list<Assinante*>::iterator itAssinantes;
+    for(itAssinantes = this->assinantes.begin(); itAssinantes != this->assinantes.end(); itAssinantes++)
+        delete (*itAssinantes);
+    this->assinantes.clear();
+    std::list<Produtor*>::iterator itProdutores;
+    for(itProdutores = this->produtores.begin(); itProdutores != this->produtores.end(); itProdutores++)
+        delete (*itProdutores);
+    this->produtores.clear();
+    std::list<Album*>::iterator itAlbumsCadastrados;
+    for(itAlbumsCadastrados = this->albumsCadastrados.begin(); itAlbumsCadastrados != this->albumsCadastrados.end(); itAlbumsCadastrados++)
+        delete (*itAlbumsCadastrados);
+    this->albumsCadastrados.clear();
+    std::list<Midia*>::iterator itProdutosRegistrados;
+    for(itProdutosRegistrados = this->produtosRegistrados.begin(); itProdutosRegistrados != this->produtosRegistrados.end(); itProdutosRegistrados++)
+        delete (*itProdutosRegistrados);
+    this->produtosRegistrados.clear();
+}
 
 // Functions
 void PlataformaDigital::printProdutos(std::string _genre) {
@@ -45,13 +66,42 @@ void PlataformaDigital::addAlbum(Album *album) {
     this->albumsCadastrados.push_back(album);
 }
 
-void PlataformaDigital::addGenero(Midia::Genero *_genre) {
-    this->generos.push_back(_genre);
+void PlataformaDigital::printGeneros() {
+    std::list<Midia::Genero*>::iterator it;
+    for(it = this->generos.begin(); it != this->generos.end(); it++)
+        std::cout << (*it)->getNome() << ';' << (*it)->getSigla() << std::endl;
 }
 
 // File
-void PlataformaDigital::loadFileUsuarios(std::ifstream &infile) {}
-void PlataformaDigital::loadFileGeneros(std::ifstream &infile) {}
+void PlataformaDigital::loadFileUsuarios(std::ifstream &infile) {
+
+}
+void PlataformaDigital::loadFileGeneros(std::ifstream &infile) {
+    if(!infile.is_open()) {
+        std::cerr << "Erro ao abrir o arquivo de genero! Saindo do programa..." << std::endl;
+        exit(1);
+    }
+
+    std::string sigla;
+    std::string nome;
+    std::string str;
+    std::stringstream ss;
+    std::getline(infile, sigla);
+    while(!infile.eof()) {
+        getline(infile, str);
+        if(str.empty()){
+            std::cout << "Jordana" << std::endl;
+            break;
+        }
+        std::cout << "Berilhes";
+        ss = std::stringstream(str);
+        getline(ss, sigla, ';');
+        getline(ss, nome);
+        this->generos.push_back(new Midia::Genero(nome, sigla));
+        
+    }
+}
+
 void PlataformaDigital::loadFileMidias(std::ifstream &infile) {
     if(!infile.is_open()) {
         std::cerr << "Erro ao abrir o arquivo de midias! Saindo do programa..." << std::endl;
@@ -69,6 +119,7 @@ void PlataformaDigital::loadFileMidias(std::ifstream &infile) {
     float duracao;
     size_t pos = -1;
     while(!infile.eof()) {
+        try {
         getline(infile, str);
         if(str.compare("\n"))
             break;
@@ -133,9 +184,18 @@ void PlataformaDigital::loadFileMidias(std::ifstream &infile) {
         getline(ss, str, '\n');
         ano = stoi(str);
             std::cout << "Ano: " << str << std::endl;
-        std::cout << "--------------------------" << std::endl << std::endl;
+            std::cout << "--------------------------" << std::endl << std::endl;
+
+        Midia::Genero *cGenero = new Midia::Genero(gen, gen);
+        switch(type)
+            case 'M':
+                Midia *cMidia = new Musica(nome, cGenero, duracao, ano);
+
 
         codProdutores.clear(); // reseta a lista de produtores pra ser usada novamente
+        } catch(std::invalid_argument) {
+            std::cerr << _BOLDRED << "Alguma entrada no arquivo de mídia parece estranha! Linha de código de mídia " << cod << "ou a próxima." << _RESET << std::endl;
+        }
     }
 }
 

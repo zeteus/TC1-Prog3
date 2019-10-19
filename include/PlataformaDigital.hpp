@@ -47,6 +47,7 @@ public:
     // Functions
     void printProdutos(std::string _genre);
     void printAssinantes();
+    void printGeneros();
     void addAssinante(Assinante* _subscriber);
     void removeAssinante(Assinante* _subscriber);
     void addProduto(Midia* _newProduct, std::list<Produtor*> _producers);
@@ -54,8 +55,6 @@ public:
     void exportLibrary();
     void generateReports();
 
-    // Manipulação das estruturas de dados
-    void addGenero(Midia::Genero *_genre);
 
     // Arquivo
     void printarNoArquivo(std::ofstream &_outfile);

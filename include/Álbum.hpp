@@ -4,7 +4,9 @@
 #include <fstream>
 #include <string>
 #include <list>
+#include <exception>
 
+#include "defines.h"
 #include "Música.hpp"
 
 class Musica;       // Fwd declaration
