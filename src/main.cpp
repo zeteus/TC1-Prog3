@@ -70,10 +70,11 @@ int main(int argc, char* argv[]) {
     cout << "Lendo arquivos de entradas..." << endl;
     // plat.loadFileUsuarios(usuario);
     plat.loadFileGeneros(generos);
-    // plat.loadFileMidias(midia);
+    plat.loadFileMidias(midia);
     // plat.loadFileFavoritos(favoritos);
 
     plat.printGeneros();
+    plat.printProdutos("abc");
 
     return 0;
 }

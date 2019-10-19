@@ -30,9 +30,9 @@ PlataformaDigital::~PlataformaDigital() {
 }
 
 // Functions
-void PlataformaDigital::printProdutos(std::string _genre) {
+void PlataformaDigital::printProdutos(std::string _genre) { //TODO: ignorando o gênero por enquanto
     std::list<Midia*>::iterator it;
-    for(it = this->produtosRegistrados.begin(); it != this->produtosRegistrados.end(); it++){
+    for(it = this->getProdutosRegistrados().begin(); it != this->getProdutosRegistrados().end(); it++){
         (*it)->printInfoProduto();
     }
 }
@@ -86,14 +86,14 @@ void PlataformaDigital::loadFileGeneros(std::ifstream &infile) {
     std::string nome;
     std::string str;
     std::stringstream ss;
-    std::getline(infile, sigla);
+    infile.ignore(5000, '\n');   //ignora a primeira linha
     while(!infile.eof()) {
         getline(infile, str);
         if(str.empty()){
-            std::cout << "Jordana" << std::endl;
+                // std::cout << "Jordana" << std::endl;
             break;
         }
-        std::cout << "Berilhes";
+            // std::cout << "Berilhes";
         ss = std::stringstream(str);
         getline(ss, sigla, ';');
         getline(ss, nome);
@@ -129,13 +129,13 @@ void PlataformaDigital::loadFileMidias(std::ifstream &infile) {
         cod = std::stoi(str);
             std::cout << "Codigo: " << cod << std::endl;
         getline(ss, nome, ';');
-            std::cout << "Nome: " << nome << std::endl;
+            // std::cout << "Nome: " << nome << std::endl;
         getline(ss, str, ';');
             // std::cout << str << std::endl;
         type = str.at(0);
-            std::cout << "Tipo: " << type << std::endl;
+            // std::cout << "Tipo: " << type << std::endl;
         getline(ss, str, ';');
-            std::cout << "Prod (antes de separar): " << str << std::endl;
+            // std::cout << "Prod (antes de separar): " << str << std::endl;
         ss2 = std::stringstream(str, std::ios::in);
         while(ss2 >> str) {
             while ((pos = str.rfind(',')) != std::string::npos) {   //acha as vírgulas
@@ -143,10 +143,10 @@ void PlataformaDigital::loadFileMidias(std::ifstream &infile) {
             }
             codProdutores.push_back(stoi(str));
         }
-            std::cout << "Produtores: ";
+            // std::cout << "Produtores: ";
             std::list<int>::iterator it;
             for(it = codProdutores.begin(); it != codProdutores.end(); it++) {
-                std::cout << *it << std::endl;
+                // std::cout << *it << std::endl;
             }
         getline(ss, str, ';');
             // std::cout << str << std::endl;
@@ -155,42 +155,68 @@ void PlataformaDigital::loadFileMidias(std::ifstream &infile) {
         if(pos != std::string::npos)
             str.replace(pos, 1, 1, '.');
         duracao = std::stof(str);
-            std::cout << "Duração: " << duracao << std::endl;
+            // std::cout << "Duração: " << duracao << std::endl;
         getline(ss, str, ';');
-            std::cout << "Gênero (antes de separar): " << str << std::endl;
+            // std::cout << "Gênero (antes de separar): " << str << std::endl;
         if((pos = str.find(',')) != std::string::npos)
             str.erase(pos, std::string::npos);
         gen = str;
-            std::cout << "Gênero: " << gen << std::endl;
+            // std::cout << "Gênero: " << gen << std::endl;
         getline(ss, str, ';');
-            std::cout << "Temporadas str: " << str << std::endl;
+            // std::cout << "Temporadas str: " << str << std::endl;
         if(!str.empty())
             temp = stoi(str);
         else
             temp = 0;
-        std::cout << "Temporadas: " << temp << std::endl;
+            // std::cout << "Temporadas: " << temp << std::endl;
         getline(ss, nomeAlbum, ';');
-            std::cout << "Album str: " << nomeAlbum << std::endl;
+            // std::cout << "Album str: " << nomeAlbum << std::endl;
         if(nomeAlbum.empty())
             nomeAlbum = "\0";
-        std::cout << "Album: " << nomeAlbum << std::endl;
+        // std::cout << "Album: " << nomeAlbum << std::endl;
         getline(ss, str, ';');
-            std::cout << "codAlbum str: " << str << std::endl;
+            // std::cout << "codAlbum str: " << str << std::endl;
         if(!str.empty())
             codAlbum = stoi(str);
         else
             codAlbum = 0;
-            std::cout << "codAlbum: " << codAlbum << std::endl;
+            // std::cout << "codAlbum: " << codAlbum << std::endl;
         getline(ss, str, '\n');
         ano = stoi(str);
-            std::cout << "Ano: " << str << std::endl;
-            std::cout << "--------------------------" << std::endl << std::endl;
+            // std::cout << "Ano: " << str << std::endl;
+            // std::cout << "--------------------------" << std::endl << std::endl;
 
-        Midia::Genero *cGenero = new Midia::Genero(gen, gen);
-        switch(type)
+        std::list<Midia::Genero*>::iterator itGeneros;
+        for(itGeneros = this->generos.begin(); itGeneros != this->generos.end(); itGeneros++) {
+            if((*itGeneros)->getNome().compare(gen))
+            std::cout << "Genero já existe" << std::endl;
+            break;
+        }
+        Midia::Genero *cGenero;
+        if(itGeneros != this->generos.end())
+            cGenero = new Midia::Genero(gen, gen);
+        else cGenero = *itGeneros;
+
+        Midia *cMidia;
+        switch(type) {
             case 'M':
-                Midia *cMidia = new Musica(nome, cGenero, duracao, ano);
+                cMidia = new Musica(nome, cGenero, duracao, ano);
+                break;
+            case 'P':
+                cMidia = new Podcast(nome, cGenero, temp);
+                break;
+            default:
+                std::cerr << _BOLDRED << "Algo de errado ao criar as mídias. Cheque o arquivo de entrada." << _RESET << std::endl << "A que causou problema foi: " << std::endl << "Cód " << cod << " Nome " << nome << " Gen " << gen << std::endl;
+        }
 
+
+        std::list<Produtor*>::iterator itProdutorPlat;
+        std::list<int>::iterator itProdutorInt;
+        for(itProdutorPlat = this->produtores.begin(); itProdutorPlat != this->produtores.end(); itProdutorPlat++) {
+// TODO: criar os produtores ou sei lá oq
+        }
+
+        this->addProduto(cMidia,);
 
         codProdutores.clear(); // reseta a lista de produtores pra ser usada novamente
         } catch(std::invalid_argument) {
