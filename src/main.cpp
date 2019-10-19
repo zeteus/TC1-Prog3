@@ -8,6 +8,7 @@ using std::cout;
 using std::endl;
 using std::string;
 using std::list;
+using std::ifstream;
 
 template <typename typeA>
 void printList(list<typeA> a) {
@@ -55,33 +56,23 @@ int main(int argc, char* argv[]) {
         }
     }
 
-    cout << pathUsuario << endl;
-    cout << pathFavoritos << endl;
-    cout << pathMidias << endl;
-    cout << pathGeneros << endl;
+    ifstream usuario;
+    usuario.open(pathUsuario, std::ios::in);
+    ifstream generos;
+    generos.open(pathGeneros, std::ios::in);
+    ifstream midia;
+    midia.open(pathMidias, std::ios::in);
+    ifstream favoritos;
+    favoritos.open(pathFavoritos, std::ios::in);
 
+    PlataformaDigital plat;
 
-                    //sigla e nome
-    list<string> genero[2], nomeMidia, album, anoPublicacao, generoMidia;
-    list<int> codigoMidia, duracao, qntSeasons;
-    list<char> tipoMidia;
-    list<list<int>> produtorMidia;
+    cout << "Lendo arquivos de entrada..." << endl;
+    plat.loadFileUsuarios(usuario);
+    plat.loadFileGeneros(generos);
+    plat.loadFileMidias(midia);
+    plat.loadFileFavoritos(favoritos);
 
-    cout << "Lendo arquivo gêneros..." << endl;
-    carregaGenero(pathGeneros, genero);
-    cout << "Lido!" << endl;
-    cout << "Lendo arquivo mídias..." << endl;
-        cout << "Chegou aqui desgraça" << endl;
-    carregaMidia(pathMidias, nomeMidia, album, anoPublicacao, generoMidia, codigoMidia, produtorMidia, duracao, qntSeasons, tipoMidia);
-
-    // for(int i = 0; i < 2; i++){
-    //     printList(genero[i]);
-    //     cout << endl;
-    // }
-
-
-    for(int i = 0; i < 2; i++)
-        genero[i].clear();
 
     return 0;
 }
