@@ -25,4 +25,5 @@ void Musica::printInfoProduto() {
     std::cout << "Duração: " << this->getDuracao() << std::endl;
     std::cout << "Ano de Lançamento: " << this->getAnoLancamento() << std::endl;
 }
+
 void Musica::printarNoArquivo(std::ofstream &_outfile) {}

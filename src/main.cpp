@@ -66,15 +66,18 @@ int main(int argc, char* argv[]) {
     favoritos.open(pathFavoritos, std::ios::in);
 
     PlataformaDigital plat;
-
+    PlataformaDigital platTest = PlataformaDigital("oi");
+    
     cout << "Lendo arquivos de entradas..." << endl;
     // plat.loadFileUsuarios(usuario);
     plat.loadFileGeneros(generos);
     plat.loadFileMidias(midia);
     // plat.loadFileFavoritos(favoritos);
 
-    plat.printGeneros();
+    // plat.printGeneros();
     plat.printProdutos("abc");
+
+    platTest.printProdutos("abc");
 
     return 0;
 }

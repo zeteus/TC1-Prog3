@@ -216,9 +216,9 @@ void PlataformaDigital::loadFileMidias(std::ifstream &infile) {
 // TODO: criar os produtores ou sei lá oq
         }
 
-        this->addProduto(cMidia,);
+        // this->addProduto(cMidia,);
 
-        codProdutores.clear(); // reseta a lista de produtores pra ser usada novamente
+        // codProdutores.clear(); // reseta a lista de produtores pra ser usada novamente
         } catch(std::invalid_argument) {
             std::cerr << _BOLDRED << "Alguma entrada no arquivo de mídia parece estranha! Linha de código de mídia " << cod << "ou a próxima." << _RESET << std::endl;
         }
