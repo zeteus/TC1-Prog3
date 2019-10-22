@@ -4,45 +4,45 @@
 #include <fstream>
 #include <string>
 #include <list>
+#include <exception>
 
-#include "Artista.hpp"
+#include "defines.h"
 #include "Música.hpp"
 
-class Musica;
-class Artista;  // forward declarations
+class Musica;       // Fwd declaration
 
 class Album {
 
 private:
     // Attributes
     std::string nome;
+    int codigo;
     int duracao;
     int anoLancamento;
     int quantidadeMusicas;
 
-    // Relations
-    Artista* artista;
+    // Relation
     std::list<Musica*> musics;
 
     // Setters
-    void setArtista(Artista* _artista);
     void setDuracao(int _duration);
     void setAnoLancamento(int _launchYear);
     void setQuantidadeMusicas(int _musicAmount);
+    void setCodigo(int _cod);
     void setNome(std::string _name);
 
 public:    
     // Constructors
-    Album(Artista* _artist, int _duration, int _yearLaunch, int _musicAmount, std::string _name);
+    Album(std::string nome, int codigo, int duracao, int ano, int qtd);
     Album();
     // Destructor
     ~Album();
 
     // Getters
-    Artista* getArtista();
     int getDuracao();
     int getAnoLancamento();
     int getQuantidadeMusicas();
+    int getCodigo();
     std::string getNome();
 
     // Functions

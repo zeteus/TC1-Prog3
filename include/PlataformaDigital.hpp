@@ -1,6 +1,7 @@
 #pragma once
 
 #include <iostream>
+#include <sstream>
 #include <list>
 
 #include "Artista.hpp"
@@ -24,6 +25,7 @@ private:
     std::list<Midia*>           produtosRegistrados;
     std::list<Produtor*>        produtores;
     std::list<Midia::Genero*>   generos;
+    std::list<Album*>           albumsCadastrados;
 
 public:
     // Constructors
@@ -40,20 +42,24 @@ public:
     std::list<Midia*>           getProdutosRegistrados();
     std::list<Produtor*>        getProdutores();
     std::list<Midia::Genero*>   getGeneros();
+    std::list<Album*>           getAlbumsCadastrados();
 
     // Functions
     void printProdutos(std::string _genre);
     void printAssinantes();
+    void printGeneros();
     void addAssinante(Assinante* _subscriber);
     void removeAssinante(Assinante* _subscriber);
     void addProduto(Midia* _newProduct, std::list<Produtor*> _producers);
+    void addAlbum(Album *album);
     void exportLibrary();
     void generateReports();
 
-    // Manipulação das estruturas de dados
-    void addGenero(Midia::Genero _genre);
 
     // Arquivo
     void printarNoArquivo(std::ofstream &_outfile);
-    void loadFile(std::ifstream &_infile);
+    void loadFileUsuarios(std::ifstream &_infile);
+    void loadFileGeneros(std::ifstream &_infile);
+    void loadFileMidias(std::ifstream &_infile);
+    void loadFileFavoritos(std::ifstream &_infile);
 };
