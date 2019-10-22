@@ -22,6 +22,7 @@ class Midia {
             // Setters
             void setNome(std::string name);
             void setSigla(std::string Sigla);
+
         public:
             // Constructors
             Genero();
@@ -39,23 +40,23 @@ class Midia {
     };
 
     protected:
-    // Attributes
-    std::string nome;
-    int codigo;
-    int duracao;
-    int anoLancamento;
+        // Attributes
+        std::string nome;
+        float   duracao;
+        int     codigo;
+        int     anoLancamento;
 
-    // Relations
-    std::list<Assinante*> assinantes;
-    Midia::Genero* genero;
+        // Relations
+        std::list<Assinante*>   assinantes;
+        Midia::Genero*          genero;
 
-    // Setters
-    void setNome(std::string _name);
-    void setCodigo(int _code);
-    void setDuracao(int _duracao);
-    void setAnoLancamento(int _launchYear);
-    void setGenero(Midia::Genero *genre);
-    static void setQtdProdutos(int qnt);
+        // Setters
+        void setNome(std::string _name);
+        void setCodigo(int _code);
+        void setDuracao(float _duracao);
+        void setAnoLancamento(int _launchYear);
+        void setGenero(Midia::Genero *genre);
+        static void setQtdProdutos(int qnt);
 
 public:
     // Attribute
@@ -67,14 +68,13 @@ public:
     // Destructor
     ~Midia();
 
-
     // Getters
-    std::string getNome();
-    int getCodigo();
-    int getDuracao();
-    int getAnoLancamento();
-    Midia::Genero* getGenero();
-    int getQtdProdutos();
+    Midia::Genero*  getGenero();
+    std::string     getNome();
+    float   getDuracao();
+    int     getCodigo();
+    int     getAnoLancamento();
+    int     getQtdProdutos();
 
     // Functions, virtual evita ser chamado pelos herdeiros
     void addAssinante(Assinante *subscriber);

@@ -28,7 +28,7 @@ void Midia::printarNoArquivo(std::ofstream &_outfile) {}
 // Setters
 void Midia::setNome(std::string name) {this->nome = name;}
 void Midia::setCodigo(int _code) {this->codigo = _code;}
-void Midia::setDuracao(int _duration) {this->duracao = _duration;}
+void Midia::setDuracao(float _duration) {this->duracao = _duration;}
 void Midia::setAnoLancamento(int _launchYr) {this->anoLancamento = _launchYr;}
 void Midia::setGenero(Midia::Genero *genero) {this->genero = genero;}
 void Midia::setQtdProdutos(int qnt) {Midia::qtdProdutos = qnt;}
@@ -36,7 +36,7 @@ void Midia::setQtdProdutos(int qnt) {Midia::qtdProdutos = qnt;}
 // Getters
 std::string Midia::getNome() {return this->nome;}
 int Midia::getCodigo() {return this->codigo;}
-int Midia::getDuracao() {return this->duracao;}
+float Midia::getDuracao() {return this->duracao;}
 int Midia::getAnoLancamento() {return this->anoLancamento;}
 Midia::Genero* Midia::getGenero() {return this->genero;}
 int Midia::getQtdProdutos() {return Midia::qtdProdutos;}

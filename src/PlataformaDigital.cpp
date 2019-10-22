@@ -31,10 +31,19 @@ PlataformaDigital::~PlataformaDigital() {
 
 // Functions
 void PlataformaDigital::printProdutos(std::string _genre) { //TODO: ignorando o gênero por enquanto
-    std::list<Midia*>::iterator it;
-    for(it = this->getProdutosRegistrados().begin(); it != this->getProdutosRegistrados().end(); it++){
-        (*it)->printInfoProduto();
+    for(Midia *it : this->getProdutosRegistrados()){
+        std::cout << "CARALHO " << std::endl;
+        it->printInfoProduto();
     }
+}
+
+void PlataformaDigital::addProduto(Midia* _newProduct, std::list<Produtor*> _producers) {
+    this->produtosRegistrados.push_back(_newProduct);
+    std::list<Produtor*>::iterator it;
+    for(it = _producers.begin(); it != _producers.end(); it++){
+        this->produtores.push_back(*it);
+    }
+    std::cout << "PORRA " << std::endl;
 }
 
 void PlataformaDigital::printAssinantes() {
@@ -52,14 +61,6 @@ void PlataformaDigital::addAssinante(Assinante *_subscriber) {
 void PlataformaDigital::removeAssinante(Assinante *_subscriber) {
     this->assinantes.remove(_subscriber);
     delete _subscriber;
-}
-
-void PlataformaDigital::addProduto(Midia* _newProduct, std::list<Produtor*> _producers) {
-    this->produtosRegistrados.push_back(_newProduct);
-    std::list<Produtor*>::iterator it;
-    for(it = this->produtores.begin(); it != this->produtores.end(); it++){
-        this->produtores.push_back(*it);
-    }
 }
 
 void PlataformaDigital::addAlbum(Album *album) {

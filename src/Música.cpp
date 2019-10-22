@@ -2,7 +2,7 @@
 
 // Constructors
 Musica::Musica() {}
-Musica::Musica(std::string name, Genero* genre, int duration, int yr) : Midia(name, rand(), genre) {
+Musica::Musica(std::string name, Genero* genre, float duration, int yr) : Midia(name, rand(), genre) {
     this->setDuracao(duration);
     this->setAnoLancamento(yr);
 }
@@ -17,7 +17,7 @@ void Musica::addAlbum(Album *album) {
     this->albums.push_back(album);
 }
 
-// Overloading , TODO:
+// Overloading
 void Musica::printInfoProduto() {
     std::cout << "Nome: " << this->getNome() << std::endl;
     std::cout << "Codigo: " << this->getCodigo() << std::endl;

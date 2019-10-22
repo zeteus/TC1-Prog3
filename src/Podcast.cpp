@@ -21,11 +21,11 @@ void Podcast::printarNoArquivo(std::ofstream &_outfile) {
 
 }
 
+// Overloading
 void Podcast::printInfoProduto() {
     std::cout << "Nome: " << this->getNome() << std::endl;
     std::cout << "Codigo: " << this->getCodigo() << std::endl;
     std::cout << "Genero: " <<  this->getGenero()->getNome() << std::endl;
-    std::cout << "Duração: " << this->getDuracao() << std::endl;
     std::cout << "Ano de Lançamento: " << this->getAnoLancamento() << std::endl;
     std::cout << "Seasons: " << this->getQtdTemporadas() << std::endl;
 }
