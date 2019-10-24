@@ -3,6 +3,7 @@
 #include <iostream>
 #include <sstream>
 #include <list>
+#include <set>
 
 #include "Artista.hpp"
 #include "Álbum.hpp"
@@ -21,11 +22,11 @@ private:
     std::string nome;
 
     // Relations
-    std::list<Assinante*>       assinantes;
-    std::list<Midia*>           produtosRegistrados;
-    std::list<Produtor*>        produtores;
-    std::list<Midia::Genero*>   generos;
-    std::list<Album*>           albumsCadastrados;
+    std::set<Assinante*>       assinantes;
+    std::set<Midia*>           produtosRegistrados;
+    std::set<Produtor*>        produtores;
+    std::set<Midia::Genero*>   generos;
+    std::set<Album*>           albumsCadastrados;
 
 public:
     // Constructors
@@ -38,19 +39,20 @@ public:
     void setNome(std::string _nome);
     //Getters
     std::string getNome();
-    std::list<Assinante*>       getAssinantes();
-    std::list<Midia*>           getProdutosRegistrados();
-    std::list<Produtor*>        getProdutores();
-    std::list<Midia::Genero*>   getGeneros();
-    std::list<Album*>           getAlbumsCadastrados();
+    std::set<Assinante*>       getAssinantes();
+    std::set<Midia*>           getProdutosRegistrados();
+    std::set<Produtor*>        getProdutores();
+    std::set<Midia::Genero*>   getGeneros();
+    std::set<Album*>           getAlbumsCadastrados();
 
     // Functions
     void printProdutos(std::string _genre);
+    void printProdutores();
     void printAssinantes();
     void printGeneros();
     void addAssinante(Assinante* _subscriber);
     void removeAssinante(Assinante* _subscriber);
-    void addProduto(Midia* _newProduct, std::list<Produtor*> _producers);
+    void addProduto(Midia* _newProduct, std::set<Produtor*> _producers);
     void addAlbum(Album *album);
     void exportLibrary();
     void generateReports();

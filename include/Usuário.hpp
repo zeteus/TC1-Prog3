@@ -15,12 +15,15 @@ protected:
     void setNome(std::string _name);
 
 public:
+    Usuario(std::string _come, int _codigo);
+    Usuario();
+    ~Usuario();
+
+    void printInfo();
     // Virtual puta para evitar ser chamado
-    virtual void printarNoArquivo(std::ofstream &outfile) = 0;
+    virtual void printarNoArquivo(std::ofstream &outfile);
 
     // Getters
     std::string getNome();
     int getCodigo();
-};//henrique esteve aqui
-
-// Não tem construtor, jamais será instânciado
+};

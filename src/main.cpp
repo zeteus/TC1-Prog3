@@ -1,5 +1,5 @@
 #include "defines.h"     //corzinhas bonitas
-#include "file.hpp"     // manipulação de arquivo
+// #include "file.hpp"     // manipulação de arquivo
 #include "../include/PlataformaDigital.hpp"
 #include <iostream>
 
@@ -66,40 +66,45 @@ int main(int argc, char* argv[]) {
     favoritos.open(pathFavoritos, std::ios::in);
 
     // criando os produtos para poder testar
-    PlataformaDigital plat = PlataformaDigital("Contrutor sem parametro");;
-    Midia::Genero *genre = new Midia::Genero("Modao", "MD");
-    Musica *music = new Musica("Menino da Porteira", genre, 2.45, 2001);
-    Podcast *pod = new Podcast("Critical Role", genre, 3);
+    PlataformaDigital plat = PlataformaDigital("Contrutor sem parametro");
+    // Midia::Genero *genre = new Midia::Genero("Modao", "MD");
+    // Musica *music = new Musica("Menino da Porteira", genre, 2.45, 2001);
+    // Podcast *pod = new Podcast("Critical Role", genre, 3);
 
     // cout << "MUSICA:" << endl;
     // music->printInfoProduto();
     // cout << "PODCAST:" << endl;
     // pod->printInfoProduto();
 
-    genre->addMidia(music);
-    genre->addMidia(pod);
+    // genre->addMidia(music);
+    // genre->addMidia(pod);
     
     // cout << "Lendo arquivos de entradas..." << endl;
-    // plat.loadFileUsuarios(usuario);
+    plat.loadFileUsuarios(usuario);
     // plat.loadFileGeneros(generos);
     // plat.loadFileMidias(midia);
     // plat.loadFileFavoritos(favoritos);
 
     // plat.printGeneros();
     
-    Produtor *prod = new Produtor("Sergio Reis", 69);
-    std::list<Produtor*> producers;
-    producers.push_back(prod);
+    // Produtor *prod = new Produtor("Sergio Reis", 69);
+    // std::set<Produtor*> producers;
+    // producers.insert(prod);
 
     // plat.addProduto(pod, producers);
-    plat.addProduto(pod, producers);
-    plat.addProduto(music, producers);
-    plat.printProdutos("abc");
+    // plat.addProduto(pod, producers);
+    // plat.addProduto(music, producers);
+    // plat.printProdutos("abc");
     // plat.printProdutos("abc");
     // platTest.addProduto(pod,producers);
     // platTest.printProdutos("abc");
 
-    delete genre;
+    cout << "Assinantes: " << plat.getAssinantes().size() << std::endl;
+    plat.printAssinantes();
+    cout << "Produtores: " << plat.getProdutores().size() << std::endl;
+    plat.printProdutores();
+
+    // delete genre;
 
     return 0;
 }

@@ -2,14 +2,9 @@
 
 // Constructors
 Produtor::Produtor() {}
-Produtor::Produtor(std::string _name, int  codigo){
-    this->setNome(_name);
-    this->setCodigo(codigo);
-}
+Produtor::Produtor(std::string _come, int  _codigo) : Usuario(_come, _codigo) {}
 // Destructor
-Produtor::~Produtor() {
-    this->produtosDesenvolvidos.clear(); //forma a composição
-}
+Produtor::~Produtor() {}
 
 // Functions
 void Produtor::printarNoArquivo(std::ofstream &outfile) {
@@ -22,10 +17,8 @@ std::list<Midia*> Produtor::getProdutosDesenvolvidos() {
 }
 
 void Produtor::imprimeProdutosDesenvolvidos() {
-    std::list<Midia*>::iterator aux;
-    for(aux = this->produtosDesenvolvidos.begin(); aux != this->produtosDesenvolvidos.end(); aux++){
-        (*aux)->printInfoProduto();
-    }
+    for(Midia *it : this->getProdutosDesenvolvidos())
+        it->printInfoProduto();
 }
 
 void Produtor::addProdutoDesenvolvido(Midia* produtoDesenvolvido) {

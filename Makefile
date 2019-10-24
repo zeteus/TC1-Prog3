@@ -17,9 +17,13 @@ run: all
 	clear
 	./$(BIN)/$(EXECUTABLE) $(EXECARGS)
 
-val: clean all
-	#clear
+val: all
+	clear
 	valgrind ./$(BIN)/$(EXECUTABLE) $(EXECARGS)
+
+valzao: all
+	clear
+	valgrind --leak-check=full --show-leak-kinds=all ./$(BIN)/$(EXECUTABLE) $(EXECARGS)
 
 $(BIN)/$(EXECUTABLE): $(SRC)/*.cpp
 	$(CXX) $(CXX_FLAGS) -I$(INCLUDE) -L$(LIB) $^ -o $@ $(LIBRARIES)

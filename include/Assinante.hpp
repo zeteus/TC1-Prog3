@@ -16,7 +16,6 @@ private:
 
 public:
     // Functions
-    void printAssinante();
     void printFavoritos();
     void inserirFavorito(Midia* favorito);
     void removeFavorito(Midia* favorito);

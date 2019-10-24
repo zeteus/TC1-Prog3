@@ -11,7 +11,6 @@ Midia::Midia(std::string name, int cod, Midia::Genero *genero){
 }
 // Destructor
 Midia::~Midia() {
-    this->genero->~Genero();    // Destroi o genero de dentro, para não perde referência
     this->setQtdProdutos(this->getQtdProdutos() - 1);
 }
 

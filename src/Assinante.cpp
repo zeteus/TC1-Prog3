@@ -2,21 +2,13 @@
 
 // Constructor
 Assinante::Assinante() {}
-Assinante::Assinante(std::string name, int codigo) {
-    this->setNome(name);
-    this->setCodigo(codigo);
-}
+Assinante::Assinante(std::string name, int codigo) : Usuario(name, codigo) {}
 // Destructor
 Assinante::~Assinante() {
 
 }
 
 // Functions
-void Assinante::printAssinante() {
-    std::cout << "Nome: " << this->getNome() << std::endl;
-    std::cout << "Código: " << this->getCodigo() << std::endl;
-}
-
 void Assinante::printFavoritos() {
     std::list<Midia*>::iterator it;
     for(it = this->favoritos.begin(); it != this->favoritos.end(); it++){
