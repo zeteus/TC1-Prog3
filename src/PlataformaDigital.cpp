@@ -31,7 +31,6 @@ PlataformaDigital::~PlataformaDigital() {
 // Functions
 void PlataformaDigital::printProdutos(std::string _genre) { //TODO: ignorando o gênero por enquanto
     for(Midia *it : this->getProdutosRegistrados()){
-        std::cout << "CARALHO " << std::endl;
         it->printInfoProduto();
     }
 }
@@ -40,7 +39,6 @@ void PlataformaDigital::addProduto(Midia* _newProduct, std::set<Produtor*> _prod
     this->produtosRegistrados.insert(_newProduct);
     for(Produtor *it : _producers)
         this->produtores.insert(it);
-    std::cout << "PORRA " << std::endl;
 }
 
 void PlataformaDigital::printAssinantes() {
@@ -153,7 +151,7 @@ void PlataformaDigital::loadFileGeneros(std::ifstream &infile) {
             ss = std::stringstream(str);
             getline(ss, sigla, ';');
             getline(ss, nome);
-            this->getGeneros().insert(new Midia::Genero(nome, sigla));
+            this->generos.insert(new Midia::Genero(nome, sigla));
             
         }
     } catch(std::invalid_argument) {
@@ -168,120 +166,134 @@ void PlataformaDigital::loadFileMidias(std::ifstream &infile) {
         exit(1);
     }
 
-    infile.ignore(5000, '\n');   //ignora a primeira linha
+    // Ignora a primeira linha
+    infile.ignore(5000, '\n');
+
+    // Inicia as strings auxiliares
     std::stringstream ss, ss2;
     std::string str;
 
-    std::string nome, nomeAlbum, gen;
-    int cod, temp, codAlbum, ano;
-    std::list<int> codProdutores;
+    // Inicia as variaveis finais
+    std::string nome;
+    std::string nomeAlbum;
+    std::string gen;
+    int cod;
+    int temp;
+    int codAlbum;
+    int ano;
     char type;
     float duracao;
+    std::set<int> codProdutores;
+    std::list<std::string> listGen;
     size_t pos = -1;
-    while(!infile.eof()) {
+
+    while(getline(infile, str)) {
         try {
-        getline(infile, str);
-        if(str.compare("\n"))
-            break;
-            // std::cout << str << std::endl;
-        ss = std::stringstream(str, std::ios::in);
+        ss = std::stringstream(str);
+
+        // Lê o código
         getline(ss, str, ';');
         cod = std::stoi(str);
-            std::cout << "Codigo: " << cod << std::endl;
+
+        // Lê o nome
         getline(ss, nome, ';');
-            // std::cout << "Nome: " << nome << std::endl;
+
+        // Lê o tipo
         getline(ss, str, ';');
-            // std::cout << str << std::endl;
+        // Seleciona  o primeiro char de 'str'
         type = str.at(0);
-            // std::cout << "Tipo: " << type << std::endl;
+
+        // Cria uma lista de produtores
         getline(ss, str, ';');
-            // std::cout << "Prod (antes de separar): " << str << std::endl;
-        ss2 = std::stringstream(str, std::ios::in);
+        ss2 = std::stringstream(str);
         while(ss2 >> str) {
             while ((pos = str.rfind(',')) != std::string::npos) {   //acha as vírgulas
-                str.erase(pos, 1);  //apaga os caracteres não vírgula, até a vírgula
+                str.erase(pos, 1);  //apaga os caracteres não vírgula, até a última vírgula
             }
-            codProdutores.push_back(stoi(str));
+            codProdutores.insert(stoi(str));
         }
-            // std::cout << "Produtores: ";
-            std::list<int>::iterator it;
-            for(it = codProdutores.begin(); it != codProdutores.end(); it++) {
-                // std::cout << *it << std::endl;
-            }
+
+        // Lê a duração
         getline(ss, str, ';');
-            // std::cout << str << std::endl;
         pos = str.find(',');
-            // std::cout << pos << std::endl;
         if(pos != std::string::npos)
+            // Troca a vírgula por um ponto, para converter para float
             str.replace(pos, 1, 1, '.');
         duracao = std::stof(str);
-            // std::cout << "Duração: " << duracao << std::endl;
+
+        // Cria uma lista de gêneros
         getline(ss, str, ';');
-            // std::cout << "Gênero (antes de separar): " << str << std::endl;
-        if((pos = str.find(',')) != std::string::npos)
-            str.erase(pos, std::string::npos);
-        gen = str;
-            // std::cout << "Gênero: " << gen << std::endl;
+        ss2 = std::stringstream(str);
+        while(ss2 >> str) {
+            while ((pos = str.rfind(',')) != std::string::npos) {   //acha as vírgulas
+                str.erase(pos, 1);  //apaga os caracteres não vírgula, até a última vírgula
+            }
+            listGen.push_back(str);
+        }
+
+        // Lê a temporada
         getline(ss, str, ';');
-            // std::cout << "Temporadas str: " << str << std::endl;
-        if(!str.empty())
-            temp = stoi(str);
-        else
-            temp = 0;
-            // std::cout << "Temporadas: " << temp << std::endl;
+        temp = !str.empty() ? stoi(str) : 0;
+
+        // Lê o Álbum
         getline(ss, nomeAlbum, ';');
-            // std::cout << "Album str: " << nomeAlbum << std::endl;
-        if(nomeAlbum.empty())
-            nomeAlbum = "\0";
-        // std::cout << "Album: " << nomeAlbum << std::endl;
+
+        // Lê o código do Álbum
         getline(ss, str, ';');
-            // std::cout << "codAlbum str: " << str << std::endl;
-        if(!str.empty())
-            codAlbum = stoi(str);
-        else
-            codAlbum = 0;
-            // std::cout << "codAlbum: " << codAlbum << std::endl;
+        codAlbum = !str.empty() ? stoi(str) : 0;
+
+        // Lê o Ano de Publicação
         getline(ss, str, '\n');
         ano = stoi(str);
-            // std::cout << "Ano: " << str << std::endl;
-            // std::cout << "--------------------------" << std::endl << std::endl;
-
-        std::set<Midia::Genero*>::iterator itGeneros;
-        for(itGeneros = this->generos.begin(); itGeneros != this->generos.end(); itGeneros++) {
-            if((*itGeneros)->getNome().compare(gen))
-            std::cout << "Genero já existe" << std::endl;
-            break;
-        }
-        Midia::Genero *cGenero;
-        if(itGeneros != this->generos.end())
-            cGenero = new Midia::Genero(gen, gen);
-        else cGenero = *itGeneros;
-
-        Midia *cMidia;
-        switch(type) {
-            case 'M':
-                cMidia = new Musica(nome, cGenero, duracao, ano);
-                break;
-            case 'P':
-                cMidia = new Podcast(nome, cGenero, temp);
-                break;
-            default:
-                std::cerr << _BOLDRED << "Algo de errado ao criar as mídias. Cheque o arquivo de entrada." << _RESET << std::endl << "A que causou problema foi: " << std::endl << "Cód " << cod << " Nome " << nome << " Gen " << gen << std::endl;
-        }
-
-
-        std::set<Produtor*>::iterator itProdutorPlat;
-        std::list<int>::iterator itProdutorInt;
-        for(itProdutorPlat = this->produtores.begin(); itProdutorPlat != this->produtores.end(); itProdutorPlat++) {
-// TODO: criar os produtores ou sei lá oq
-        }
-
-        // this->addProduto(cMidia,);
-
-        // codProdutores.clear(); // reseta a lista de produtores pra ser usada novamente
+        
         } catch(std::invalid_argument) {
             std::cerr << _BOLDRED << "Alguma entrada no arquivo de mídia parece estranha! Linha de código de mídia " << cod << "ou a anterior." << _RESET << std::endl;
         }
+
+        // Cria uma mídia para ser definida
+        Midia *midia;
+        // Verifica se algun genero da lista existe
+        Midia::Genero *genre = NULL;
+            for(std::string itstr : listGen){
+                for(Midia::Genero *itgen : this->getGeneros())
+                    // Gênero encontrado
+                    if(itgen->getSigla() == itstr){
+                        genre = itgen;
+                        break;
+                    }
+                // Gênero foi encontrado
+                if(genre != NULL) break;
+            }
+            // Genero não existe
+            if(genre == NULL) break;
+
+        // Verifica se algum produtor da lista existe
+        std::set<Produtor*> setProdutores;
+            for(int itProdInt : codProdutores)
+                for(Produtor *itProdPlat : this->getProdutores())
+                    if(itProdPlat->getCodigo() == itProdInt) // Produtor encontrado
+                        setProdutores.insert(itProdPlat);
+
+        switch(type) {
+            case 'P':
+            case 'p':                
+                midia = new Podcast(nome, genre, temp);
+            break;
+            case 'M':
+            case 'm':
+                midia = new Musica(nome, genre, duracao, ano);
+            break;
+        }
+        
+        if(!setProdutores.empty())
+            this->addProduto(midia, setProdutores);
+        else
+            std::cout << "Produtor VAZIO!!!\n";
+        
+
+        codProdutores.clear();
+        setProdutores.clear();
+        listGen.clear();
     }
 }
 

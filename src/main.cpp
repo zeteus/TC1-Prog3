@@ -81,8 +81,8 @@ int main(int argc, char* argv[]) {
     
     // cout << "Lendo arquivos de entradas..." << endl;
     plat.loadFileUsuarios(usuario);
-    // plat.loadFileGeneros(generos);
-    // plat.loadFileMidias(midia);
+    plat.loadFileGeneros(generos);
+    plat.loadFileMidias(midia);
     // plat.loadFileFavoritos(favoritos);
 
     // plat.printGeneros();
@@ -99,10 +99,12 @@ int main(int argc, char* argv[]) {
     // platTest.addProduto(pod,producers);
     // platTest.printProdutos("abc");
 
-    cout << "Assinantes: " << plat.getAssinantes().size() << std::endl;
-    plat.printAssinantes();
-    cout << "Produtores: " << plat.getProdutores().size() << std::endl;
-    plat.printProdutores();
+    // cout << "Assinantes: " << plat.getAssinantes().size() << std::endl;
+    // plat.printAssinantes();
+    // cout << "Produtores: " << plat.getProdutores().size() << std::endl;
+    // plat.printProdutores();
+
+    plat.printProdutos("abc");
 
     // delete genre;
 
