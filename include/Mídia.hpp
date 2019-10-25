@@ -64,7 +64,7 @@ public:
 
     // Constructors
     Midia();
-    Midia(std::string name, int cod, Genero *genre);
+    Midia(std::string name, int cod, Genero *genre, int ano, float duracao);
     // Destructor
     ~Midia();
 

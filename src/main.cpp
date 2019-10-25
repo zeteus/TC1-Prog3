@@ -1,5 +1,4 @@
 #include "defines.h"     //corzinhas bonitas
-// #include "file.hpp"     // manipulação de arquivo
 #include "../include/PlataformaDigital.hpp"
 #include <iostream>
 
@@ -83,7 +82,7 @@ int main(int argc, char* argv[]) {
     plat.loadFileUsuarios(usuario);
     plat.loadFileGeneros(generos);
     plat.loadFileMidias(midia);
-    // plat.loadFileFavoritos(favoritos);
+    plat.loadFileFavoritos(favoritos);
 
     // plat.printGeneros();
     
@@ -104,7 +103,9 @@ int main(int argc, char* argv[]) {
     // cout << "Produtores: " << plat.getProdutores().size() << std::endl;
     // plat.printProdutores();
 
-    plat.printProdutos("abc");
+    // plat.printProdutos();
+    // plat.printProdutores();
+    // plat.printAssinantes();
 
     // delete genre;
 

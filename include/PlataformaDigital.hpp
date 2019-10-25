@@ -46,6 +46,7 @@ public:
     std::set<Album*>           getAlbumsCadastrados();
 
     // Functions
+    void printProdutos();
     void printProdutos(std::string _genre);
     void printProdutores();
     void printAssinantes();

@@ -29,9 +29,15 @@ PlataformaDigital::~PlataformaDigital() {
 }
 
 // Functions
-void PlataformaDigital::printProdutos(std::string _genre) { //TODO: ignorando o gênero por enquanto
-    for(Midia *it : this->getProdutosRegistrados()){
+void PlataformaDigital::printProdutos() {
+    for(Midia *it : this->getProdutosRegistrados())
         it->printInfoProduto();
+}
+
+void PlataformaDigital::printProdutos(std::string _genre) {
+    for(Midia *it : this->getProdutosRegistrados()){
+        if(it->getGenero()->getSigla() == _genre || it->getGenero()->getNome() == _genre)
+            it->printInfoProduto();
     }
 }
 
@@ -46,6 +52,7 @@ void PlataformaDigital::printAssinantes() {
         it->printInfo();
         std::cout << "Favoritos: " << std::endl;
         it->printFavoritos();
+        std::cout << "---------------------" << std::endl;
     }
 }
 
@@ -107,21 +114,18 @@ void PlataformaDigital::loadFileUsuarios(std::ifstream &infile) {
         switch(tipo) {
             case 'U':
             case 'u':
-                // u = new Usuario(nome, codigo);
-                // ele pensa que pode existir, coitado
-                // std::cout << "SORRIZO RONALDO" << std::endl;
+                u = new Assinante(nome, codigo);
+                this->assinantes.insert((Assinante*) u);
             break;
             case 'P':
             case 'p':
-                u = new Produtor(nome, codigo);
+                u = new Podcaster(nome, codigo);
                 this->produtores.insert((Produtor*) u);
-                // std::cout << "DESGRAÇADO" << std::endl;
             break;
             case 'A':
             case 'a':
-                u = new Assinante(nome, codigo);
-                this->assinantes.insert((Assinante*) u);
-                // std::cout << "FILHO DA PUTA" << std::endl;
+                u = new Artista(nome, codigo);
+                this->produtores.insert((Produtor*) u);
             break;
             default:
                 std::cerr << _BOLDRED << "Tipo de usuário inválido! Cheque o primeiro usuário de código " << codigo << "." << std::endl;
@@ -210,7 +214,7 @@ void PlataformaDigital::loadFileMidias(std::ifstream &infile) {
             while ((pos = str.rfind(',')) != std::string::npos) {   //acha as vírgulas
                 str.erase(pos, 1);  //apaga os caracteres não vírgula, até a última vírgula
             }
-            codProdutores.insert(stoi(str));
+            codProdutores.insert(std::stoi(str));
         }
 
         // Lê a duração
@@ -250,9 +254,7 @@ void PlataformaDigital::loadFileMidias(std::ifstream &infile) {
             std::cerr << _BOLDRED << "Alguma entrada no arquivo de mídia parece estranha! Linha de código de mídia " << cod << "ou a anterior." << _RESET << std::endl;
         }
 
-        // Cria uma mídia para ser definida
-        Midia *midia;
-        // Verifica se algun genero da lista existe
+        // Verifica se algum genero da lista existe
         Midia::Genero *genre = NULL;
             for(std::string itstr : listGen){
                 for(Midia::Genero *itgen : this->getGeneros())
@@ -267,29 +269,42 @@ void PlataformaDigital::loadFileMidias(std::ifstream &infile) {
             // Genero não existe
             if(genre == NULL) break;
 
-        // Verifica se algum produtor da lista existe
         std::set<Produtor*> setProdutores;
-            for(int itProdInt : codProdutores)
-                for(Produtor *itProdPlat : this->getProdutores())
-                    if(itProdPlat->getCodigo() == itProdInt) // Produtor encontrado
-                        setProdutores.insert(itProdPlat);
+        Produtor* p = NULL;
+        // Assumindo que todos os produtores da lista são diferentes
+        // (Não há dupla entrada de produtores)
+        // Para cada produtor de entrada...
+        for(int pCod : codProdutores) {
+            // ... percorre os produtores registrados...
+            for(Produtor *produtorPlataforma : this->getProdutores()) {
+                // ...e encontra o de mesmo código
+                if(produtorPlataforma->getCodigo() == pCod)
+                    p = produtorPlataforma;
+            }
+            // Caso não tenha encontrado
+            if(p == NULL)
+                p = new Produtor("Artista desconhecido", pCod);
+            setProdutores.insert(p);
+        }
 
+        Midia *midia;
         switch(type) {
             case 'P':
-            case 'p':                
-                midia = new Podcast(nome, genre, temp);
+            case 'p':
+                midia = new Podcast(nome, cod, genre, temp, ano, duracao);
             break;
             case 'M':
             case 'm':
-                midia = new Musica(nome, genre, duracao, ano);
+                midia = new Musica(nome, cod, genre, duracao, ano, duracao);
             break;
         }
-        
+
         if(!setProdutores.empty())
             this->addProduto(midia, setProdutores);
         else
-            std::cout << "Produtor VAZIO!!!\n";
-        
+            std::cout << _BOLDRED << "Lista de produtores VAZIA!!!" << _RESET << std::endl;
+
+            // std::cout << std::endl;
 
         codProdutores.clear();
         setProdutores.clear();
@@ -297,10 +312,73 @@ void PlataformaDigital::loadFileMidias(std::ifstream &infile) {
     }
 }
 
-void PlataformaDigital::loadFileFavoritos(std::ifstream &infile) {}
+void PlataformaDigital::loadFileFavoritos(std::ifstream &infile) {
+    if(!infile.is_open()) {
+        std::cerr << "Erro ao abrir o arquivo de favoritos! Saindo do programa..." << std::endl;
+        exit(1);
+    }
 
-void PlataformaDigital::exportLibrary()   { /* TODO: */}
-void PlataformaDigital::generateReports() { /* TODO: */}
+
+
+    // Definição de variável
+    std::stringstream ss;
+    std::string str;
+    std::set<int> setFavoritos;
+    int cod;
+    size_t pos = -1;
+
+    getline(infile, str);    // Ignora a primeira linha
+    while(getline(infile, str, '\n')){
+        ss = std::stringstream(str);
+        // Lê o codigo
+        getline(ss, str, ';');
+
+        if(!str.empty())
+            try {
+                cod = std::stoi(str);
+
+            // Se o penúltimo caractere de 'ss' não for ';'
+            // i.e. se a lista de favoritos não for vazia
+            if(ss.str().at(ss.str().size() -2) != ';') {
+                while(getline(ss, str, ','))
+                    if(!str.empty())
+                        setFavoritos.insert(std::stoi(str));
+            } else continue;
+            
+        } catch (const std::invalid_argument& e){
+            std::cerr << _BOLDRED << "Alguma entrada no arquivo de favoritos parece estranha! Argumento de stoi inválido! Cód de entrada: " << cod << " ou a próxima." << _RESET << std::endl;
+            std::cerr << "Erro: " << e.what() << std::endl;
+        }  catch (const std::out_of_range& e){
+            std::cerr << _BOLDRED << "Alguma entrada no arquivo de favoritos parece estranha! Stoi out of range! Cód de entrada: " << cod << " ou a próxima." << _RESET << std::endl;
+            std::cerr << "Erro: " << e.what() << std::endl;
+        }
+        
+
+        // Procurando o assinante
+        Assinante *a = NULL;
+        for(Assinante *Aaux : this->getAssinantes())
+            if(Aaux->getCodigo() == cod)
+                a = Aaux;
+        if(a == NULL)   // Não foi encontrado assinante
+            continue;   // Passa para a próxima linha
+
+        // Procurando as mídias
+        Midia *favmidia = NULL;
+        // Pra cada código em 'setFavoritos'...
+        for(int codMidia : setFavoritos)
+            // ...busca a respectiva mídia...
+            for(Midia *midia : this->getProdutosRegistrados())
+                if(midia->getCodigo() == codMidia)
+                    //  ...e a adiciona no assinante.
+                    a->inserirFavorito(midia);
+        // encontrar o usuário com o código lido e inserir a mídia
+
+        setFavoritos.clear();
+    }
+}
+
+void PlataformaDigital::exportLibrary()   { /* TODO: */ }
+void PlataformaDigital::generateReports() { /* TODO: */ }
 
 // Setters
 void PlataformaDigital::setNome(std::string _name) {this->nome = _name;}

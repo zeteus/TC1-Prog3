@@ -20,7 +20,7 @@ public:
 
     // Constructor
     Podcast();
-    Podcast(std::string name, Genero* genre, int seasonsQnt);
+    Podcast(std::string name, int cod, Genero* genre, int seasonsQnt, int ano, float duracao);
     // Destructor
     ~Podcast();
 

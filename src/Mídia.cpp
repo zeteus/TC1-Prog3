@@ -4,10 +4,12 @@ int Midia::qtdProdutos = 0;      // Iniciando a variável estática ao carregar 
 
 // Constructors
 Midia::Midia() {}
-Midia::Midia(std::string name, int cod, Midia::Genero *genero){
+Midia::Midia(std::string name, int cod, Midia::Genero *genero, int ano, float duracao){
     this->setNome(name);
     this->setCodigo(cod);
     this->setGenero(genero);
+    this->setAnoLancamento(ano);
+    this->setDuracao(duracao);
 }
 // Destructor
 Midia::~Midia() {

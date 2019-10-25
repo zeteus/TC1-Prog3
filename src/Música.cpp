@@ -2,7 +2,7 @@
 
 // Constructors
 Musica::Musica() {}
-Musica::Musica(std::string name, Genero* genre, float duration, int yr) : Midia(name, rand(), genre) {
+Musica::Musica(std::string name, int cod, Genero* genre, float duration, int yr, float duracao) : Midia(name, cod, genre, yr, duracao) {
     this->setDuracao(duration);
     this->setAnoLancamento(yr);
 }

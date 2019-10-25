@@ -10,22 +10,23 @@ Assinante::~Assinante() {
 
 // Functions
 void Assinante::printFavoritos() {
-    std::list<Midia*>::iterator it;
-    for(it = this->favoritos.begin(); it != this->favoritos.end(); it++){
-        (*it)->printInfoProduto();
+    for(Midia *it : this->getFavoritos()){
+        it->printInfoProduto();
+        std::cout << '-' << std::endl;
     }
 }
 
 void Assinante::inserirFavorito(Midia* favorito) {
-    this->favoritos.push_back(favorito);
+    this->favoritos.insert(favorito);
 }
 
 void Assinante::removeFavorito(Midia* favorito) {
-    this->favoritos.remove(favorito);
+    this->favoritos.erase(favorito);
 }
 
 // Getters
-std::list<Midia*> Assinante::getFavoritos() {return this->favoritos;}
+std::set<Midia*> Assinante::getFavoritos() {return this->favoritos;}
 
 // Arquivo TODO:
+// Overloading
 void Assinante::printarNoArquivo(std::ofstream &_outfile){}

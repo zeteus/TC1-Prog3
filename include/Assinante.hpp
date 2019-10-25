@@ -1,6 +1,6 @@
 #pragma once
 
-#include <list>
+#include <set>
 #include <iostream>
 
 #include "Usuário.hpp"
@@ -12,7 +12,7 @@ class Assinante: public Usuario {
 
 private:
     // Relations
-    std::list<Midia*> favoritos;
+    std::set<Midia*> favoritos;
 
 public:
     // Functions
@@ -27,7 +27,7 @@ public:
     ~Assinante();
 
     // Getters
-    std::list<Midia*> getFavoritos();
+    std::set<Midia*> getFavoritos();
 
     // Overloading
     void printarNoArquivo(std::ofstream &_outfile);
