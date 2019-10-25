@@ -6,7 +6,7 @@ SRC			:= src
 INCLUDE		:= include
 LIB			:= lib
 EXECARGS	:= -g input/generos.csv -u input/usuarios.csv -f input/favoritos.csv -m input/midias_corrigidas.csv
-EXECARGSPY  := -g input/entradas_python/generos_python.csv -u input/usuarios_python.csv -f input/entradas_python/favoritos_python.csv -m input/entradas_python/midias_python.csv
+EXECARGSPY  := -g input/entradas_python/generos_python.csv -u input/entradas_python/usuarios_python.csv -f input/entradas_python/favoritos_python.csv -m input/entradas_python/midias_python.csv
 
 LIBRARIES	:=
 EXECUTABLE	:= main
@@ -21,6 +21,10 @@ run: all
 py: all
 	clear
 	./$(BIN)/$(EXECUTABLE) $(EXECARGSPY)
+
+valpy: all
+	clear
+	valgrind ./$(BIN)/$(EXECUTABLE) $(EXECARGSPY)
 
 val: all
 	clear
