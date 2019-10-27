@@ -84,7 +84,7 @@ int main(int argc, char* argv[]) {
     plat.loadFileMidias(midia);
     plat.loadFileFavoritos(favoritos);
 
-    plat.printAlbuns();
+    // plat.printAlbuns();
 
     // plat.printGeneros();
     
