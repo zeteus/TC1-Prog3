@@ -84,6 +84,8 @@ int main(int argc, char* argv[]) {
     plat.loadFileMidias(midia);
     plat.loadFileFavoritos(favoritos);
 
+    plat.printAlbuns();
+
     // plat.printGeneros();
     
     // Produtor *prod = new Produtor("Sergio Reis", 69);

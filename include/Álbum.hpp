@@ -17,7 +17,7 @@ private:
     // Attributes
     std::string nome;
     int codigo;
-    int duracao;
+    float duracao;
     int anoLancamento;
     int quantidadeMusicas;
 
@@ -25,7 +25,7 @@ private:
     std::list<Musica*> musics;
 
     // Setters
-    void setDuracao(int _duration);
+    void setDuracao(float _duration);
     void setAnoLancamento(int _launchYear);
     void setQuantidadeMusicas(int _musicAmount);
     void setCodigo(int _cod);
@@ -33,13 +33,13 @@ private:
 
 public:    
     // Constructors
-    Album(std::string nome, int codigo, int duracao, int ano, int qtd);
+    Album(std::string nome, int codigo, float duracao, int ano, int qtd);
     Album();
     // Destructor
     ~Album();
 
     // Getters
-    int getDuracao();
+    float getDuracao();
     int getAnoLancamento();
     int getQuantidadeMusicas();
     int getCodigo();
@@ -47,6 +47,7 @@ public:
 
     // Functions
     void addMusic(Musica* music);
+    void printMe();
 
     // Overloading
     void printarNoArquivo(std::ofstream &_outfile);

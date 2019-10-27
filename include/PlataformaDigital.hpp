@@ -51,6 +51,7 @@ public:
     void printProdutores();
     void printAssinantes();
     void printGeneros();
+    void printAlbuns();
     void addAssinante(Assinante* _subscriber);
     void removeAssinante(Assinante* _subscriber);
     void addProduto(Midia* _newProduct, std::set<Produtor*> _producers);

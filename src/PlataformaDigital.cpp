@@ -61,6 +61,12 @@ void PlataformaDigital::printProdutores() {
         it->printInfo();
 }
 
+void PlataformaDigital::printAlbuns() {
+    for(Album *itAlbum : this->getAlbumsCadastrados()) {
+        itAlbum->printMe();
+        std::cout << std::endl;
+    }
+}
 
 void PlataformaDigital::addAssinante(Assinante *_subscriber) {
     this->assinantes.insert(_subscriber);
@@ -254,21 +260,6 @@ void PlataformaDigital::loadFileMidias(std::ifstream &infile) {
             std::cerr << _BOLDRED << "Alguma entrada no arquivo de mídia parece estranha! Linha de código de mídia " << cod << "ou a anterior." << _RESET << std::endl;
         }
 
-        // Verifica se algum genero da lista existe
-        Midia::Genero *genre = NULL;
-            for(std::string itstr : listGen){
-                for(Midia::Genero *itgen : this->getGeneros())
-                    // Gênero encontrado
-                    if(itgen->getSigla() == itstr){
-                        genre = itgen;
-                        break;
-                    }
-                // Gênero foi encontrado
-                if(genre != NULL) break;
-            }
-            // Genero não existe
-            if(genre == NULL) break;
-
         std::set<Produtor*> setProdutores;
         Produtor* p = NULL;
         // Assumindo que todos os produtores da lista são diferentes
@@ -287,6 +278,21 @@ void PlataformaDigital::loadFileMidias(std::ifstream &infile) {
             setProdutores.insert(p);
         }
 
+        // Verifica se algum genero da lista existe
+        Midia::Genero *genre = NULL;
+            for(std::string itstr : listGen){
+                for(Midia::Genero *itgen : this->getGeneros())
+                    // Gênero encontrado
+                    if(itgen->getSigla() == itstr){
+                        genre = itgen;
+                        break;
+                    }
+                // Gênero foi encontrado
+                if(genre != NULL) break;
+            }
+            // Genero não existe
+            if(genre == NULL) break;
+
         Midia *midia;
         switch(type) {
             case 'P':
@@ -295,22 +301,43 @@ void PlataformaDigital::loadFileMidias(std::ifstream &infile) {
             break;
             case 'M':
             case 'm':
+                Album *albumDaMusica = NULL;
+                if(codAlbum != 0) {
+                    for (Album *itAlbuns : this->getAlbumsCadastrados())
+                        if (itAlbuns->getCodigo() == codAlbum) {
+                            nomeAlbum = itAlbuns->getNome();
+                            albumDaMusica = itAlbuns;
+                            break;
+                        }
+
+                    if (albumDaMusica == NULL) {    // Não foi encontrado álbum já existente para a música
+                        albumDaMusica = new Album(nomeAlbum, codAlbum, duracao, ano, 1);
+                        this->addAlbum(albumDaMusica);
+                    }
+                    }
+
                 midia = new Musica(nome, cod, genre, duracao, ano, duracao);
+
+                if(codAlbum != 0)
+                    albumDaMusica->addMusic((Musica*) midia);
+
             break;
         }
 
         if(!setProdutores.empty())
             this->addProduto(midia, setProdutores);
-        else
+        else {
             std::cout << _BOLDRED << "Lista de produtores VAZIA!!!" << _RESET << std::endl;
+        }
 
-            // std::cout << std::endl;
+        // Mídia já está pronta
 
         codProdutores.clear();
         setProdutores.clear();
         listGen.clear();
     }
 }
+
 
 void PlataformaDigital::loadFileFavoritos(std::ifstream &infile) {
     if(!infile.is_open()) {
