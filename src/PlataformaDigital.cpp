@@ -336,23 +336,24 @@ void PlataformaDigital::loadFileFavoritos(std::ifstream &infile) {
         if(!str.empty())
             try {
                 cod = std::stoi(str);
+                // Se o último caractere de 'ss' não for ';'
+                // i.e. se a lista de favoritos não for vazia)
+                if(ss.str().size() - str.size() - 2 != 0) {
+                    while(getline(ss, str, ','))
+                        if(!str.empty())
+                            setFavoritos.insert(std::stoi(str));
+                } else continue;
 
-            // Se o penúltimo caractere de 'ss' não for ';'
-            // i.e. se a lista de favoritos não for vazia
-            if(ss.str().at(ss.str().size() -2) != ';') {
-                while(getline(ss, str, ','))
-                    if(!str.empty())
-                        setFavoritos.insert(std::stoi(str));
-            } else continue;
-            
-        } catch (const std::invalid_argument& e){
-            std::cerr << _BOLDRED << "Alguma entrada no arquivo de favoritos parece estranha! Argumento de stoi inválido! Cód de entrada: " << cod << " ou a próxima." << _RESET << std::endl;
-            std::cerr << "Erro: " << e.what() << std::endl;
-        }  catch (const std::out_of_range& e){
-            std::cerr << _BOLDRED << "Alguma entrada no arquivo de favoritos parece estranha! Stoi out of range! Cód de entrada: " << cod << " ou a próxima." << _RESET << std::endl;
-            std::cerr << "Erro: " << e.what() << std::endl;
-        }
-        
+            } catch (const std::invalid_argument& e){
+                std::cerr << _BOLDRED << "Alguma entrada no arquivo de favoritos parece estranha! Argumento de stoi inválido! Cód de entrada: " << cod + 1 << " ou a anterior." << _RESET << std::endl;
+                std::cerr << "Erro: " << e.what() << std::endl;
+                exit(1);
+            }  catch (const std::out_of_range& e){
+                std::cerr << _BOLDRED << "Alguma entrada no arquivo de favoritos parece estranha! Stoi out of range! Cód de entrada: " << cod  + 1<< " ou a anterior." << _RESET << std::endl;
+                std::cerr << "Erro: " << e.what() << std::endl;
+                exit(1);
+            }
+
 
         // Procurando o assinante
         Assinante *a = NULL;
@@ -377,8 +378,21 @@ void PlataformaDigital::loadFileFavoritos(std::ifstream &infile) {
     }
 }
 
-void PlataformaDigital::exportLibrary()   { /* TODO: */ }
-void PlataformaDigital::generateReports() { /* TODO: */ }
+void PlataformaDigital::exportLibrary()   {}
+void PlataformaDigital::generateReports() {
+    std::ofstream filestats;
+    std::ofstream fileprods;
+    std::ofstream filefavs;
+    filestats.open("output/1-estatisticas.txt", std::ios::out);
+    fileprods.open("output/2-produtores.csv", std::ios::out);
+    filefavs.open("output/3-favoritos.csv", std::ios::out);
+    if(!(filestats.is_open() && fileprods.is_open() && filefavs.is_open())) {
+        std::cerr << _BOLDRED << "Verifique se a pasta output existe no diretório de onde está executando o programa." << _RESET << std::endl;
+        exit(1);
+    }
+
+    
+}
 
 // Setters
 void PlataformaDigital::setNome(std::string _name) {this->nome = _name;}
