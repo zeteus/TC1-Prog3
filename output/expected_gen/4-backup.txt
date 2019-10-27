@@ -1,0 +1,222 @@
+Usuários:
+
+2;Luana Moura
+3;Helena Azevedo
+12;Gustavo Cunha
+13;Bernardo Araújo
+15;Eloah Moreira
+25;Nicolas Teixeira
+26;Laís Gonçalves
+28;Arthur Silveira
+32;Arthur Novaes
+37;Carlos Eduardo Rodrigues
+38;Alana Cardoso
+39;Matheus Almeida
+40;Maria Luiza Jesus
+41;João Vitor Costela
+43;Leonardo Nunes
+44;Lorenzo Gonçalves
+48;Davi Gomes
+
+Mídias:
+
+Est facere velit labore;P;Juliana Ferreira, Sr. Rafael Cardoso;5.89;Automobile;4;;2024
+Dolores mollitia;P;Srta. Mirella da Conceição, Sr. Rafael Cardoso;46.78;Educational;20;;2062
+Quasi;M;Leandro das Neves;9.55;Progressive bluegrass;;84;2057
+Cumque;P;Davi Lucas Porto;73.15;Educational;8;;2030
+Qui quae totam corrupti ducimus;P;Enzo da Cunha;93.35;Educational;12;;2025
+Corrupti;M;Marcelo Silva;2.12;Go-go;;22;2061
+Tenetur eligendi in a soluta;M;Marcelo Silva, Clarice Fernandes;5.24;Ars nova;;33;2004
+Debitis cum placeat sint;M;Isis Nogueira;10.49;Rare groove;;35;2041
+Beatae perspiciatis nesciunt ipsum sequi architecto;M;Maria Julia Silva, Danilo Duarte;10.97;Mexican son;;38;2026
+Asperiores porro voluptatem nostrum quod saepe tenetur modi;P;Benício Aragão, Srta. Mirella da Conceição;32.19;History;19;;2032
+Voluptates assumenda esse;M;Maria Julia Alves, Danilo Duarte;8.11;Ars nova;;51;2061
+Quia quos magni ducimus;P;Alícia Sales, Luna Freitas;85.8;Film and television;1;;2077
+Ab magni veritatis;M;Leandro das Neves, Bianca Castro;6.1;Waltz;;57;2023
+Rem;P;Juliana Ferreira;112.22;Video game;10;;2033
+Molestiae quis aliquam ut itaque;P;João Felipe Campos;92.5;Religion and spirituality;18;;2047
+Rerum voluptatem;P;Augusto Teixeira;71.19;Film and television;12;;2037
+Voluptatum voluptas;M;Maria Julia Alves, Sra. Sophie Freitas;3;Music drama;;79;2033
+Provident porro explicabo dicta;M;Danilo Duarte, Luana da Cruz;5.75;Music drama;;86;2046
+Voluptate cumque optio qui;P;Davi Lucas Porto, Murilo Costela;30.19;Advice;8;;2020
+Quam;M;Bianca Castro;7.85;Progressive bluegrass;;1;2070
+Placeat;P;Enzo da Cunha, Ana Laura Campos;64.97;Talk;10;;2039
+Voluptates est aliquid aut voluptatum sapiente dolores consequuntur;P;Juliana Ferreira;87.62;Music;17;;2009
+Sit dignissimos perspiciatis ad deserunt molestiae id dignissimos;P;Ana Laura Campos;44.26;Science;3;;2061
+Eligendi doloribus reprehenderit porro dolorem consequatur;M;Sra. Sophie Freitas;6.84;Stoner rock;;9;2061
+Quis dolor et commodi ex dolorum nemo autem optio;P;Alice Carvalho, Benício Aragão;73.8;Sports;9;;2048
+Sint magnam odit quam numquam;M;Bianca Castro;6.94;Khplam wai;;10;2064
+Dignissimos accusantium sit ipsam nemo minus officiis dolorum;M;Sra. Sophie Freitas;4.31;Stoner rock;;11;2014
+Aspernatur nostrum delectus iste;M;Leandro das Neves, Elisa Jesus;8.82;Music drama;;13;2028
+Enim aliquam quaerat quia accusamus mollitia;M;Isis Nogueira;7.29;Waltz;;14;2029
+Reprehenderit magni dolor fuga fuga vero tempora;M;Elisa Jesus, Maria Julia Silva;8.65;Waltz;;16;2071
+Vitae provident enim perferendis veritatis praesentium;P;Augusto Teixeira;113.61;Talk;18;;2045
+Vitae praesentium est pariatur veritatis rem;P;Alice Carvalho;8.35;Political;19;;2039
+Optio ut optio fuga;M;Luana da Cruz, Sophia Castro;8.89;Waltz;;26;2030
+Placeat a delectus;M;Luana da Cruz;6.19;Khplam wai;;32;2022
+Totam repellat eius ex quibusdam architecto a provident dolore;M;Maria Julia Alves, Luana da Cruz;6.18;Outsider music;;36;2073
+Aspernatur;P;Srta. Mirella da Conceição, Maysa Farias;57.35;Comedy and humor;4;;2034
+Cumque;M;Elisa Jesus, Maria Julia Silva;3.9;Dirty south;;37;2009
+Accusantium maiores voluptas eos nisi;P;Sr. Rafael Cardoso;40.5;Automobile;19;;2050
+Necessitatibus voluptatum;P;Srta. Mirella da Conceição, Augusto Teixeira;9.94;Comedy and humor;16;;2050
+Quidem sequi ad vel molestiae facere veniam eos atque;P;João Felipe Campos;117.79;History;16;;2061
+Nisi;M;Isis Nogueira;7.17;Kaseko;;45;2062
+Quam;M;Clarice Fernandes;4.41;Progressive bluegrass;;56;2016
+Suscipit sed;P;Bárbara Rocha;57.54;Technology;19;;2055
+At eos voluptas officiis vero atque;P;Davi Lucas Porto;98.5;Interview;17;;2022
+Itaque consectetur earum omnis facilis;M;Clarice Fernandes;5.42;La la;;63;2037
+Maxime ipsa nihil id;P;Bárbara Rocha, Enzo da Cunha;23.12;Sports;19;;2018
+Saepe optio;M;Sra. Sophie Freitas, Elisa Jesus;2.7;Horror punk;;66;2069
+Vitae eveniet iste similique ducimus iusto;P;Augusto Teixeira;74.18;Film and television;18;;2032
+Hic porro officiis;P;Enzo da Cunha, Davi Lucas Porto;76.69;History;3;;2018
+Ipsum doloremque;M;Elisa Jesus;10.87;Swing music;;68;2058
+At odit error ex;M;Clarice Fernandes;7.13;Swing music;;69;2056
+Laudantium laborum;P;Maysa Farias, Isis Teixeira;17.83;Interview;2;;2060
+Rerum minus nisi;M;Natália Porto, Maria Julia Alves, Sra. Sophie Freitas;8.5;Rare groove;;71;2060
+Dolores eos voluptates earum repellat eius quasi;P;Augusto Teixeira, Davi Lucas Porto;89.46;Science fiction;19;;2041
+Doloremque tempore;P;Evelyn Pinto;81.67;Business and finance;2;;1999
+Culpa;M;Marcelo Silva;8.16;Mor lam;;81;1994
+Tempora praesentium nobis culpa perspiciatis optio;P;Sra. Pietra Ferreira;40.4;Philosophy;17;;2041
+Veritatis;M;Luana da Cruz;3.64;Jesus music;;88;2016
+Corrupti consequuntur deserunt;M;Isis Nogueira;10.37;Shoegaze;;89;2051
+Quod optio;M;Leandro das Neves, Sophia Castro;10.81;Waltz;;90;2000
+Praesentium iste id ratione nobis mollitia;P;Alícia Sales;24.78;Feminist;14;;2032
+Voluptatem numquam aliquid blanditiis;P;Maysa Farias, Sra. Pietra Ferreira;33.15;Arts;19;;2001
+Temporibus architecto voluptas facilis sint rerum quod doloribus similique;P;Benício Aragão;51.75;Feminist;13;;2041
+Voluptates sint;P;Juliana Ferreira, Sra. Pietra Ferreira;98.79;Sports;18;;2077
+Quisquam eligendi culpa quas qui molestias sit dolorem tenetur;P;Evelyn Pinto;98.15;Automobile;18;;2025
+Maiores;P;Enzo da Cunha, Alice Carvalho;75.5;Talk;2;;2058
+Ipsam blanditiis consequatur nam;M;Elisa Jesus;8.86;Progressive bluegrass;;2;2026
+Adipisci;M;Natália Porto;10.73;Outsider music;;3;2030
+Omnis corporis saepe;P;Ana Laura Campos, Alícia Sales;44.43;Sports;6;;2055
+Delectus laudantium ipsam doloremque nisi ipsam;P;Maria Eduarda Nascimento;114.51;Interview;14;;1996
+Nobis impedit voluptatem;M;Sra. Sophie Freitas;7.91;Seis;;5;2050
+Adipisci voluptatibus error;P;Murilo Costela;56.84;Science fiction;9;;2039
+Sapiente sequi dignissimos;P;Enzo da Cunha;4.57;Automobile;14;;2073
+Odio quibusdam;M;Marcelo Silva, Natália Porto;8.59;Progressive bluegrass;;7;2033
+Quae neque in atque;M;Elisa Jesus;6.9;Shoegaze;;8;2022
+Doloribus recusandae nesciunt voluptatibus fugiat dolore error ut;P;Enzo da Cunha;2.55;Technology;1;;2004
+Voluptatibus;P;Murilo Costela;23.24;Automobile;18;;2055
+Rerum;M;Maria Julia Silva, Sra. Sophie Freitas;9.2;Dirty south;;12;1991
+Tempore;P;Enzo da Cunha, Murilo Costela;76.36;Religion and spirituality;1;;2011
+Quos nostrum temporibus sapiente est;P;Juliana Ferreira, Ana Laura Campos;11.63;Comedy and humor;16;;2070
+Dolorum;P;Sra. Pietra Ferreira;6.93;Feminist;13;;2057
+Nostrum a vitae sit;P;Sra. Pietra Ferreira;19.65;History;20;;2046
+Molestias a quibusdam;M;Leandro das Neves;3.9;Horror punk;;17;1999
+Sunt modi tempora nesciunt;P;Maysa Farias;93.16;Horror;16;;2041
+Ut quod quia laboriosam architecto quia ullam;M;Leandro das Neves;8.2;Outsider music;;18;1998
+Quaerat facere;P;Maria Eduarda Nascimento;45.41;Religion and spirituality;16;;2062
+Consequuntur sequi quas facere aut itaque;M;Isis Nogueira;8.9;Waltz;;19;2020
+Odio;M;Maria Julia Silva;5.82;Khyal;;21;2055
+Voluptas architecto consequatur quas hic voluptate omnis;P;Ana Laura Campos;61.46;Comedy and humor;16;;2059
+Est voluptate porro cupiditate;M;Danilo Duarte;2.76;Ars nova;;23;1990
+Ducimus mollitia itaque repellat odio;M;Luana da Cruz;5.63;Gunchei;;25;2016
+Inventore ut libero adipisci iusto;P;Sra. Pietra Ferreira, João Felipe Campos;70.46;Science fiction;3;;2005
+Culpa maxime;M;Sra. Sophie Freitas;3.1;Jesus music;;27;2064
+Voluptates;M;Maria Julia Silva;5.23;Mor lam;;29;2055
+Asperiores;P;Alícia Sales;30.76;Interview;19;;2042
+Eius commodi voluptatum;M;Maria Julia Silva;4.38;Khyal;;34;2005
+Blanditiis consequatur ullam;P;Evelyn Pinto, Davi Lucas Porto;81.43;Video game;16;;2019
+Optio qui;P;Bárbara Rocha, Alícia Sales;9.19;Law;19;;2004
+Animi illum aliquid beatae;P;Enzo da Cunha;56.5;Horror;11;;2018
+Delectus inventore illum;M;Luana da Cruz;9.59;Progressive bluegrass;;46;1992
+Nulla aperiam perspiciatis;M;Marcelo Silva;1.34;Outsider music;;52;1995
+Minima numquam pariatur vel;P;Evelyn Pinto;43.73;Talk;14;;2001
+Praesentium;P;Alice Carvalho, Augusto Teixeira;93.7;Law;8;;2026
+Labore at reprehenderit cumque eligendi accusantium vel quos nemo;P;Srta. Mirella da Conceição;47.77;Technology;5;;2043
+Laboriosam in dolor;M;Leandro das Neves;4.81;La la;;54;2057
+Fuga accusantium excepturi dolores;P;Srta. Mirella da Conceição;95.68;Talk;14;;2053
+Ut nam impedit;P;Alice Carvalho;28.74;History;5;;2039
+Consectetur eius adipisci;M;Sophia Castro, Elisa Jesus;4.84;Dirty south;;59;2029
+Animi consequatur;M;Marcelo Silva, Luana da Cruz;8.29;Industrial rock;;64;2005
+Fuga consequuntur;P;João Felipe Campos, Benício Aragão;81.54;Music;11;;2077
+Excepturi fuga tempora possimus;P;Benício Aragão;38.95;Philosophy;12;;2067
+Laudantium quibusdam;P;Isis Teixeira, Sr. Rafael Cardoso;59.5;Sports;13;;2015
+Officia doloribus animi;M;Sophia Castro, Sra. Sophie Freitas;6.29;Industrial rock;;67;2045
+Ea;M;Sophia Castro;2.29;Gamelan bebonangan;;70;2031
+Exercitationem assumenda odit provident quod rerum reprehenderit;P;Srta. Mirella da Conceição;46.37;Music;12;;2009
+Illo doloribus est voluptatum quos placeat;P;Evelyn Pinto, Sr. Rafael Cardoso;92.99;Video game;3;;2075
+Excepturi;M;Luana da Cruz;8.11;Music drama;;73;2029
+Pariatur quidem animi occaecati;M;Clarice Fernandes;2.85;Outsider music;;75;2048
+Possimus porro illum;M;Marcelo Silva, Maria Julia Silva;8.3;Seis;;76;2017
+Perferendis consequatur aliquid;M;Clarice Fernandes;5.5;Outsider music;;78;2058
+Dolor praesentium perferendis blanditiis odit;P;Sra. Pietra Ferreira;83.89;Political;12;;1994
+Ad ipsum minima mollitia;P;Alícia Sales;113.17;Science fiction;15;;2024
+Recusandae;P;Ana Laura Campos;3.46;LGBT-related;1;;2059
+Neque;P;João Felipe Campos, Augusto Teixeira;30.2;Sports;7;;2077
+Consequuntur;P;Sr. Rafael Cardoso, João Felipe Campos;69.27;Technology;9;;2002
+Dolorem qui;P;Alice Carvalho, Murilo Costela;108.77;Talk;10;;2008
+Eos;P;João Felipe Campos;6.3;Comedy and humor;18;;2013
+Molestias maxime ratione nihil odio;M;Marcelo Silva, Bianca Castro;4.34;Horror punk;;91;1990
+Architecto soluta;M;Natália Porto, Sophia Castro;10.82;Outsider music;;92;2055
+Asperiores sed laboriosam laboriosam;P;Augusto Teixeira, João Felipe Campos;31.12;History;4;;2072
+Amet expedita eos aliquam;P;Murilo Costela, Benício Aragão;33.24;Comic book;3;;2029
+Iste sint animi;P;Luna Freitas;104.32;Feminist;18;;2054
+Nam sunt impedit sed;P;Murilo Costela;80.42;Talk;1;;2069
+Provident perspiciatis eius explicabo laborum recusandae;M;Isis Nogueira;4.73;Seis;;4;2016
+Recusandae debitis dolor qui;M;Leandro das Neves, Sophia Castro;5.82;Kaseko;;6;2012
+Quos minima corrupti quisquam vero excepturi;P;Evelyn Pinto, Alícia Sales;10.53;Video game;18;;2060
+Minima deserunt;P;Bárbara Rocha;12.88;Comedy and humor;2;;2009
+Harum nisi accusantium distinctio aut eveniet;M;Leandro das Neves, Marcelo Silva;4;Mor lam;;15;2010
+Dolorem;P;Murilo Costela;105.1;Crime;7;;2053
+A;P;Alice Carvalho;37.1;LGBT-related;18;;2020
+Veniam velit dolorum dolores quam;M;Luana da Cruz;1.93;Gunchei;;20;2072
+Repellendus repellendus quo accusamus;P;Alícia Sales, Maysa Farias;9.62;Business and finance;19;;2043
+Corporis inventore tenetur;M;Sophia Castro, Sra. Sophie Freitas;5.7;Swing music;;24;2017
+Perspiciatis dicta suscipit;P;Isis Teixeira;62.9;Science fiction;16;;2009
+Accusantium;P;Juliana Ferreira, Alice Carvalho, Maria Eduarda Nascimento;64.24;Arts;18;;2001
+Tenetur minima excepturi laudantium vitae;M;Bianca Castro;3.87;Gunchei;;28;2004
+Repellat;M;Danilo Duarte;5.83;Progressive bluegrass;;30;2019
+Accusantium quasi deleniti architecto;M;Leandro das Neves;6.3;La la;;31;2047
+Adipisci sunt repellat fugit;P;Alícia Sales;108.66;Interview;16;;2004
+Temporibus eaque maxime repudiandae omnis;P;Juliana Ferreira;75.73;LGBT-related;6;;2044
+Molestias corrupti;M;Isis Nogueira;10.38;La la;;39;2003
+Sed doloribus;M;Danilo Duarte, Maria Julia Alves;3.78;Concerto;;40;2056
+Harum illum suscipit dolorem consequatur;M;Maria Julia Silva;3.35;Concerto;;41;2058
+Quae earum in porro explicabo;M;Danilo Duarte, Isis Nogueira;8.96;La la;;42;2059
+Nisi molestiae perspiciatis nemo delectus voluptas incidunt eveniet;M;Maria Julia Alves, Bianca Castro;1.86;Gunchei;;43;2027
+Voluptates;P;Evelyn Pinto;26.92;History;19;;1992
+Ducimus repudiandae a odit;M;Bianca Castro, Clarice Fernandes;6.9;Ars nova;;44;2040
+Tempora necessitatibus repellendus ipsa mollitia;M;Isis Nogueira;1.19;La la;;47;2044
+Temporibus sint consequuntur quam nostrum;M;Elisa Jesus;9.48;Music drama;;48;2007
+Est doloremque cum;M;Maria Julia Silva;3.3;Shoegaze;;49;2043
+Ipsa;M;Maria Julia Alves;1.76;Praise song;;50;2031
+Laboriosam voluptates nam;M;Sophia Castro;4.87;Stoner rock;;53;2075
+Saepe voluptate vero debitis fuga;M;Danilo Duarte;2.45;Praise song;;55;2033
+Sed quam qui quia quis;P;Luna Freitas;17.9;LGBT-related;7;;1997
+Recusandae architecto accusamus itaque placeat distinctio accusantium;P;Maria Eduarda Nascimento;29.5;Technology;5;;2047
+Magnam veniam necessitatibus molestias esse;M;Clarice Fernandes;6.2;Kaseko;;58;2028
+Soluta;P;Murilo Costela;37.86;LGBT-related;1;;1994
+Quasi quisquam modi;M;Maria Julia Alves;9.83;Concerto;;60;2064
+Officia exercitationem qui doloremque vel eos;M;Luana da Cruz;5.87;Go-go;;61;2066
+Quia officiis maxime nulla earum;M;Bianca Castro, Sophia Castro;7.62;Seis;;62;2074
+Pariatur quam animi;M;Maria Julia Silva, Natália Porto;9.96;Outsider music;;65;2011
+Modi quae necessitatibus labore;P;Davi Lucas Porto;56.88;Religion and spirituality;4;;2063
+Ipsa corrupti deserunt;P;Benício Aragão;11.4;Feminist;18;;1995
+Temporibus beatae consequuntur vitae;P;Isis Teixeira;41.99;Feminist;15;;2055
+Consequuntur iure minus consequatur;P;Augusto Teixeira, Sr. Rafael Cardoso;87.43;Comedy and humor;16;;2065
+Quisquam suscipit;M;Maria Julia Silva, Danilo Duarte, Sophia Castro;9.32;Khyal;;72;2063
+Nam tempora dolores quae;M;Clarice Fernandes;4.14;Mor lam;;74;2067
+Occaecati reiciendis dignissimos accusamus recusandae;M;Sra. Sophie Freitas;3.31;Outsider music;;77;2038
+Provident excepturi dolores cupiditate;P;Sra. Pietra Ferreira;19.27;Educational;4;;2027
+Quod;P;Luna Freitas;103.1;Comedy and humor;5;;2049
+Ea impedit aperiam magnam;P;Juliana Ferreira;79.86;Crime;4;;2037
+Repudiandae;P;Sra. Pietra Ferreira, Enzo da Cunha;105.84;Science fiction;9;;2072
+Odio;P;Juliana Ferreira;51.58;Feminist;12;;2048
+Porro debitis distinctio inventore fugiat dolore natus voluptatibus;M;Elisa Jesus;6.46;Khyal;;80;2048
+Officiis;P;Evelyn Pinto;108.94;Science fiction;8;;2027
+Necessitatibus optio laudantium;M;Bianca Castro;6.41;Concerto;;82;1991
+Iusto eius ea distinctio;M;Maria Julia Alves, Danilo Duarte;4.48;Music drama;;83;2043
+Distinctio ea optio est alias magnam ea;P;Alícia Sales, Enzo da Cunha;96.86;Science;8;;2005
+Quia enim sapiente adipisci ducimus dolor quod eaque;P;Murilo Costela, Juliana Ferreira;7.17;Religion and spirituality;16;;2044
+Necessitatibus possimus molestias;P;Murilo Costela;73.75;Arts;9;;2066
+Suscipit fugit corporis unde;M;Sophia Castro;5.54;Kaseko;;85;2039
+Veritatis nam nostrum nulla ipsum;M;Isis Nogueira, Maria Julia Silva;7.69;Progressive bluegrass;;87;1992
+Non aspernatur ut modi distinctio molestiae;P;Augusto Teixeira;116.47;Automobile;18;;2004
+Ipsam quo;P;Sra. Pietra Ferreira, Juliana Ferreira, Isis Teixeira;91.96;Automobile;7;;1997
+Debitis nesciunt qui;P;Bárbara Rocha;56.23;Automobile;10;;2027
+Alias rem;P;Alice Carvalho;6.43;History;9;;2074
+Fugiat cum;P;Davi Lucas Porto;70.81;Comedy and humor;16;;2069
+Culpa laboriosam voluptas;P;Srta. Mirella da Conceição;41.79;Religion and spirituality;12;;2025
+Libero accusantium;P;Sr. Rafael Cardoso, Maysa Farias;66.9;Talk;12;;2071
+Porro distinctio ipsam at numquam voluptatum dicta;M;Natália Porto, Luana da Cruz;9.29;Ars nova;;93;2057

@@ -4,6 +4,7 @@
 #include <sstream>
 #include <list>
 #include <set>
+#include <unordered_map>
 
 #include "Artista.hpp"
 #include "Álbum.hpp"

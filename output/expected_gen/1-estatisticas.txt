@@ -1,0 +1,79 @@
+Horas Consumidas: 7311.87
+
+Gênero mais ouvido: WA - 98.48 minutos
+
+Mídias por Gênero:
+WA:12
+PB:11
+ED:10
+AU:9
+HI:9
+MD:9
+FA:8
+SP:8
+TA:8
+OM:8
+CA:7
+AN:7
+IN:6
+RA:5
+SF:5
+TE:5
+VG:5
+RG:5
+FE:4
+MU:4
+DS:4
+KW:4
+SR:4
+SM:4
+HP:4
+AD:3
+PH:3
+PO:3
+JM:3
+LL:3
+ML:3
+SH:3
+GO:3
+MS:3
+AR:2
+BA:2
+HO:2
+LA:2
+SC:2
+SE:2
+KH:2
+IR:2
+KA:2
+LG:1
+GU:1
+GB:1
+CB:0
+CR:0
+CO:0
+PS:0
+
+Top 10 Mídias:
+Est facere velit labore:AU:4
+Dolores mollitia:ED:4
+Quasi:PB:4
+Cumque:ED:3
+Qui quae totam corrupti ducimus:ED:3
+Corrupti:GO:3
+Tenetur eligendi in a soluta:AN:3
+Debitis cum placeat sint:RG:3
+Beatae perspiciatis nesciunt ipsum sequi architecto:MS:3
+Asperiores porro voluptatem nostrum quod saepe tenetur modi:HI:3
+
+Top 10 Produtores
+Luana da Cruz:15
+Sra. Sophie Freitas:15
+Enzo da Cunha:14
+Leandro das Neves:14
+Srta. Mirella da Conceição:14
+Augusto Teixeira:13
+Davi Lucas Porto:13
+Elisa Jesus:13
+Marcelo Silva:13
+Sr. Rafael Cardoso:13

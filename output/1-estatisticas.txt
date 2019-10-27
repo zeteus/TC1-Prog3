@@ -1,0 +1,16 @@
+Horas Consumidas: 6447,91
+
+Gênero mais ouvido: Sertanejo - 17	
+
+Mídias por Gêneros:
+NT:5	
+PP:7	
+IN:9	
+HH:10	
+RO:13	
+AT:7	
+KP:3	
+FK:13	
+ST:17	
+EL:8	
+GK:8	

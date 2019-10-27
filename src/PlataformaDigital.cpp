@@ -414,11 +414,61 @@ void PlataformaDigital::generateReports() {
     fileprods.open("output/2-produtores.csv", std::ios::out);
     filefavs.open("output/3-favoritos.csv", std::ios::out);
     if(!(filestats.is_open() && fileprods.is_open() && filefavs.is_open())) {
-        std::cerr << _BOLDRED << "Verifique se a pasta output existe no diretório de onde está executando o programa." << _RESET << std::endl;
+        std::cerr << _BOLDRED << "Verifique se a pasta \"output\" existe no diretório de onde está executando o programa." << _RESET << std::endl;
         exit(1);
     }
 
+    float tempo = 0;
+
+    for(Assinante *itAssinante : this->getAssinantes()) {
+        for(Midia *itMidia : itAssinante->getFavoritos()) {
+            tempo += itMidia->getDuracao();
+        }
+    }
+    std::stringstream ss;
+    std::string str;
+
+    size_t pos;
+    ss << tempo;
+    getline(ss, str);
+    pos = str.find('.');
+    if(pos != std::string::npos)
+            // Troca o ponto por uma vírgula
+            str.replace(pos, 1, 1, ',');
+
+    filestats << "Horas Consumidas: " << str << std::endl << std::endl;
+
+    str = "";
+    tempo = 0;
+
+    std::unordered_map<Midia::Genero*,unsigned int> mapGeneros;
+    for(Midia::Genero *itGen : this->getGeneros()) {
+        for(Midia *itMidia : this->getProdutosRegistrados()) {
+            if(itMidia->getGenero() == itGen)
+                mapGeneros[itGen]++;
+        }
+    }
+
+    std::pair<Midia::Genero*,unsigned int> maior;
+    for(std::pair<Midia::Genero*,unsigned int> itMap : mapGeneros) {
+        if(itMap.second > maior.second)
+            maior = itMap;
+        }
     
+
+    filestats << "Gênero mais ouvido: " << maior.first->getNome() << " - " << maior.second << '\t' << std::endl << std::endl;
+
+    filestats << "Mídias por Gêneros:" << std::endl;
+    
+    for(std::pair<Midia::Genero*,unsigned int> itMap : mapGeneros) {
+        // if(itMap.second > maior.second)
+        //     maior = itMap;
+        filestats << itMap.first->getSigla() << ':' << itMap.second << '\t' << std::endl;
+    }
+
+    filestats.close();
+    fileprods.close();
+    filefavs.close();
 }
 
 // Setters
