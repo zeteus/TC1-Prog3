@@ -1,11 +1,11 @@
 
 # TC1-Prog3
 
-- #### Todos os arquivos de entradas precisa estar usando o caractere terminador de linha (newline) '\n' (LF/Line Feed), e não usar o caractere '\r' (CR/Carriage Return).
+- #### Todos os arquivos de entradas precisa estar usando o caractere terminador de linha (newline) `'\n'` (`LF/Line Feed`), e não usar o caractere `'\r'` (`CR/Carriage Return`).
 
-- #### Todos os arquivos de entradas deve estar codificados usando o padrão UTF-8.
+- #### Todos os arquivos de entradas deve estar codificados usando o padrão `UTF-8`.
 
-- #### Usar arquivos de entrada que não seguem os parâmetros descritos acimas tem comportamento não definido.
+- #### **Usar arquivos de entrada que não seguem os parâmetros descritos acimas tem comportamento não definido**.
 
 >`make`
 
