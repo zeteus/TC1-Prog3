@@ -4,13 +4,13 @@ Gênero mais ouvido: Sertanejo - 17
 
 Mídias por Gêneros:
 NT:5	
+HH:10	
 PP:7	
 IN:9	
-HH:10	
-RO:13	
-AT:7	
 KP:3	
 FK:13	
+RO:13	
 ST:17	
 EL:8	
 GK:8	
+AT:7	

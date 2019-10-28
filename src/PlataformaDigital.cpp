@@ -153,14 +153,13 @@ void PlataformaDigital::loadFileGeneros(std::ifstream &infile) {
     try{
         while(!infile.eof()) {
             getline(infile, str);
-            if(str.empty()){
-                    // std::cout << "Jordana" << std::endl;
-                break;
-            }
-                // std::cout << "Berilhes";
+            if(str.empty())
+                continue;
+            if(str.at(str.size() - 1) == '\n')
+                std::cout << "TIRA ISSO DAQUI MANO" << std::endl;
             ss = std::stringstream(str);
             getline(ss, sigla, ';');
-            getline(ss, nome);
+            getline(ss, nome, '\n');
             this->generos.insert(new Midia::Genero(nome, sigla));
             
         }
@@ -438,7 +437,7 @@ void PlataformaDigital::generateReports() {
 
     filestats << "Horas Consumidas: " << str << std::endl << std::endl;
 
-    str = "";
+    str.clear();
     tempo = 0;
 
     std::unordered_map<Midia::Genero*,unsigned int> mapGeneros;
