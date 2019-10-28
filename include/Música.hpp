@@ -14,10 +14,6 @@ private:
     // Relation
     Album* album;
 
-
-    // Fuctions
-    void formataDuracao();
-
 public:
     // Constructor
     Musica();

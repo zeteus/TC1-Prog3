@@ -14,9 +14,6 @@ void Musica::setAlbum(Album* a) {this->album = a;}
 Album* Musica::getAlbum() {return this->album;}
 
 // Functions
-void Musica::formataDuracao() {
-    // TODO 
-}
 char Musica::getTipo() {return 'M';}
 
 // Overloading
