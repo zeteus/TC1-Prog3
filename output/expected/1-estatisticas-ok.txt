@@ -1,39 +1,42 @@
 Horas Consumidas: 6447,91 minutos	
 
-Gênero mais ouvido: ST - 51	
+Gênero mais ouvido: Sertanejo - 149,97 minutos
 
 Mídias por Gêneros:
-ST:51	
-FK:43	
-RO:39	
-GK:30	
-HH:29	
-IN:26	
-AT:26	
-EL:25	
-PP:17	
-NT:14	
+Sertanejo:51	
+Funk:43	
+Rock:39	
+Geek:30	
+Hip-Hop:29	
+Indie:26	
+Atualidades:26	
+Eletrônica25	
+Pop:17	
+Noticias:14
+K-Pop:5
+Blues:0
+Rap:0
 
 Top 10 Mídias:		
-Queen of California:RO:6
-Changing:RO:6
-Shades Of Cool:IN:6
-NerdCash 15 - Objetivos e consciência financeira:GK:6
-NerdTech 42 - Tecnologias da corrida espacial:GK:6
-Gordox // POUCAS #38:AT:6
-Credo que delicia:FK:6
-#253 - Luí­sa Sonza: diva sensata do pop:PP:6
-O Assunto #19: Dinheiro para campanhas eleitorais:NT:6
-Something Like Olivia:RO:5
+Queen of California:Rock:6
+Changing:Rock:6
+Shades Of Cool:Indie:6
+NerdCash 15 - Objetivos e consciência financeira:Geek:6
+NerdTech 42 - Tecnologias da corrida espacial:Geek:6
+Gordox // POUCAS #38:Atualidades:6
+Credo que delicia:Funk:6
+#253 - Luí­sa Sonza: diva sensata do pop:Pop:6
+O Assunto #19: Dinheiro para campanhas eleitorais:Notícias:6
+Something Like Olivia:Rock:5
 
-Top 10 Produtores:		
-John Mayer:37	
-Alexandre Ottoni:23	
-Deive Pazos:23	
-MC Kevinho:23	
-Wesley Safadão:23	
-Caue Moura:22	
-Lil Nas X:21	
-Lana Del Rey:20	
-Manu Gavassi:19	
-Renata Lo Prete:18	
+Top 10 Produtores:
+John Mayer;39
+Alexandre Ottoni;30
+Deive Pazos;30
+MC Kevinho;27
+Caue Moura;26
+Lana Del Rey;25
+Wesley Safadão;23
+Lil Nas X;19
+MC Livinho;16
+Allok;15
