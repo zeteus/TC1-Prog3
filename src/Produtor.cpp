@@ -8,7 +8,10 @@ Produtor::~Produtor() {}
 
 // Functions
 void Produtor::printarNoArquivo(std::ofstream &outfile) {
-    outfile << this->getCodigo() << ';' << this->getNome() << '\n';
+    if(!outfile.is_open()) {
+        std::cerr << "Erro de I/O" << std::endl;
+        exit(1);
+    };
 }
 
 std::list<Midia*> Produtor::getProdutosDesenvolvidos() {

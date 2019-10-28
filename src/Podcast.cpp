@@ -17,7 +17,7 @@ int Podcast::getQtdTemporadas() {return this->quantidadeTemporadas;}
 // Overloading
 void Podcast::printarNoArquivo(std::ofstream &outfile) {
     if(!outfile.is_open()) {
-        std::cerr << "Verifique se a pasta \"output\" existe no diretório de onde está executando o programa." << std::endl;
+        std::cerr << "Erro de I/O" << std::endl;
         exit(1);
     }   
     

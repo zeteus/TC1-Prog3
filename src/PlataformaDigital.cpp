@@ -100,7 +100,7 @@ void PlataformaDigital::printGeneros() {
 // File
 void PlataformaDigital::loadFileUsuarios(std::ifstream &infile) {
     if(!infile.is_open()) {
-        std::cerr << "Erro ao abrir o arquivo de usuarios! Saindo do programa..." << std::endl;
+        std::cerr << _BOLDRED << "Erro de I/O" << _RESET << std::endl;
         exit(1);
     }
     int codigo = 0;
@@ -152,7 +152,7 @@ void PlataformaDigital::loadFileUsuarios(std::ifstream &infile) {
 }
 void PlataformaDigital::loadFileGeneros(std::ifstream &infile) {
     if(!infile.is_open()) {
-        std::cerr << "Erro ao abrir o arquivo de generos! Saindo do programa..." << std::endl;
+        std::cerr << _BOLDRED << "Erro de I/O" << _RESET << std::endl;
         exit(1);
     }
 
@@ -180,7 +180,7 @@ void PlataformaDigital::loadFileGeneros(std::ifstream &infile) {
 
 void PlataformaDigital::loadFileMidias(std::ifstream &infile) {
     if(!infile.is_open()) {
-        std::cerr << "Erro ao abrir o arquivo de midias! Saindo do programa..." << std::endl;
+        std::cerr << _BOLDRED << "Erro de I/O" << _RESET << std::endl;
         exit(1);
     }
 
@@ -281,8 +281,10 @@ void PlataformaDigital::loadFileMidias(std::ifstream &infile) {
                     p = produtorPlataforma;
             }
             // Caso não tenha encontrado
-            if(p == NULL)
-                p = new Produtor("Artista desconhecido", pCod);
+            if(p == NULL) {
+                std::cerr << _BOLDRED << "Inconsistências na entrada" << _RESET << std::endl;
+                exit(1);
+            }
             setProdutores.insert(p);
         }
 
@@ -300,8 +302,8 @@ void PlataformaDigital::loadFileMidias(std::ifstream &infile) {
             }
             // Genero não existe
             if(genre == NULL) {
-                std::cout << "Gen não existe" << std::endl;
-                break;
+                std::cerr << _BOLDRED << "Inconsistências na entrada" << _RESET << std::endl;
+                exit(1);
             }
 
         Midia *midia = NULL;
@@ -341,7 +343,8 @@ void PlataformaDigital::loadFileMidias(std::ifstream &infile) {
         if(!setProdutores.empty())
             this->addProduto(midia, setProdutores);
         else {
-            std::cout << _BOLDRED << "Lista de produtores VAZIA!!!" << _RESET << std::endl;
+            std::cerr << _BOLDRED << "Inconsistências na entrada" << _RESET << std::endl;
+            exit(1);
         }
 
         // Mídia já está pronta
@@ -355,7 +358,7 @@ void PlataformaDigital::loadFileMidias(std::ifstream &infile) {
 
 void PlataformaDigital::loadFileFavoritos(std::ifstream &infile) {
     if(!infile.is_open()) {
-        std::cerr << "Erro ao abrir o arquivo de favoritos! Saindo do programa..." << std::endl;
+        std::cerr << _BOLDRED << "Erro de I/O" << _RESET << std::endl;
         exit(1);
     }
 
@@ -383,12 +386,10 @@ void PlataformaDigital::loadFileFavoritos(std::ifstream &infile) {
                 } else continue;
 
             } catch (const std::invalid_argument& e){
-                std::cerr << _BOLDRED << "Alguma entrada no arquivo de favoritos parece estranha! Argumento de stoi inválido! Cód de entrada: " << cod + 1 << " ou a anterior." << _RESET << std::endl;
-                std::cerr << "Erro: " << e.what() << std::endl;
+                std::cerr << _BOLDRED << "Erro de formatação" << _RESET << std::endl;
                 exit(1);
             }  catch (const std::out_of_range& e){
-                std::cerr << _BOLDRED << "Alguma entrada no arquivo de favoritos parece estranha! Stoi out of range! Cód de entrada: " << cod  + 1<< " ou a anterior." << _RESET << std::endl;
-                std::cerr << "Erro: " << e.what() << std::endl;
+                std::cerr << _BOLDRED << "Erro de formatação" << _RESET << std::endl;
                 exit(1);
             }
 
@@ -431,7 +432,7 @@ void PlataformaDigital::exportLibrary() {
     std::ofstream backfile;
     backfile.open("output/4-backup.txt", std::ios::out);
     if(!backfile.is_open()) {
-        std::cerr << _BOLDRED << "Verifique se a pasta \"output\" existe no diretório de onde está executando o programa." << _RESET << std::endl;
+        std::cerr << _BOLDRED << "Erro de I/O" << _RESET << std::endl;
         exit(1);
     }
 
@@ -459,7 +460,7 @@ void PlataformaDigital::generateReports() {
     fileprods.open("output/2-produtores.csv", std::ios::out);
     filefavs.open("output/3-favoritos.csv", std::ios::out);
     if(!(filestats.is_open() && fileprods.is_open() && filefavs.is_open())) {
-        std::cerr << _BOLDRED << "Verifique se a pasta \"output\" existe no diretório de onde está executando o programa." << _RESET << std::endl;
+        std::cerr << _BOLDRED << "Erro de I/O" << _RESET << std::endl;
         exit(1);
     }
 

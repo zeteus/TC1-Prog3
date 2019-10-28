@@ -28,39 +28,6 @@ Usuários:
 27;Patience Vasya
 28;Alexandros Berinhard
 29;Samuel Herberto
-30;Tymoteusz Elfreda
-31;Alexandre Ottoni
-32;Deive Pazos
-33;Mauricio Cid Fernandez Morais
-34;Phelipe Cruz
-35;Manu Gavassi
-36;Luísa Sonza
-37;Samira Close
-38;IZA
-39;Caue Moura
-40;Tiago Nigro
-41;Renata Lo Prete
-42;Scalene
-43;Lana Del Rey
-44;Lil Nas X
-45;Adele
-46;Atitude 67
-47;O rappa
-48;Imagine Dragons
-49;Post Malone
-50;John Mayer
-51;BTS
-52;MC Kevinho
-53;MC Livinho
-54;Wesley Safadão
-55;Marilía Mendonça
-56;Luan Santana
-57;Allok
-58;Avicii
-59;Cardi B
-60;Billy Ray Cyrus
-61;Snoop Dog
-62;Clarisse
 
 Mídias:
 Queen of California;Música;50;4.17;Rock;;1;2012
