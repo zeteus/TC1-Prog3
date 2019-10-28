@@ -561,7 +561,9 @@ void PlataformaDigital::generateReports() {
 
     fileprods.close();
 
-    std::list<Assinante*> assinantes = this->getAssinantes;
+    std::list<Assinante*> assinantes;
+    for(auto &ass : this->getAssinantes())
+        assinantes.push_back(ass);
 
     assinantes.sort(cmp_codAss);
 
