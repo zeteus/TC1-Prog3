@@ -25,7 +25,4 @@ public:
 
     // Getters
     std::list<Album*> getAlbums();
-
-    // Overloading
-    void printarNoArquivo(std::ofstream &_outfile);
 };

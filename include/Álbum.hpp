@@ -44,6 +44,7 @@ public:
     int getQuantidadeMusicas();
     int getCodigo();
     std::string getNome();
+    std::list<Musica*> getMusicas();
 
     // Functions
     void addMusic(Musica* music);

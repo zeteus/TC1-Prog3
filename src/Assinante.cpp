@@ -26,7 +26,3 @@ void Assinante::removeFavorito(Midia* favorito) {
 
 // Getters
 std::set<Midia*> Assinante::getFavoritos() {return this->favoritos;}
-
-// Arquivo TODO:
-// Overloading
-void Assinante::printarNoArquivo(std::ofstream &_outfile){}

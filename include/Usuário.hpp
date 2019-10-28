@@ -17,7 +17,7 @@ protected:
 public:
     Usuario(std::string _come, int _codigo);
     Usuario();
-    ~Usuario();
+    virtual ~Usuario();
 
     void printInfo();
     // Virtual puta para evitar ser chamado

@@ -72,6 +72,7 @@ int main(int argc, char* argv[]) {
     plat.loadFileFavoritos(favoritos);
 
     plat.generateReports();
+    plat.exportLibrary();
 
     return 0;
 }

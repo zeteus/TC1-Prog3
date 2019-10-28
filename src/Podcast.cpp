@@ -2,7 +2,7 @@
 
 // Constructors
 Podcast::Podcast() {}
-Podcast::Podcast(std::string name, int cod, Genero* genre, int seasonsQnt, int ano, float duracao) : Midia(name, cod, genre, ano, duracao) {
+Podcast::Podcast(std::string name, int cod, Midia::Genero* genre, float duracao, int ano, int seasonsQnt) : Midia(name, cod, genre, duracao, ano) {
     this->setQtdTemporadas(seasonsQnt);
 }
 // Destrutor
@@ -15,8 +15,20 @@ void Podcast::setQtdTemporadas(int _qnt) {this->quantidadeTemporadas = _qnt;}
 int Podcast::getQtdTemporadas() {return this->quantidadeTemporadas;}
 
 // Overloading
-void Podcast::printarNoArquivo(std::ofstream &_outfile) {
-// TODO
+void Podcast::printarNoArquivo(std::ofstream &outfile) {
+    if(!outfile.is_open()) {
+        std::cerr << "Verifique se a pasta \"output\" existe no diretório de onde está executando o programa." << std::endl;
+        exit(1);
+    }   
+    
+    outfile << this->getNome() << ";Música;";
+    for(auto p : this->getProdutores()) {
+        outfile << p->getCodigo();
+        if(*this->getProdutores().rbegin() != p){ // Se não for o último
+            outfile <<',';
+        }
+    }
+    outfile << ';' << this->getDuracao() << ';' << this->getGenero()->getNome() << this->getQtdTemporadas() << ";;" << this->getAnoLancamento() << '\n';
 }
 
 // Overloading
@@ -27,3 +39,4 @@ void Podcast::printInfoProduto() {
     std::cout << "Ano de Lançamento: "  << this->getAnoLancamento()         << std::endl;
     std::cout << "Seasons: "            << this->getQtdTemporadas()         << std::endl;
 }
+char Podcast::getTipo() {return 'P';}

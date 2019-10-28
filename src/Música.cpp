@@ -2,28 +2,48 @@
 
 // Constructors
 Musica::Musica() {}
-Musica::Musica(std::string name, int cod, Genero* genre, float duration, int yr, float duracao) : Midia(name, cod, genre, yr, duracao) {
-    this->setDuracao(duration);
-    this->setAnoLancamento(yr);
+Musica::Musica(std::string name, int cod, Midia::Genero* genre, float duracao, int ano) : Midia(name, cod, genre, duracao, ano) {
+    setAlbum(NULL);
 }
 // Destructor
 Musica::~Musica() {}
+
+// Setter
+void Musica::setAlbum(Album* a) {this->album = a;}
+// Getter
+Album* Musica::getAlbum() {return this->album;}
 
 // Functions
 void Musica::formataDuracao() {
     // TODO 
 }
-void Musica::addAlbum(Album *album) {
-    this->albums.push_back(album);
-}
+char Musica::getTipo() {return 'M';}
 
 // Overloading
 void Musica::printInfoProduto() {
-    std::cout << "Nome: " << this->getNome() << std::endl;
-    std::cout << "Codigo: " << this->getCodigo() << std::endl;
-    std::cout << "Genero: " <<  this->getGenero()->getNome() << std::endl;
-    std::cout << "Duração: " << this->getDuracao() << std::endl;
-    std::cout << "Ano de Lançamento: " << this->getAnoLancamento() << std::endl;
+    std::cout << "Nome: "               << this->getNome()                  << std::endl;
+    std::cout << "Codigo: "             << this->getCodigo()                << std::endl;
+    std::cout << "Genero: "             <<  this->getGenero()->getNome()    << std::endl;
+    std::cout << "Duração: "            << this->getDuracao()               << std::endl;
+    std::cout << "Ano de Lançamento: "  << this->getAnoLancamento()         << std::endl;
 }
 
-void Musica::printarNoArquivo(std::ofstream &_outfile) {}
+void Musica::printarNoArquivo(std::ofstream &outfile) {
+    if(!outfile.is_open()) {
+        std::cerr << "Verifique se a pasta \"output\" existe no diretório de onde está executando o programa." << std::endl;
+        exit(1);
+    }   
+    
+    outfile << this->getNome() << ";Música;";
+    for(auto p : this->getProdutores()) {
+        outfile << p->getCodigo();
+        if(*this->getProdutores().rbegin() != p){ // Se não for o último
+            outfile <<',';
+        }
+    }
+    outfile << ';' << this->getDuracao() << ';' << this->getGenero()->getNome() << ";;"; 
+    if(this->getAlbum() != NULL)
+        outfile << this->getAlbum()->getCodigo();
+    outfile << ';' << this->getAnoLancamento() << '\n';
+
+}

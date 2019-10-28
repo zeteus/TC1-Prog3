@@ -54,6 +54,7 @@ void PlataformaDigital::addProduto(Midia* _newProduct, std::set<Produtor*> _prod
     for(Produtor *it : _producers) {
         this->produtores.insert(it);
         it->addProdutoDesenvolvido(_newProduct);
+        _newProduct->addProdutor(it);
     }
 }
 
@@ -102,7 +103,7 @@ void PlataformaDigital::loadFileUsuarios(std::ifstream &infile) {
         std::cerr << "Erro ao abrir o arquivo de usuarios! Saindo do programa..." << std::endl;
         exit(1);
     }
-    int codigo;
+    int codigo = 0;
     std::string str, nome;
     char tipo;
     std::stringstream ss;
@@ -197,7 +198,7 @@ void PlataformaDigital::loadFileMidias(std::ifstream &infile) {
     int cod;
     int temp;
     int codAlbum;
-    int ano;
+    int ano = 0;
     char type;
     float duracao;
     std::set<int> codProdutores;
@@ -298,13 +299,16 @@ void PlataformaDigital::loadFileMidias(std::ifstream &infile) {
                 if(genre != NULL) break;
             }
             // Genero não existe
-            if(genre == NULL) break;
+            if(genre == NULL) {
+                std::cout << "Gen não existe" << std::endl;
+                break;
+            }
 
-        Midia *midia;
+        Midia *midia = NULL;
         switch(type) {
             case 'P':
             case 'p':
-                midia = new Podcast(nome, cod, genre, temp, ano, duracao);
+                midia = new Podcast(nome, cod, genre, duracao, ano, temp);
             break;
             case 'M':
             case 'm':
@@ -317,16 +321,19 @@ void PlataformaDigital::loadFileMidias(std::ifstream &infile) {
                             break;
                         }
 
-                    if (albumDaMusica == NULL) {    // Não foi encontrado álbum já existente para a música
-                        albumDaMusica = new Album(nomeAlbum, codAlbum, duracao, ano, 1);
-                        this->addAlbum(albumDaMusica);
-                    }
-                    }
+                    if (albumDaMusica == NULL && codAlbum != 0) {    // Não foi encontrado álbum já existente para a música
 
-                midia = new Musica(nome, cod, genre, duracao, ano, duracao);
+                            albumDaMusica = new Album(nomeAlbum, codAlbum, duracao, ano, 1);
+                            this->addAlbum(albumDaMusica);
+                    }
+                }
+                Musica *ptrMusica = new Musica(nome, cod, genre, duracao, ano);
+                midia = ptrMusica;
 
-                if(codAlbum != 0)
+                if(codAlbum != 0) 
                     albumDaMusica->addMusic((Musica*) midia);
+
+                ptrMusica->setAlbum(albumDaMusica);
 
             break;
         }
@@ -352,14 +359,11 @@ void PlataformaDigital::loadFileFavoritos(std::ifstream &infile) {
         exit(1);
     }
 
-
-
     // Definição de variável
     std::stringstream ss;
     std::string str;
     std::set<int> setFavoritos;
-    int cod;
-    size_t pos = -1;
+    int cod = 0;
 
     getline(infile, str);    // Ignora a primeira linha
     while(getline(infile, str, '\n')){
@@ -397,8 +401,6 @@ void PlataformaDigital::loadFileFavoritos(std::ifstream &infile) {
         if(a == NULL)   // Não foi encontrado assinante
             continue;   // Passa para a próxima linha
 
-        // Procurando as mídias
-        Midia *favmidia = NULL;
         // Pra cada código em 'setFavoritos'...
         for(int codMidia : setFavoritos)
             // ...busca a respectiva mídia...
@@ -425,7 +427,30 @@ bool cmp_nomesProd(Produtor *a, Produtor *b) {
     return a->getNome() < b->getNome();
 }
 
-void PlataformaDigital::exportLibrary()   {}
+void PlataformaDigital::exportLibrary() {
+    std::ofstream backfile;
+    backfile.open("output/4-backup.txt", std::ios::out);
+    if(!backfile.is_open()) {
+        std::cerr << _BOLDRED << "Verifique se a pasta \"output\" existe no diretório de onde está executando o programa." << _RESET << std::endl;
+        exit(1);
+    }
+
+    backfile << "Usuários:\n";
+
+    for(auto a : this->getAssinantes())
+        a->printarNoArquivo(backfile);
+
+    for(auto p : this->getProdutores())
+        p->printarNoArquivo(backfile);
+
+
+    backfile << "\nMídias:\n";
+    for(auto m : this->getProdutosRegistrados())
+        m->printarNoArquivo(backfile);
+
+
+    backfile.close();
+}
 void PlataformaDigital::generateReports() {
     std::ofstream filestats;
     std::ofstream fileprods;
@@ -552,8 +577,8 @@ void PlataformaDigital::generateReports() {
         fileprods << p->getNome() << ';';
         for(auto &m : jordana) {
             fileprods << m->getNome();
-            if(!(m == *jordana.rbegin()))
-                fileprods << ", ";
+            if(m != *jordana.rbegin())
+                fileprods << ";";
         }
         jordana.clear();
         fileprods << '\n';
@@ -572,7 +597,33 @@ void PlataformaDigital::generateReports() {
             jordana.push_back(m);
         jordana.sort();
 
-    // filefavs << a->getCodigo() << ';';
+        while(!jordana.empty()) {
+            Midia *midiaPrioritaria = NULL;
+            for(auto &m : jordana) {
+                if(midiaPrioritaria == NULL)
+                    midiaPrioritaria = m;
+                if(m->getTipo() > midiaPrioritaria->getTipo())
+                    midiaPrioritaria = m;
+                if(m->getTipo() == midiaPrioritaria->getTipo())
+                    if(midiaPrioritaria->getNome().compare(m->getNome()) < 0)
+                        midiaPrioritaria = m;
+            }
+
+            filefavs << a->getCodigo() << ';';
+            switch(midiaPrioritaria->getTipo()) {
+                case 'p':
+                case 'P':
+                    filefavs << "Podcast" << ';' << midiaPrioritaria->getNome() << ';';
+                break;
+                case 'm':
+                case 'M':
+                    filefavs << "Música" << ';' << midiaPrioritaria->getNome() << ';';
+                break;
+            }
+
+            filefavs << midiaPrioritaria->getCodigo() << ';' << midiaPrioritaria->getGenero()->getNome() << ';' << midiaPrioritaria->getDuracao() << '\n';
+            jordana.remove(midiaPrioritaria);
+        }
     }
 
     filefavs.close();

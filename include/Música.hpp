@@ -12,20 +12,23 @@ class Musica: public Midia {
 
 private:
     // Relation
-    std::list<Album*> albums;
+    Album* album;
+
 
     // Fuctions
     void formataDuracao();
-    void addAlbum(Album* album);
 
 public:
     // Constructor
     Musica();
-    Musica(std::string name, int cod, Genero* genre, float duration, int yr, float duracao);
+    Musica(std::string name, int cod, Midia::Genero* genre, float duration, int yr);
     // Destructor
     ~Musica();
+    void setAlbum(Album *a);
+    Album* getAlbum();
 
     // Overloading
     void printInfoProduto();
+    char getTipo();
     void printarNoArquivo(std::ofstream &_outfile);
 };

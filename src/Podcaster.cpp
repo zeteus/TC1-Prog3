@@ -8,11 +8,6 @@ Podcaster::Podcaster(std::string name, int code) {
 // Destructor
 Podcaster::~Podcaster() {}
 
-// Overloading
-void Podcaster::printarNoArquivo(std::ofstream &_outfile) {
-    // TODO
-}
-
 // Functions
 void Podcaster::addPodcast(Podcast* podcast) {
     this->podcasts.push_back(podcast);

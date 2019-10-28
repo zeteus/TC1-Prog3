@@ -15,6 +15,3 @@ void Artista::addAlbum(Album* album) {
 
 // Getters
 std::list<Album*> Artista::getAlbums() {return this->albums;}
-
-// Overloading TODO:
-void Artista::printarNoArquivo(std::ofstream &_outfile) {}

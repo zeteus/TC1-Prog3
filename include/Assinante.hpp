@@ -29,6 +29,4 @@ public:
     // Getters
     std::set<Midia*> getFavoritos();
 
-    // Overloading
-    void printarNoArquivo(std::ofstream &_outfile);
 };

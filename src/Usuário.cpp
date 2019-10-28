@@ -6,7 +6,14 @@ Usuario::Usuario(std::string _come, int _codigo) {
 Usuario::Usuario() {}
 Usuario::~Usuario() {}
 
-void Usuario::printarNoArquivo(std::ofstream &outfile) {}
+void Usuario::printarNoArquivo(std::ofstream &outfile) {
+    if(!outfile.is_open()) {
+        std::cerr << "Verifique se a pasta \"output\" existe no diretório de onde está executando o programa." << std::endl;
+        exit(1);
+    }
+
+    outfile << this->getCodigo() << ';' << this->getNome() << '\n';
+}
 
 void Usuario::printInfo() {
     std::cout << "Nome: " << this->getNome() << "\nCodigo: " << this->getCodigo() << std::endl;

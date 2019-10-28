@@ -18,6 +18,7 @@ Album::~Album() {
 
 void Album::addMusic(Musica* music) {
     this->setQuantidadeMusicas(this->getQuantidadeMusicas() + 1);
+    this->getMusicas().push_back(music);
     this->setDuracao(this->getDuracao() + music->getDuracao());
     if (music->getAnoLancamento() > this->getAnoLancamento())
         this->setAnoLancamento(music->getAnoLancamento());
@@ -49,6 +50,7 @@ int Album::getAnoLancamento() {return this->anoLancamento;}
 int Album::getQuantidadeMusicas() {return this->quantidadeMusicas;}
 int Album::getCodigo() {return this->codigo;}
 std::string Album::getNome() {return this->nome;}
+std::list<Musica*> Album::getMusicas() {return this->musics;}
 
 // Setters
 void Album::setDuracao(float _duration) {this->duracao = _duration;}

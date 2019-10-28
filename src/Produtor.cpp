@@ -8,8 +8,7 @@ Produtor::~Produtor() {}
 
 // Functions
 void Produtor::printarNoArquivo(std::ofstream &outfile) {
-    // fazer uma funcao pra printar aqui em amigo
-    // TODO
+    outfile << this->getNome() << ';' << this->getCodigo() << '\n';
 }
 
 std::list<Midia*> Produtor::getProdutosDesenvolvidos() {

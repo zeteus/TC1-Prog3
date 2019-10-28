@@ -4,12 +4,12 @@ int Midia::qtdProdutos = 0;      // Iniciando a variável estática ao carregar 
 
 // Constructors
 Midia::Midia() {}
-Midia::Midia(std::string name, int cod, Midia::Genero *genero, int ano, float duracao){
+Midia::Midia::Midia(std::string name, int cod, Genero* genre, float duracao, int ano){
     this->setNome(name);
     this->setCodigo(cod);
-    this->setGenero(genero);
-    this->setAnoLancamento(ano);
+    this->setGenero(genre);
     this->setDuracao(duracao);
+    this->setAnoLancamento(ano);
 }
 // Destructor
 Midia::~Midia() {
@@ -19,12 +19,14 @@ Midia::~Midia() {
 // Functions
 void Midia::addAssinante(Assinante *subscriber) {
     this->assinantes.push_back(subscriber);
-};
+}
 void Midia::removeAssinante(Assinante *subscriber) {
     this->assinantes.remove(subscriber);
-};
+}
+void Midia::addProdutor(Produtor* p) {
+    this->produtores.push_back(p);
+}
 
-void Midia::printarNoArquivo(std::ofstream &_outfile) {}
 
 // Setters
 void Midia::setNome(std::string name) {this->nome = name;}
@@ -33,6 +35,7 @@ void Midia::setDuracao(float _duration) {this->duracao = _duration;}
 void Midia::setAnoLancamento(int _launchYr) {this->anoLancamento = _launchYr;}
 void Midia::setGenero(Midia::Genero *genero) {this->genero = genero;}
 void Midia::setQtdProdutos(int qnt) {Midia::qtdProdutos = qnt;}
+void Midia::setProdutores(std::list<Produtor*> prods) {this->produtores = prods;}
 
 // Getters
 std::string Midia::getNome() {return this->nome;}
@@ -41,6 +44,7 @@ float Midia::getDuracao() {return this->duracao;}
 int Midia::getAnoLancamento() {return this->anoLancamento;}
 Midia::Genero* Midia::getGenero() {return this->genero;}
 int Midia::getQtdProdutos() {return Midia::qtdProdutos;}
+std::list<Produtor*> Midia::getProdutores() {return this->produtores;}
 
 //---------GENERO ".cpp"
 // Constructors

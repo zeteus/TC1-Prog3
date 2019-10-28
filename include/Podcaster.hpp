@@ -27,6 +27,4 @@ public:
     // Getter
     std::list<Podcast*> getPodcasts();
 
-    // Overloading, virtual para evitar dos herdeiros chamarem
-    virtual void printarNoArquivo(std::ofstream &_outfile);
 };

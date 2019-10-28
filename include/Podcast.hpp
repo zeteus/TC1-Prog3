@@ -20,11 +20,12 @@ public:
 
     // Constructor
     Podcast();
-    Podcast(std::string name, int cod, Genero* genre, int seasonsQnt, int ano, float duracao);
+    Podcast(std::string name, int cod, Midia::Genero* genre, float duracao, int ano, int seasonsQnt);
     // Destructor
     ~Podcast();
 
     // Overloading
     void printInfoProduto();
+    char getTipo();
     void printarNoArquivo(std::ofstream &_outfile);
 };

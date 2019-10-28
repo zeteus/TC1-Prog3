@@ -30,6 +30,6 @@ public:
     // Destructor
     ~Produtor();
 
-    // Overloading, virtual para evitar ser chamado pelos herdeiros
-    virtual void printarNoArquivo(std::ofstream &outfile);
+    // Overloading
+    void printarNoArquivo(std::ofstream &outfile);
 };
