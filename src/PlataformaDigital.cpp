@@ -41,10 +41,20 @@ void PlataformaDigital::printProdutos(std::string _genre) {
     }
 }
 
+std::list<Midia*> PlataformaDigital::getProdutos(std::string gen) {
+    std::list<Midia*> produtos;
+    for(auto &it : this->getProdutosRegistrados())
+        if(it->getGenero()->getNome() == gen)
+            produtos.push_back(it);
+    return produtos;
+}
+
 void PlataformaDigital::addProduto(Midia* _newProduct, std::set<Produtor*> _producers) {
     this->produtosRegistrados.insert(_newProduct);
-    for(Produtor *it : _producers)
+    for(Produtor *it : _producers) {
         this->produtores.insert(it);
+        it->addProdutoDesenvolvido(_newProduct);
+    }
 }
 
 void PlataformaDigital::printAssinantes() {
@@ -155,8 +165,6 @@ void PlataformaDigital::loadFileGeneros(std::ifstream &infile) {
             getline(infile, str);
             if(str.empty())
                 continue;
-            if(str.at(str.size() - 1) == '\n')
-                std::cout << "TIRA ISSO DAQUI MANO" << std::endl;
             ss = std::stringstream(str);
             getline(ss, sigla, ';');
             getline(ss, nome, '\n');
@@ -404,6 +412,19 @@ void PlataformaDigital::loadFileFavoritos(std::ifstream &infile) {
     }
 }
 
+bool cmp_codAss(Assinante *a, Assinante *b) {
+    return a->getCodigo() < b->getCodigo();
+}
+
+bool cmp_nomesMidia(Midia *a, Midia *b) {
+    return a->getNome() < b->getNome();
+}
+
+
+bool cmp_nomesProd(Produtor *a, Produtor *b) {
+    return a->getNome() < b->getNome();
+}
+
 void PlataformaDigital::exportLibrary()   {}
 void PlataformaDigital::generateReports() {
     std::ofstream filestats;
@@ -448,25 +469,110 @@ void PlataformaDigital::generateReports() {
         }
     }
 
-    std::pair<Midia::Genero*,unsigned int> maior;
-    for(std::pair<Midia::Genero*,unsigned int> itMap : mapGeneros) {
-        if(itMap.second > maior.second)
-            maior = itMap;
+    std::pair<Midia::Genero*,unsigned int> genMaisOuvido;
+    for(std::pair<Midia::Genero*,unsigned int> it : mapGeneros)
+        if(it.second > genMaisOuvido.second)
+            genMaisOuvido = it;
+
+    std::map<unsigned int, Midia::Genero*> mapGenerosOrd;
+    float duracaoGenMaisOuvido = 0;
+    for(auto &it : this->getProdutos(genMaisOuvido.first->getNome())) {
+        duracaoGenMaisOuvido += it->getDuracao();
+    }
+
+    filestats << "Gênero mais ouvido: " <<  genMaisOuvido.first->getNome() << " - " << duracaoGenMaisOuvido << " minutos\n\n";
+
+    filestats << "Mídias por Gêneros:\n";
+
+    for(std::pair<Midia::Genero*,unsigned int> itMap : mapGeneros)
+        filestats << itMap.first->getSigla() << ':' << itMap.second << '\n';
+
+    filestats << "\nTop 10 Mídias:\n";
+
+    std::unordered_map<Midia*,int> mapMidias;
+    for(auto &itAssinante : this->getAssinantes()) {
+        for(auto &itFav : itAssinante->getFavoritos())
+            mapMidias[itFav]++;
+    }
+
+    std::unordered_map<Midia*,int> mapMidias2 = mapMidias;
+
+    int cont = 0;
+    while(!mapMidias.empty() && cont < 10) {
+        std::pair<Midia*,int> maisOcorre;
+        for(auto &it : mapMidias) {
+            if(it.second > maisOcorre.second)
+                maisOcorre = it;
         }
-    
+        filestats << maisOcorre.first->getNome() << ':' << maisOcorre.first->getGenero()->getNome() << ':' << maisOcorre.second << '\n';
+        mapMidias.erase(maisOcorre.first);
+        cont++;
+    }
+    mapMidias.clear();
 
-    filestats << "Gênero mais ouvido: " << maior.first->getNome() << " - " << maior.second << '\t' << std::endl << std::endl;
+    filestats << "\nTop 10 Produtores:\n";
 
-    filestats << "Mídias por Gêneros:" << std::endl;
-    
-    for(std::pair<Midia::Genero*,unsigned int> itMap : mapGeneros) {
-        // if(itMap.second > maior.second)
-        //     maior = itMap;
-        filestats << itMap.first->getSigla() << ':' << itMap.second << '\t' << std::endl;
+    for(auto &itAssinante : this->getAssinantes()) {
+        for(auto &itFav : itAssinante->getFavoritos())
+            mapMidias[itFav]++;
+    }
+
+    std::unordered_map<Produtor*,int> mapProdutores;
+    for(auto &itProd : this->getProdutores()) {
+        for(auto &itMidia : itProd->getProdutosDesenvolvidos()) {
+            mapProdutores[itProd] += mapMidias2[itMidia];
+        }
+    }
+
+    cont = 0;
+    while(!mapProdutores.empty() && cont < 10) {
+        std::pair<Produtor*,int> maisOcorre;
+        for(auto &it : mapProdutores) {
+            if(it.second > maisOcorre.second)
+                maisOcorre = it;
+        }
+        filestats << maisOcorre.first->getNome() << ':' << maisOcorre.second << '\n';
+        mapProdutores.erase(maisOcorre.first);
+        cont++;
     }
 
     filestats.close();
+
+    std::list<Produtor*> produtoresOrd;
+    for(auto &itProdPlat : this->getProdutores())
+            produtoresOrd.push_back(itProdPlat);
+
+    produtoresOrd.sort(cmp_nomesProd);
+
+    std::list<Midia*> jordana;
+    for(auto &p : produtoresOrd) {
+        for(auto &m : p->getProdutosDesenvolvidos())
+            jordana.push_back(m);
+        jordana.sort(cmp_nomesMidia);
+        fileprods << p->getNome() << ';';
+        for(auto &m : jordana) {
+            fileprods << m->getNome();
+            if(!(m == *jordana.rbegin()))
+                fileprods << ", ";
+        }
+        jordana.clear();
+        fileprods << '\n';
+    }
+
     fileprods.close();
+
+    std::list<Assinante*> assinantes = this->getAssinantes;
+
+    assinantes.sort(cmp_codAss);
+
+    for(auto &a : assinantes) {
+        for(auto &m : a->getFavoritos())
+            jordana.push_back(m);
+        jordana.sort();
+
+    // filefavs << a->getCodigo() << ';';
+    }
+
     filefavs.close();
 }
 

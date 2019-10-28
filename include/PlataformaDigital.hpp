@@ -5,6 +5,7 @@
 #include <list>
 #include <set>
 #include <unordered_map>
+#include <map>
 
 #include "Artista.hpp"
 #include "Álbum.hpp"
@@ -49,6 +50,7 @@ public:
     // Functions
     void printProdutos();
     void printProdutos(std::string _genre);
+    std::list<Midia*> getProdutos(std::string gen);
     void printProdutores();
     void printAssinantes();
     void printGeneros();
