@@ -1,40 +1,79 @@
-Horas Consumidas: 6447,91
+Horas Consumidas: 7311,87
 
-Gênero mais ouvido: Sertanejo - 49.37 minutos
+Gênero mais ouvido: Comedy and humor - 420.9 minutos
 
 Mídias por Gêneros:
-NT:5
-HH:10
-PP:7
-IN:9
-KP:3
-FK:13
-RO:13
-ST:17
-EL:8
-GK:8
-AT:7
+MS:1
+WA:6
+AN:5
+KA:4
+SP:6
+PO:2
+PH:2
+AU:8
+MU:3
+AR:3
+SC:2
+LA:2
+IN:5
+HI:8
+ED:4
+TA:8
+CR:2
+ML:4
+MD:6
+FE:7
+TE:5
+LG:5
+AD:1
+RA:6
+BA:2
+IR:2
+HO:2
+CA:9
+SF:7
+CB:1
+FA:3
+VG:4
+JM:2
+RG:2
+CO:4
+SH:3
+SE:4
+OM:9
+DS:3
+PS:2
+LL:6
+GO:2
+KW:2
+KH:4
+SR:3
+PB:8
+GU:4
+SM:3
+HP:3
+GB:1
 
 Top 10 Mídias:
-Gordox // POUCAS #38:Atualidades:6
-NerdTech 42 - Tecnologias da corrida espacial:Geek:6
-NerdCash 15 - Objetivos e consciência financeira:Geek:6
-Queen of California:Rock:6
-Changing:Rock:6
-#253 - Luí­sa Sonza: diva sensata do pop:Pop:6
-O Assunto #19: Dinheiro para campanhas eleitorais:Noticias:6
-Credo que delicia:Funk:6
-Shades Of Cool:Indie:6
-Ressaca de Saudade:Sertanejo:5
+Dolores mollitia:Educational:4
+Quasi:Progressive bluegrass:4
+Est facere velit labore:Automobile:4
+Quia quos magni ducimus:Film and television:3
+Rerum voluptatem:Film and television:3
+Ab magni veritatis:Waltz:3
+Voluptatum voluptas:Music drama:3
+Provident porro explicabo dicta:Music drama:3
+Qui quae totam corrupti ducimus:Educational:3
+Cumque:Educational:3
 
 Top 10 Produtores:
-John Mayer:39
-Alexandre Ottoni:30
-Deive Pazos:30
-MC Kevinho:27
-Caue Moura:26
-Lana Del Rey:25
-Wesley Safadão:23
-Lil Nas X:19
-Phelipe Cruz:17
-MC Livinho:16
+Luana da Cruz:15
+Sra. Sophie Freitas:15
+Enzo da Cunha:14
+Leandro das Neves:14
+Srta. Mirella da Conceição:14
+Sr. Rafael Cardoso:13
+Elisa Jesus:13
+Davi Lucas Porto:13
+Augusto Teixeira:13
+Marcelo Silva:13

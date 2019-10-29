@@ -1,5 +1,5 @@
 CXX		  	:= g++
-CXX_FLAGS 	:= -std=c++17 -ggdb -g -Ofast -Wall -Wextra -Werror 
+CXX_FLAGS 	:= -std=c++17 -ggdb -g -Wall -Wextra -Werror # -Ofast
 
 BIN			:= bin
 SRC			:= src

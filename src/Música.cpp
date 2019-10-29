@@ -38,7 +38,7 @@ void Musica::printarNoArquivo(std::ofstream &outfile) {
             outfile <<',';
         }
     }
-    outfile << ';' << this->getDuracao() << ';' << this->getGenero()->getNome() << ";;"; 
+    outfile << ';' << this->getDuracao() << ';' << this->getGenero()->getNome() << ";;";    // ;; -> ñ tem temporada
     if(this->getAlbum() != NULL)
         outfile << this->getAlbum()->getCodigo();
     outfile << ';' << this->getAnoLancamento() << '\n';

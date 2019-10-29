@@ -1,165 +1,253 @@
 Usuários:
-1;Muriel Ailen
-2;Max Éowyn
-3;Reena Blejan
-4;Jouni Ferdo
-5;Edith Frank
-6;Libbie Dipika
-7;Shun Elkanah
-8;Matas Roxana
-9;Rasmus Takeshi
-10;Abacuc Mamadou
-11;Netuno Caitlin
-12;Constantin Buddha
-13;Ninoslav Selma
-14;Caelia Steinarr
-15;Baxter José Manuel
-16;Nélida Firdos
-17;Chikere Nikusha
-18;Kadek Cowhauler
-19;Ganzorig Gobind
-20;Tanu Roderick
-21;Eamon Cyneweard
-22;Moritz Anastasios
-23;Teobaldo Tadija
-24;Yuliana Wafula
-25;Klara Harry
-26;Young Kukulkan
-27;Patience Vasya
-28;Alexandros Berinhard
-29;Samuel Herberto
-30;Tymoteusz Elfreda
-31;Alexandre Ottoni
-32;Deive Pazos
-33;Mauricio Cid Fernandez Morais
-34;Phelipe Cruz
-35;Manu Gavassi
-36;Luísa Sonza
-37;Samira Close
-38;IZA
-39;Caue Moura
-40;Tiago Nigro
-41;Renata Lo Prete
-42;Scalene
-43;Lana Del Rey
-44;Lil Nas X
-45;Adele
-46;Atitude 67
-47;O rappa
-48;Imagine Dragons
-49;Post Malone
-50;John Mayer
-51;BTS
-52;MC Kevinho
-53;MC Livinho
-54;Wesley Safadão
-55;Marilía Mendonça
-56;Luan Santana
-57;Allok
-58;Avicii
-59;Cardi B
-60;Billy Ray Cyrus
-61;Snoop Dog
-62;Clarisse
+2;Luana Moura
+3;Helena Azevedo
+12;Gustavo Cunha
+13;Bernardo Araújo
+15;Eloah Moreira
+25;Nicolas Teixeira
+26;Laís Gonçalves
+28;Arthur Silveira
+32;Arthur Novaes
+37;Carlos Eduardo Rodrigues
+38;Alana Cardoso
+39;Matheus Almeida
+40;Maria Luiza Jesus
+41;João Vitor Costela
+43;Leonardo Nunes
+44;Lorenzo Gonçalves
+48;Davi Gomes
+1;Lucca Lima
+4;Maysa Farias
+5;Maria Julia Alves
+6;Davi Lucas Porto
+7;Sophia Castro
+8;Murilo Costela
+9;Clarice Fernandes
+10;Leandro das Neves
+11;Maria Eduarda Nascimento
+14;Ana Laura Campos
+16;Luna Freitas
+17;João Felipe Campos
+18;Bianca Castro
+19;Isis Nogueira
+20;Alice Carvalho
+21;Alícia Sales
+22;Augusto Teixeira
+23;Evelyn Pinto
+24;Srta. Mirella da Conceição
+27;Sra. Pietra Ferreira
+29;Benício Aragão
+30;Marcelo Silva
+31;Danilo Duarte
+33;Enzo da Cunha
+34;Sra. Sophie Freitas
+35;Natália Porto
+36;Maria Julia Silva
+42;Luana da Cruz
+45;Elisa Jesus
+46;Isis Teixeira
+47;Bárbara Rocha
+49;Sr. Rafael Cardoso
+50;Juliana Ferreira
 
 Mídias:
-Queen of California;Música;50;4.17;Rock;;1;2012
-The Age of Worry;Música;50;2.62;Rock;;1;2012
-Shadow Days;Música;50;3.8;Rock;;1;2012
-Speak For Me;Música;50;3.73;Rock;;1;2012
-Something Like Olivia;Música;50;3;Rock;;1;2012
-Born and Raised;Música;50;4.78;Rock;;1;2012
-Still Feel Like Your Man;Música;50;3.9;Rock;;2;2017
-Emoji of a Wave;Música;50;3.98;Rock;;2;2017
-Helpless;Música;50;4.15;Rock;;2;2017
-Love on the Weekend;Música;50;3.53;Rock;;2;2017
-Rosie;Música;50;4;Rock;;2;2017
-Changing;Música;50;3.55;Rock;;2;2017
-Moving On and Getting Over;Música;50;4.42;Rock;;2;2017
-Born To Die;Música;43;4.77;Indie;;3;2012
-Blue Jeans;Música;43;3.48;Indie;;3;2012
-Dark Paradise;Música;43;4.05;Indie;;3;2012
-Carmen;Música;43;4.13;Indie;;3;2012
-Summertime Sadness;Música;43;4.4;Indie;;3;2012
-Cruel World;Música;43;6.65;Indie;;4;2014
-Ultraviolence;Música;43;4.18;Indie;;4;2014
-Shades Of Cool;Música;43;5.7;Indie;;4;2014
-Sad Girl;Música;43;5.28;Indie;;4;2014
-Blood Sweat & Tears;Música;51;3.62;K-Pop;;5;2016
-Begin;Música;51;3.82;K-Pop;;5;2016
-Lie;Música;51;3.58;K-Pop;;5;2016
-NerdCast 692 - Era uma vez um... Tarantino;Música;31,32;131.73;Geek70;;2019
-Speak English 19 - Connected Speech;Música;31,32;40.38;Geek70;;2019
-NerdCash 15 - Objetivos e consciência financeira;Música;31,32;59.23;Geek70;;2019
-NerdTech 43 - Profissão: Programador 4.0;Música;31,32;42.45;Geek70;;2019
-NerdCast 688 - A batalha dos Crossovers 8;Música;31,32;80.67;Geek70;;2019
-Speak English 18 - Armadilhas das traduções;Música;31,32;47.57;Geek70;;2019
-NerdCast 685 - MCU Fase 4;Música;31,32;79.5;Geek70;;2019
-NerdTech 42 - Tecnologias da corrida espacial;Música;31,32;44.5;Geek70;;2019
-Reinaldo Azevedo // POUCAS #43;Música;39;62.5;Atualidades3;;2019
-Damiani // POUCAS $42;Música;39;63.42;Atualidades3;;2019
-Luisa Mell  // POUCAS #41;Música;39;56.35;Atualidades3;;2019
-Wendel Bezerra // POUCAS #40;Música;39;58.02;Atualidades3;;2019
-Érico Borgo // POUCAS #39;Música;39;50.22;Atualidades3;;2019
-Gordox // POUCAS #38;Música;39;47.2;Atualidades3;;2019
-Mauricio Meirelles // POUCAS #37;Música;39;65;Atualidades3;;2019
-Uma nora pra cada dia;Música;52;2.18;Funk;;;2019
-Credo que delicia;Música;52;2.05;Funk;;;2019
-Facilita;Música;52;2.63;Funk;;;2019
-Agora é tudo meu;Música;52;2.85;Funk;;;2019
-Terremoto;Música;52;2.43;Funk;;;2019
-Reboladinha;Música;52;2.37;Funk;;;2019
-O bebê;Música;52;2.97;Funk;;;2019
-Cheio de Marra;Música;53;3.77;Funk;;6;2016
-Tudo de Bom;Música;53;2.32;Funk;;6;2016
-Foi bom;Música;53;3.78;Funk;;6;2016
-Bandida;Música;53;2.87;Funk;;6;2016
-Tocar sua Pele;Música;53;4.2;Funk;;6;2016
-Minha Nega;Música;53;2.88;Funk;;6;2016
-Casado, Namorando, Solteiro;Música;54;3.33;Sertanejo;;7;2017
-Ar-condicionado no 15;Música;54;2.8;Sertanejo;;7;2017
-Ressaca de Saudade;Música;54;3.15;Sertanejo;;7;2017
-Decreto Liberado;Música;54;3.1;Sertanejo;;7;2017
-Quem Bate Também Chora;Música;54;2.5;Sertanejo;;7;2017
-Ninguém é de Ferro;Música;54;2.3;Sertanejo;;7;2017
-Sonhei que tava me casando;Música;54;2.7;Sertanejo;;7;2017
-Se esconder Ela Não Chora;Música;54;2.33;Sertanejo;;7;2017
-Eu sei de Cor;Música;55;3.08;Sertanejo;;8;2017
-A Gente não se Aguenta;Música;55;2.47;Sertanejo;;8;2017
-Traição Não tem Perdão;Música;55;2.7;Sertanejo;;8;2017
-Nem Foi e Já voltou;Música;55;2.83;Sertanejo;;8;2017
-Amante não tem Lar;Música;55;2.88;Sertanejo;;8;2017
-Dia, Lugar e Hora;Música;56;4.18;Sertanejo;;9;2016
-Primeira Semana;Música;56;3.13;Sertanejo;;9;2016
-Eu, você, o Mar e Ela;Música;56;3.12;Sertanejo;;9;2016
-Estava Zero;Música;56;2.77;Sertanejo;;9;2016
-Hear Me Now;Música;57;3.23;Eletrônica;;;2016
-All the Lies;Música;57;2;Eletrônica;;;2016
-Favela;Música;57;3.08;Eletrônica;;;2016
-Fuego;Música;57;3.13;Eletrônica;;;2016
-Peace Of Mind;Música;58;3;Eletrônica;;10;2019
-Heaven;Música;58;4.62;Eletrônica;;10;2019
-SOS;Música;58;2.62;Eletrônica;;10;2019
-Bad Reputation;Música;58;3.42;Eletrônica;;10;2019
-Old Town Road - Remix;Música;44,60;2.62;Hip-Hop;;11;2019
-Panini;Música;44;1.9;Hip-Hop;;12;2019
-Rodeo;Música;44,59;2.63;Hip-Hop;;13;2019
-Bring U Down;Música;44;2.18;Hip-Hop;;13;2019
-C7osure;Música;44;2.47;Hip-Hop;;13;2019
-Kick It;Música;44;2.35;Hip-Hop;;13;2019
-Always Got Something to Say;Música;61;4.08;Hip-Hop;;14;2018
-Going Home;Música;61;4.22;Hip-Hop;;14;2018
-Pure Gold;Música;61;5.62;Hip-Hop;;14;2018
-Pain;Música;61;4.73;Hip-Hop;;14;2018
-#259 - Loucos por boyband (feat. Manu Gavassi);Música;34,35;144.33;Pop2;;2019
-#258 - Wanda Morning Show: Bolsinha da Rihanna;Música;34;141.02;Pop2;;2019
-#257 - Não Queira;Música;34;151.8;Pop2;;2019
-#253 - Luí­sa Sonza: diva sensata do pop;Música;34,36;113.23;Pop2;;2019
-#237 - A sexta-feira é Santa Mas eu Não;Música;34,37;101.7;Pop2;;2019
-#229 - Wanda Morning Show 2;Música;34,62;107.33;Pop2;;2019
-#216 - Papo Sobre Fama e Artistas Incríveis;Música;34,38;120.77;Pop2;;2019
-O Assunto #22: Como a morte da menina Ágatha reabriu...;Música;41;20.6;Noticias1;;2019
-O Assunto #20: As contradições do caso Flordelis e como a deputada passou...;Música;41;21.27;Noticias1;;2019
-O Assunto #21: A emergência do clima - ainda dá tempo para salvar o planeta?;Música;41;22.93;Noticias1;;2019
-O Assunto #19: Dinheiro para campanhas eleitorais;Música;41;24.07;Noticias1;;2019
-O Assunto #18: Existe risco de guerra após os ataques na Arábia Saudita?;Música;41;23.7;Noticias1;;2019
+Quam;Música;18;7.85;Progressive bluegrass;;1;2070
+Temporibus architecto voluptas facilis sint rerum quod doloribus similique;Música;29;51.75;Feminist13;;2041
+Voluptates sint;Música;27,50;98.79;Sports18;;2077
+Placeat;Música;14,33;64.97;Talk10;;2039
+Quisquam eligendi culpa quas qui molestias sit dolorem tenetur;Música;23;98.15;Automobile18;;2025
+Asperiores sed laboriosam laboriosam;Música;17,22;31.12;History4;;2072
+Maiores;Música;20,33;75.5;Talk2;;2058
+Amet expedita eos aliquam;Música;8,29;33.24;Comic book3;;2029
+Ipsam blanditiis consequatur nam;Música;45;8.86;Progressive bluegrass;;2;2026
+Voluptates est aliquid aut voluptatum sapiente dolores consequuntur;Música;50;87.62;Music17;;2009
+Iste sint animi;Música;16;104.32;Feminist18;;2054
+Adipisci;Música;35;10.73;Outsider music;;3;2030
+Nam sunt impedit sed;Música;8;80.42;Talk1;;2069
+Cumque;Música;6;73.15;Educational8;;2030
+Provident perspiciatis eius explicabo laborum recusandae;Música;19;4.73;Seis;;4;2016
+Sit dignissimos perspiciatis ad deserunt molestiae id dignissimos;Música;14;44.26;Science3;;2061
+Qui quae totam corrupti ducimus;Música;33;93.35;Educational12;;2025
+Omnis corporis saepe;Música;14,21;44.43;Sports6;;2055
+Delectus laudantium ipsam doloremque nisi ipsam;Música;11;114.51;Interview14;;1996
+Nobis impedit voluptatem;Música;34;7.91;Seis;;5;2050
+Adipisci voluptatibus error;Música;8;56.84;Science fiction9;;2039
+Recusandae debitis dolor qui;Música;7,10;5.82;Kaseko;;6;2012
+Quos minima corrupti quisquam vero excepturi;Música;21,23;10.53;Video game18;;2060
+Sapiente sequi dignissimos;Música;33;4.57;Automobile14;;2073
+Est facere velit labore;Música;49,50;5.89;Automobile4;;2024
+Odio quibusdam;Música;30,35;8.59;Progressive bluegrass;;7;2033
+Quae neque in atque;Música;45;6.9;Shoegaze;;8;2022
+Doloribus recusandae nesciunt voluptatibus fugiat dolore error ut;Música;33;2.55;Technology1;;2004
+Eligendi doloribus reprehenderit porro dolorem consequatur;Música;34;6.84;Stoner rock;;9;2061
+Quis dolor et commodi ex dolorum nemo autem optio;Música;20,29;73.8;Sports9;;2048
+Sint magnam odit quam numquam;Música;18;6.94;Khplam wai;;10;2064
+Voluptatibus;Música;8;23.24;Automobile18;;2055
+Rerum;Música;34,36;9.2;Dirty south;;12;1991
+Dignissimos accusantium sit ipsam nemo minus officiis dolorum;Música;34;4.31;Stoner rock;;11;2014
+Minima deserunt;Música;47;12.88;Comedy and humor2;;2009
+Aspernatur nostrum delectus iste;Música;10,45;8.82;Music drama;;13;2028
+Tempore;Música;8,33;76.36;Religion and spirituality1;;2011
+Enim aliquam quaerat quia accusamus mollitia;Música;19;7.29;Waltz;;14;2029
+Harum nisi accusantium distinctio aut eveniet;Música;10,30;4;Mor lam;;15;2010
+Quos nostrum temporibus sapiente est;Música;14,50;11.63;Comedy and humor16;;2070
+Dolorum;Música;27;6.93;Feminist13;;2057
+Reprehenderit magni dolor fuga fuga vero tempora;Música;36,45;8.65;Waltz;;16;2071
+Nostrum a vitae sit;Música;27;19.65;History20;;2046
+Dolorem;Música;8;105.1;Crime7;;2053
+Molestias a quibusdam;Música;10;3.9;Horror punk;;17;1999
+Sunt modi tempora nesciunt;Música;4;93.16;Horror16;;2041
+Vitae provident enim perferendis veritatis praesentium;Música;22;113.61;Talk18;;2045
+A;Música;20;37.1;LGBT-related18;;2020
+Ut quod quia laboriosam architecto quia ullam;Música;10;8.2;Outsider music;;18;1998
+Dolores mollitia;Música;24,49;46.78;Educational20;;2062
+Vitae praesentium est pariatur veritatis rem;Música;20;8.35;Political19;;2039
+Quaerat facere;Música;11;45.41;Religion and spirituality16;;2062
+Consequuntur sequi quas facere aut itaque;Música;19;8.9;Waltz;;19;2020
+Odio;Música;36;5.82;Khyal;;21;2055
+Veniam velit dolorum dolores quam;Música;42;1.93;Gunchei;;20;2072
+Voluptas architecto consequatur quas hic voluptate omnis;Música;14;61.46;Comedy and humor16;;2059
+Corrupti;Música;30;2.12;Go-go;;22;2061
+Repellendus repellendus quo accusamus;Música;4,21;9.62;Business and finance19;;2043
+Est voluptate porro cupiditate;Música;31;2.76;Ars nova;;23;1990
+Corporis inventore tenetur;Música;7,34;5.7;Swing music;;24;2017
+Ducimus mollitia itaque repellat odio;Música;42;5.63;Gunchei;;25;2016
+Inventore ut libero adipisci iusto;Música;17,27;70.46;Science fiction3;;2005
+Optio ut optio fuga;Música;7,42;8.89;Waltz;;26;2030
+Culpa maxime;Música;34;3.1;Jesus music;;27;2064
+Perspiciatis dicta suscipit;Música;46;62.9;Science fiction16;;2009
+Accusantium;Música;11,20,50;64.24;Arts18;;2001
+Tenetur minima excepturi laudantium vitae;Música;18;3.87;Gunchei;;28;2004
+Voluptates;Música;36;5.23;Mor lam;;29;2055
+Repellat;Música;31;5.83;Progressive bluegrass;;30;2019
+Accusantium quasi deleniti architecto;Música;10;6.3;La la;;31;2047
+Placeat a delectus;Música;42;6.19;Khplam wai;;32;2022
+Tenetur eligendi in a soluta;Música;9,30;5.24;Ars nova;;33;2004
+Asperiores;Música;21;30.76;Interview19;;2042
+Adipisci sunt repellat fugit;Música;21;108.66;Interview16;;2004
+Temporibus eaque maxime repudiandae omnis;Música;50;75.73;LGBT-related6;;2044
+Eius commodi voluptatum;Música;36;4.38;Khyal;;34;2005
+Debitis cum placeat sint;Música;19;10.49;Rare groove;;35;2041
+Totam repellat eius ex quibusdam architecto a provident dolore;Música;5,42;6.18;Outsider music;;36;2073
+Aspernatur;Música;4,24;57.35;Comedy and humor4;;2034
+Blanditiis consequatur ullam;Música;6,23;81.43;Video game16;;2019
+Cumque;Música;36,45;3.9;Dirty south;;37;2009
+Beatae perspiciatis nesciunt ipsum sequi architecto;Música;31,36;10.97;Mexican son;;38;2026
+Molestias corrupti;Música;19;10.38;La la;;39;2003
+Sed doloribus;Música;5,31;3.78;Concerto;;40;2056
+Harum illum suscipit dolorem consequatur;Música;36;3.35;Concerto;;41;2058
+Accusantium maiores voluptas eos nisi;Música;49;40.5;Automobile19;;2050
+Necessitatibus voluptatum;Música;22,24;9.94;Comedy and humor16;;2050
+Quae earum in porro explicabo;Música;19,31;8.96;La la;;42;2059
+Nisi molestiae perspiciatis nemo delectus voluptas incidunt eveniet;Música;5,18;1.86;Gunchei;;43;2027
+Optio qui;Música;21,47;9.19;Law19;;2004
+Voluptates;Música;23;26.92;History19;;1992
+Quidem sequi ad vel molestiae facere veniam eos atque;Música;17;117.79;History16;;2061
+Ducimus repudiandae a odit;Música;9,18;6.9;Ars nova;;44;2040
+Animi illum aliquid beatae;Música;33;56.5;Horror11;;2018
+Nisi;Música;19;7.17;Kaseko;;45;2062
+Tempora necessitatibus repellendus ipsa mollitia;Música;19;1.19;La la;;47;2044
+Delectus inventore illum;Música;42;9.59;Progressive bluegrass;;46;1992
+Asperiores porro voluptatem nostrum quod saepe tenetur modi;Música;24,29;32.19;History19;;2032
+Temporibus sint consequuntur quam nostrum;Música;45;9.48;Music drama;;48;2007
+Est doloremque cum;Música;36;3.3;Shoegaze;;49;2043
+Ipsa;Música;5;1.76;Praise song;;50;2031
+Voluptates assumenda esse;Música;5,31;8.11;Ars nova;;51;2061
+Nulla aperiam perspiciatis;Música;30;1.34;Outsider music;;52;1995
+Minima numquam pariatur vel;Música;23;43.73;Talk14;;2001
+Praesentium;Música;20,22;93.7;Law8;;2026
+Laboriosam voluptates nam;Música;7;4.87;Stoner rock;;53;2075
+Labore at reprehenderit cumque eligendi accusantium vel quos nemo;Música;24;47.77;Technology5;;2043
+Laboriosam in dolor;Música;10;4.81;La la;;54;2057
+Quia quos magni ducimus;Música;16,21;85.8;Film and television1;;2077
+Saepe voluptate vero debitis fuga;Música;31;2.45;Praise song;;55;2033
+Quam;Música;9;4.41;Progressive bluegrass;;56;2016
+Ab magni veritatis;Música;10,18;6.1;Waltz;;57;2023
+Sed quam qui quia quis;Música;16;17.9;LGBT-related7;;1997
+Recusandae architecto accusamus itaque placeat distinctio accusantium;Música;11;29.5;Technology5;;2047
+Suscipit sed;Música;47;57.54;Technology19;;2055
+Fuga accusantium excepturi dolores;Música;24;95.68;Talk14;;2053
+Magnam veniam necessitatibus molestias esse;Música;9;6.2;Kaseko;;58;2028
+Soluta;Música;8;37.86;LGBT-related1;;1994
+Ut nam impedit;Música;20;28.74;History5;;2039
+Consectetur eius adipisci;Música;7,45;4.84;Dirty south;;59;2029
+Quasi quisquam modi;Música;5;9.83;Concerto;;60;2064
+Officia exercitationem qui doloremque vel eos;Música;42;5.87;Go-go;;61;2066
+At eos voluptas officiis vero atque;Música;6;98.5;Interview17;;2022
+Quia officiis maxime nulla earum;Música;7,18;7.62;Seis;;62;2074
+Itaque consectetur earum omnis facilis;Música;9;5.42;La la;;63;2037
+Animi consequatur;Música;30,42;8.29;Industrial rock;;64;2005
+Pariatur quam animi;Música;35,36;9.96;Outsider music;;65;2011
+Maxime ipsa nihil id;Música;33,47;23.12;Sports19;;2018
+Modi quae necessitatibus labore;Música;6;56.88;Religion and spirituality4;;2063
+Saepe optio;Música;34,45;2.7;Horror punk;;66;2069
+Fuga consequuntur;Música;17,29;81.54;Music11;;2077
+Vitae eveniet iste similique ducimus iusto;Música;22;74.18;Film and television18;;2032
+Ipsa corrupti deserunt;Música;29;11.4;Feminist18;;1995
+Temporibus beatae consequuntur vitae;Música;46;41.99;Feminist15;;2055
+Excepturi fuga tempora possimus;Música;29;38.95;Philosophy12;;2067
+Hic porro officiis;Música;6,33;76.69;History3;;2018
+Laudantium quibusdam;Música;46,49;59.5;Sports13;;2015
+Consequuntur iure minus consequatur;Música;22,49;87.43;Comedy and humor16;;2065
+Officia doloribus animi;Música;7,34;6.29;Industrial rock;;67;2045
+Ipsum doloremque;Música;45;10.87;Swing music;;68;2058
+Rem;Música;50;112.22;Video game10;;2033
+At odit error ex;Música;9;7.13;Swing music;;69;2056
+Laudantium laborum;Música;4,46;17.83;Interview2;;2060
+Ea;Música;7;2.29;Gamelan bebonangan;;70;2031
+Exercitationem assumenda odit provident quod rerum reprehenderit;Música;24;46.37;Music12;;2009
+Rerum minus nisi;Música;5,34,35;8.5;Rare groove;;71;2060
+Molestiae quis aliquam ut itaque;Música;17;92.5;Religion and spirituality18;;2047
+Quisquam suscipit;Música;7,31,36;9.32;Khyal;;72;2063
+Illo doloribus est voluptatum quos placeat;Música;23,49;92.99;Video game3;;2075
+Excepturi;Música;42;8.11;Music drama;;73;2029
+Nam tempora dolores quae;Música;9;4.14;Mor lam;;74;2067
+Pariatur quidem animi occaecati;Música;9;2.85;Outsider music;;75;2048
+Possimus porro illum;Música;30,36;8.3;Seis;;76;2017
+Occaecati reiciendis dignissimos accusamus recusandae;Música;34;3.31;Outsider music;;77;2038
+Provident excepturi dolores cupiditate;Música;27;19.27;Educational4;;2027
+Rerum voluptatem;Música;22;71.19;Film and television12;;2037
+Perferendis consequatur aliquid;Música;9;5.5;Outsider music;;78;2058
+Quod;Música;16;103.1;Comedy and humor5;;2049
+Ea impedit aperiam magnam;Música;50;79.86;Crime4;;2037
+Dolores eos voluptates earum repellat eius quasi;Música;6,22;89.46;Science fiction19;;2041
+Repudiandae;Música;27,33;105.84;Science fiction9;;2072
+Voluptatum voluptas;Música;5,34;3;Music drama;;79;2033
+Odio;Música;50;51.58;Feminist12;;2048
+Officiis;Música;23;108.94;Science fiction8;;2027
+Porro debitis distinctio inventore fugiat dolore natus voluptatibus;Música;45;6.46;Khyal;;80;2048
+Doloremque tempore;Música;23;81.67;Business and finance2;;1999
+Culpa;Música;30;8.16;Mor lam;;81;1994
+Iusto eius ea distinctio;Música;5,31;4.48;Music drama;;83;2043
+Necessitatibus optio laudantium;Música;18;6.41;Concerto;;82;1991
+Dolor praesentium perferendis blanditiis odit;Música;27;83.89;Political12;;1994
+Distinctio ea optio est alias magnam ea;Música;21,33;96.86;Science8;;2005
+Quasi;Música;10;9.55;Progressive bluegrass;;84;2057
+Quia enim sapiente adipisci ducimus dolor quod eaque;Música;8,50;7.17;Religion and spirituality16;;2044
+Necessitatibus possimus molestias;Música;8;73.75;Arts9;;2066
+Suscipit fugit corporis unde;Música;7;5.54;Kaseko;;85;2039
+Provident porro explicabo dicta;Música;31,42;5.75;Music drama;;86;2046
+Ad ipsum minima mollitia;Música;21;113.17;Science fiction15;;2024
+Veritatis nam nostrum nulla ipsum;Música;19,36;7.69;Progressive bluegrass;;87;1992
+Recusandae;Música;14;3.46;LGBT-related1;;2059
+Non aspernatur ut modi distinctio molestiae;Música;22;116.47;Automobile18;;2004
+Neque;Música;17,22;30.2;Sports7;;2077
+Ipsam quo;Música;27,46,50;91.96;Automobile7;;1997
+Debitis nesciunt qui;Música;47;56.23;Automobile10;;2027
+Voluptate cumque optio qui;Música;6,8;30.19;Advice8;;2020
+Tempora praesentium nobis culpa perspiciatis optio;Música;27;40.4;Philosophy17;;2041
+Consequuntur;Música;17,49;69.27;Technology9;;2002
+Alias rem;Música;20;6.43;History9;;2074
+Veritatis;Música;42;3.64;Jesus music;;88;2016
+Dolorem qui;Música;8,20;108.77;Talk10;;2008
+Corrupti consequuntur deserunt;Música;19;10.37;Shoegaze;;89;2051
+Eos;Música;17;6.3;Comedy and humor18;;2013
+Quod optio;Música;7,10;10.81;Waltz;;90;2000
+Praesentium iste id ratione nobis mollitia;Música;21;24.78;Feminist14;;2032
+Molestias maxime ratione nihil odio;Música;18,30;4.34;Horror punk;;91;1990
+Fugiat cum;Música;6;70.81;Comedy and humor16;;2069
+Culpa laboriosam voluptas;Música;24;41.79;Religion and spirituality12;;2025
+Architecto soluta;Música;7,35;10.82;Outsider music;;92;2055
+Voluptatem numquam aliquid blanditiis;Música;4,27;33.15;Arts19;;2001
+Libero accusantium;Música;4,49;66.9;Talk12;;2071
+Porro distinctio ipsam at numquam voluptatum dicta;Música;35,42;9.29;Ars nova;;93;2057
