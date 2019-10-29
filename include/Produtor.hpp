@@ -30,6 +30,4 @@ public:
     // Destructor
     ~Produtor();
 
-    // Overloading
-    void printarNoArquivo(std::ofstream &outfile);
 };

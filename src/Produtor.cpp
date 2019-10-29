@@ -7,13 +7,6 @@ Produtor::Produtor(std::string _come, int  _codigo) : Usuario(_come, _codigo) {}
 Produtor::~Produtor() {}
 
 // Functions
-void Produtor::printarNoArquivo(std::ofstream &outfile) {
-    if(!outfile.is_open()) {
-        std::cerr << "Erro de I/O" << std::endl;
-        exit(1);
-    };
-}
-
 std::list<Midia*> Produtor::getProdutosDesenvolvidos() {
     return this->produtosDesenvolvidos;
 }
