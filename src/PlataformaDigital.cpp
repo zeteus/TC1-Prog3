@@ -496,7 +496,7 @@ void PlataformaDigital::generateReports() {
             // Troca o ponto por uma vírgula
             str.replace(pos, 1, 1, ',');
 
-    filestats << "Horas Consumidas: " << str << std::endl << std::endl;
+    filestats << "Horas Consumidas: " << str << " minutos\n\n";
 
     str.clear();
     tempo = 0;
@@ -573,7 +573,6 @@ void PlataformaDigital::generateReports() {
         }
         if(maisOcorre.first != NULL)
             filestats << maisOcorre.first->getNome() << ':' << maisOcorre.second << '\n';
-            filestats << ":\n";
         mapProdutores.erase(maisOcorre.first);
         cont++;
     }

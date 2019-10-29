@@ -1,5 +1,253 @@
 Usuários:
-1;Código do usuário é número
+2;Luana Moura
+3;Helena Azevedo
+12;Gustavo Cunha
+13;Bernardo Araújo
+15;Eloah Moreira
+25;Nicolas Teixeira
+26;Laís Gonçalves
+28;Arthur Silveira
+32;Arthur Novaes
+37;Carlos Eduardo Rodrigues
+38;Alana Cardoso
+39;Matheus Almeida
+40;Maria Luiza Jesus
+41;João Vitor Costela
+43;Leonardo Nunes
+44;Lorenzo Gonçalves
+48;Davi Gomes
+1;Lucca Lima
+4;Maysa Farias
+5;Maria Julia Alves
+6;Davi Lucas Porto
+7;Sophia Castro
+8;Murilo Costela
+9;Clarice Fernandes
+10;Leandro das Neves
+11;Maria Eduarda Nascimento
+14;Ana Laura Campos
+16;Luna Freitas
+17;João Felipe Campos
+18;Bianca Castro
+19;Isis Nogueira
+20;Alice Carvalho
+21;Alícia Sales
+22;Augusto Teixeira
+23;Evelyn Pinto
+24;Srta. Mirella da Conceição
+27;Sra. Pietra Ferreira
+29;Benício Aragão
+30;Marcelo Silva
+31;Danilo Duarte
+33;Enzo da Cunha
+34;Sra. Sophie Freitas
+35;Natália Porto
+36;Maria Julia Silva
+42;Luana da Cruz
+45;Elisa Jesus
+46;Isis Teixeira
+47;Bárbara Rocha
+49;Sr. Rafael Cardoso
+50;Juliana Ferreira
 
 Mídias:
-Eligendi quae tempore voluptates nisi;Música;1;7.12;NULL;;1;2019
+Quam;Música;18;7.85;Progressive bluegrass;;1;2070
+Temporibus architecto voluptas facilis sint rerum quod doloribus similique;Podcast;29;51.75;Feminist;13;;2041
+Voluptates sint;Podcast;27,50;98.79;Sports;18;;2077
+Placeat;Podcast;14,33;64.97;Talk;10;;2039
+Quisquam eligendi culpa quas qui molestias sit dolorem tenetur;Podcast;23;98.15;Automobile;18;;2025
+Asperiores sed laboriosam laboriosam;Podcast;17,22;31.12;History;4;;2072
+Maiores;Podcast;20,33;75.5;Talk;2;;2058
+Amet expedita eos aliquam;Podcast;8,29;33.24;Comic book;3;;2029
+Ipsam blanditiis consequatur nam;Música;45;8.86;Progressive bluegrass;;2;2026
+Voluptates est aliquid aut voluptatum sapiente dolores consequuntur;Podcast;50;87.62;Music;17;;2009
+Iste sint animi;Podcast;16;104.32;Feminist;18;;2054
+Adipisci;Música;35;10.73;Outsider music;;3;2030
+Nam sunt impedit sed;Podcast;8;80.42;Talk;1;;2069
+Cumque;Podcast;6;73.15;Educational;8;;2030
+Provident perspiciatis eius explicabo laborum recusandae;Música;19;4.73;Seis;;4;2016
+Sit dignissimos perspiciatis ad deserunt molestiae id dignissimos;Podcast;14;44.26;Science;3;;2061
+Qui quae totam corrupti ducimus;Podcast;33;93.35;Educational;12;;2025
+Omnis corporis saepe;Podcast;14,21;44.43;Sports;6;;2055
+Delectus laudantium ipsam doloremque nisi ipsam;Podcast;11;114.51;Interview;14;;1996
+Nobis impedit voluptatem;Música;34;7.91;Seis;;5;2050
+Adipisci voluptatibus error;Podcast;8;56.84;Science fiction;9;;2039
+Recusandae debitis dolor qui;Música;7,10;5.82;Kaseko;;6;2012
+Quos minima corrupti quisquam vero excepturi;Podcast;21,23;10.53;Video game;18;;2060
+Sapiente sequi dignissimos;Podcast;33;4.57;Automobile;14;;2073
+Est facere velit labore;Podcast;49,50;5.89;Automobile;4;;2024
+Odio quibusdam;Música;30,35;8.59;Progressive bluegrass;;7;2033
+Quae neque in atque;Música;45;6.9;Shoegaze;;8;2022
+Doloribus recusandae nesciunt voluptatibus fugiat dolore error ut;Podcast;33;2.55;Technology;1;;2004
+Eligendi doloribus reprehenderit porro dolorem consequatur;Música;34;6.84;Stoner rock;;9;2061
+Quis dolor et commodi ex dolorum nemo autem optio;Podcast;20,29;73.8;Sports;9;;2048
+Sint magnam odit quam numquam;Música;18;6.94;Khplam wai;;10;2064
+Voluptatibus;Podcast;8;23.24;Automobile;18;;2055
+Dignissimos accusantium sit ipsam nemo minus officiis dolorum;Música;34;4.31;Stoner rock;;11;2014
+Rerum;Música;34,36;9.2;Dirty south;;12;1991
+Minima deserunt;Podcast;47;12.88;Comedy and humor;2;;2009
+Aspernatur nostrum delectus iste;Música;10,45;8.82;Music drama;;13;2028
+Tempore;Podcast;8,33;76.36;Religion and spirituality;1;;2011
+Enim aliquam quaerat quia accusamus mollitia;Música;19;7.29;Waltz;;14;2029
+Harum nisi accusantium distinctio aut eveniet;Música;10,30;4;Mor lam;;15;2010
+Quos nostrum temporibus sapiente est;Podcast;14,50;11.63;Comedy and humor;16;;2070
+Dolorum;Podcast;27;6.93;Feminist;13;;2057
+Reprehenderit magni dolor fuga fuga vero tempora;Música;36,45;8.65;Waltz;;16;2071
+Nostrum a vitae sit;Podcast;27;19.65;History;20;;2046
+Dolorem;Podcast;8;105.1;Crime;7;;2053
+Molestias a quibusdam;Música;10;3.9;Horror punk;;17;1999
+Sunt modi tempora nesciunt;Podcast;4;93.16;Horror;16;;2041
+Vitae provident enim perferendis veritatis praesentium;Podcast;22;113.61;Talk;18;;2045
+Ut quod quia laboriosam architecto quia ullam;Música;10;8.2;Outsider music;;18;1998
+A;Podcast;20;37.1;LGBT-related;18;;2020
+Dolores mollitia;Podcast;24,49;46.78;Educational;20;;2062
+Vitae praesentium est pariatur veritatis rem;Podcast;20;8.35;Political;19;;2039
+Quaerat facere;Podcast;11;45.41;Religion and spirituality;16;;2062
+Consequuntur sequi quas facere aut itaque;Música;19;8.9;Waltz;;19;2020
+Veniam velit dolorum dolores quam;Música;42;1.93;Gunchei;;20;2072
+Odio;Música;36;5.82;Khyal;;21;2055
+Voluptas architecto consequatur quas hic voluptate omnis;Podcast;14;61.46;Comedy and humor;16;;2059
+Corrupti;Música;30;2.12;Go-go;;22;2061
+Repellendus repellendus quo accusamus;Podcast;4,21;9.62;Business and finance;19;;2043
+Est voluptate porro cupiditate;Música;31;2.76;Ars nova;;23;1990
+Corporis inventore tenetur;Música;7,34;5.7;Swing music;;24;2017
+Ducimus mollitia itaque repellat odio;Música;42;5.63;Gunchei;;25;2016
+Inventore ut libero adipisci iusto;Podcast;17,27;70.46;Science fiction;3;;2005
+Optio ut optio fuga;Música;7,42;8.89;Waltz;;26;2030
+Culpa maxime;Música;34;3.1;Jesus music;;27;2064
+Perspiciatis dicta suscipit;Podcast;46;62.9;Science fiction;16;;2009
+Accusantium;Podcast;11,20,50;64.24;Arts;18;;2001
+Tenetur minima excepturi laudantium vitae;Música;18;3.87;Gunchei;;28;2004
+Voluptates;Música;36;5.23;Mor lam;;29;2055
+Repellat;Música;31;5.83;Progressive bluegrass;;30;2019
+Accusantium quasi deleniti architecto;Música;10;6.3;La la;;31;2047
+Placeat a delectus;Música;42;6.19;Khplam wai;;32;2022
+Tenetur eligendi in a soluta;Música;9,30;5.24;Ars nova;;33;2004
+Asperiores;Podcast;21;30.76;Interview;19;;2042
+Adipisci sunt repellat fugit;Podcast;21;108.66;Interview;16;;2004
+Temporibus eaque maxime repudiandae omnis;Podcast;50;75.73;LGBT-related;6;;2044
+Eius commodi voluptatum;Música;36;4.38;Khyal;;34;2005
+Debitis cum placeat sint;Música;19;10.49;Rare groove;;35;2041
+Totam repellat eius ex quibusdam architecto a provident dolore;Música;5,42;6.18;Outsider music;;36;2073
+Aspernatur;Podcast;4,24;57.35;Comedy and humor;4;;2034
+Blanditiis consequatur ullam;Podcast;6,23;81.43;Video game;16;;2019
+Cumque;Música;36,45;3.9;Dirty south;;37;2009
+Beatae perspiciatis nesciunt ipsum sequi architecto;Música;31,36;10.97;Mexican son;;38;2026
+Molestias corrupti;Música;19;10.38;La la;;39;2003
+Sed doloribus;Música;5,31;3.78;Concerto;;40;2056
+Harum illum suscipit dolorem consequatur;Música;36;3.35;Concerto;;41;2058
+Accusantium maiores voluptas eos nisi;Podcast;49;40.5;Automobile;19;;2050
+Necessitatibus voluptatum;Podcast;22,24;9.94;Comedy and humor;16;;2050
+Quae earum in porro explicabo;Música;19,31;8.96;La la;;42;2059
+Nisi molestiae perspiciatis nemo delectus voluptas incidunt eveniet;Música;5,18;1.86;Gunchei;;43;2027
+Optio qui;Podcast;21,47;9.19;Law;19;;2004
+Voluptates;Podcast;23;26.92;History;19;;1992
+Quidem sequi ad vel molestiae facere veniam eos atque;Podcast;17;117.79;History;16;;2061
+Ducimus repudiandae a odit;Música;9,18;6.9;Ars nova;;44;2040
+Animi illum aliquid beatae;Podcast;33;56.5;Horror;11;;2018
+Nisi;Música;19;7.17;Kaseko;;45;2062
+Delectus inventore illum;Música;42;9.59;Progressive bluegrass;;46;1992
+Tempora necessitatibus repellendus ipsa mollitia;Música;19;1.19;La la;;47;2044
+Temporibus sint consequuntur quam nostrum;Música;45;9.48;Music drama;;48;2007
+Asperiores porro voluptatem nostrum quod saepe tenetur modi;Podcast;24,29;32.19;History;19;;2032
+Est doloremque cum;Música;36;3.3;Shoegaze;;49;2043
+Ipsa;Música;5;1.76;Praise song;;50;2031
+Voluptates assumenda esse;Música;5,31;8.11;Ars nova;;51;2061
+Nulla aperiam perspiciatis;Música;30;1.34;Outsider music;;52;1995
+Minima numquam pariatur vel;Podcast;23;43.73;Talk;14;;2001
+Praesentium;Podcast;20,22;93.7;Law;8;;2026
+Laboriosam voluptates nam;Música;7;4.87;Stoner rock;;53;2075
+Labore at reprehenderit cumque eligendi accusantium vel quos nemo;Podcast;24;47.77;Technology;5;;2043
+Laboriosam in dolor;Música;10;4.81;La la;;54;2057
+Quia quos magni ducimus;Podcast;16,21;85.8;Film and television;1;;2077
+Saepe voluptate vero debitis fuga;Música;31;2.45;Praise song;;55;2033
+Quam;Música;9;4.41;Progressive bluegrass;;56;2016
+Ab magni veritatis;Música;10,18;6.1;Waltz;;57;2023
+Sed quam qui quia quis;Podcast;16;17.9;LGBT-related;7;;1997
+Recusandae architecto accusamus itaque placeat distinctio accusantium;Podcast;11;29.5;Technology;5;;2047
+Suscipit sed;Podcast;47;57.54;Technology;19;;2055
+Fuga accusantium excepturi dolores;Podcast;24;95.68;Talk;14;;2053
+Magnam veniam necessitatibus molestias esse;Música;9;6.2;Kaseko;;58;2028
+Soluta;Podcast;8;37.86;LGBT-related;1;;1994
+Ut nam impedit;Podcast;20;28.74;History;5;;2039
+Consectetur eius adipisci;Música;7,45;4.84;Dirty south;;59;2029
+Quasi quisquam modi;Música;5;9.83;Concerto;;60;2064
+Officia exercitationem qui doloremque vel eos;Música;42;5.87;Go-go;;61;2066
+Quia officiis maxime nulla earum;Música;7,18;7.62;Seis;;62;2074
+At eos voluptas officiis vero atque;Podcast;6;98.5;Interview;17;;2022
+Itaque consectetur earum omnis facilis;Música;9;5.42;La la;;63;2037
+Animi consequatur;Música;30,42;8.29;Industrial rock;;64;2005
+Pariatur quam animi;Música;35,36;9.96;Outsider music;;65;2011
+Maxime ipsa nihil id;Podcast;33,47;23.12;Sports;19;;2018
+Modi quae necessitatibus labore;Podcast;6;56.88;Religion and spirituality;4;;2063
+Saepe optio;Música;34,45;2.7;Horror punk;;66;2069
+Fuga consequuntur;Podcast;17,29;81.54;Music;11;;2077
+Vitae eveniet iste similique ducimus iusto;Podcast;22;74.18;Film and television;18;;2032
+Ipsa corrupti deserunt;Podcast;29;11.4;Feminist;18;;1995
+Temporibus beatae consequuntur vitae;Podcast;46;41.99;Feminist;15;;2055
+Excepturi fuga tempora possimus;Podcast;29;38.95;Philosophy;12;;2067
+Hic porro officiis;Podcast;6,33;76.69;History;3;;2018
+Laudantium quibusdam;Podcast;46,49;59.5;Sports;13;;2015
+Consequuntur iure minus consequatur;Podcast;22,49;87.43;Comedy and humor;16;;2065
+Officia doloribus animi;Música;7,34;6.29;Industrial rock;;67;2045
+Ipsum doloremque;Música;45;10.87;Swing music;;68;2058
+Rem;Podcast;50;112.22;Video game;10;;2033
+At odit error ex;Música;9;7.13;Swing music;;69;2056
+Laudantium laborum;Podcast;4,46;17.83;Interview;2;;2060
+Ea;Música;7;2.29;Gamelan bebonangan;;70;2031
+Rerum minus nisi;Música;5,34,35;8.5;Rare groove;;71;2060
+Exercitationem assumenda odit provident quod rerum reprehenderit;Podcast;24;46.37;Music;12;;2009
+Molestiae quis aliquam ut itaque;Podcast;17;92.5;Religion and spirituality;18;;2047
+Quisquam suscipit;Música;7,31,36;9.32;Khyal;;72;2063
+Illo doloribus est voluptatum quos placeat;Podcast;23,49;92.99;Video game;3;;2075
+Excepturi;Música;42;8.11;Music drama;;73;2029
+Nam tempora dolores quae;Música;9;4.14;Mor lam;;74;2067
+Pariatur quidem animi occaecati;Música;9;2.85;Outsider music;;75;2048
+Possimus porro illum;Música;30,36;8.3;Seis;;76;2017
+Occaecati reiciendis dignissimos accusamus recusandae;Música;34;3.31;Outsider music;;77;2038
+Provident excepturi dolores cupiditate;Podcast;27;19.27;Educational;4;;2027
+Rerum voluptatem;Podcast;22;71.19;Film and television;12;;2037
+Perferendis consequatur aliquid;Música;9;5.5;Outsider music;;78;2058
+Quod;Podcast;16;103.1;Comedy and humor;5;;2049
+Ea impedit aperiam magnam;Podcast;50;79.86;Crime;4;;2037
+Dolores eos voluptates earum repellat eius quasi;Podcast;6,22;89.46;Science fiction;19;;2041
+Repudiandae;Podcast;27,33;105.84;Science fiction;9;;2072
+Voluptatum voluptas;Música;5,34;3;Music drama;;79;2033
+Odio;Podcast;50;51.58;Feminist;12;;2048
+Porro debitis distinctio inventore fugiat dolore natus voluptatibus;Música;45;6.46;Khyal;;80;2048
+Officiis;Podcast;23;108.94;Science fiction;8;;2027
+Doloremque tempore;Podcast;23;81.67;Business and finance;2;;1999
+Culpa;Música;30;8.16;Mor lam;;81;1994
+Necessitatibus optio laudantium;Música;18;6.41;Concerto;;82;1991
+Iusto eius ea distinctio;Música;5,31;4.48;Music drama;;83;2043
+Dolor praesentium perferendis blanditiis odit;Podcast;27;83.89;Political;12;;1994
+Distinctio ea optio est alias magnam ea;Podcast;21,33;96.86;Science;8;;2005
+Quasi;Música;10;9.55;Progressive bluegrass;;84;2057
+Quia enim sapiente adipisci ducimus dolor quod eaque;Podcast;8,50;7.17;Religion and spirituality;16;;2044
+Necessitatibus possimus molestias;Podcast;8;73.75;Arts;9;;2066
+Suscipit fugit corporis unde;Música;7;5.54;Kaseko;;85;2039
+Provident porro explicabo dicta;Música;31,42;5.75;Music drama;;86;2046
+Veritatis nam nostrum nulla ipsum;Música;19,36;7.69;Progressive bluegrass;;87;1992
+Ad ipsum minima mollitia;Podcast;21;113.17;Science fiction;15;;2024
+Recusandae;Podcast;14;3.46;LGBT-related;1;;2059
+Non aspernatur ut modi distinctio molestiae;Podcast;22;116.47;Automobile;18;;2004
+Neque;Podcast;17,22;30.2;Sports;7;;2077
+Ipsam quo;Podcast;27,46,50;91.96;Automobile;7;;1997
+Debitis nesciunt qui;Podcast;47;56.23;Automobile;10;;2027
+Voluptate cumque optio qui;Podcast;6,8;30.19;Advice;8;;2020
+Tempora praesentium nobis culpa perspiciatis optio;Podcast;27;40.4;Philosophy;17;;2041
+Consequuntur;Podcast;17,49;69.27;Technology;9;;2002
+Alias rem;Podcast;20;6.43;History;9;;2074
+Veritatis;Música;42;3.64;Jesus music;;88;2016
+Dolorem qui;Podcast;8,20;108.77;Talk;10;;2008
+Corrupti consequuntur deserunt;Música;19;10.37;Shoegaze;;89;2051
+Eos;Podcast;17;6.3;Comedy and humor;18;;2013
+Quod optio;Música;7,10;10.81;Waltz;;90;2000
+Praesentium iste id ratione nobis mollitia;Podcast;21;24.78;Feminist;14;;2032
+Molestias maxime ratione nihil odio;Música;18,30;4.34;Horror punk;;91;1990
+Fugiat cum;Podcast;6;70.81;Comedy and humor;16;;2069
+Culpa laboriosam voluptas;Podcast;24;41.79;Religion and spirituality;12;;2025
+Architecto soluta;Música;7,35;10.82;Outsider music;;92;2055
+Voluptatem numquam aliquid blanditiis;Podcast;4,27;33.15;Arts;19;;2001
+Libero accusantium;Podcast;4,49;66.9;Talk;12;;2071
+Porro distinctio ipsam at numquam voluptatum dicta;Música;35,42;9.29;Ars nova;;93;2057

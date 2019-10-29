@@ -23,17 +23,21 @@ py: all
 	clear
 	./$(BIN)/$(EXECUTABLE) $(EXECARGSPY)
 
-valpy: all
-	clear
-	valgrind ./$(BIN)/$(EXECUTABLE) $(EXECARGSPY)
-
 val: all
 	clear
 	valgrind ./$(BIN)/$(EXECUTABLE) $(EXECARGS)
 
+valpy: all
+	clear
+	valgrind ./$(BIN)/$(EXECUTABLE) $(EXECARGSPY)
+
 valzao: all
 	clear
 	valgrind --leak-check=full --show-leak-kinds=all ./$(BIN)/$(EXECUTABLE) $(EXECARGS)
+
+valzaopy: all
+	clear
+	valgrind --leak-check=full --show-leak-kinds=all ./$(BIN)/$(EXECUTABLE) $(EXECARGSPY)
 
 $(BIN)/$(EXECUTABLE): $(SRC)/*.cpp
 	$(CXX) $(CXX_FLAGS) -I$(INCLUDE) -L$(LIB) $^ -o $@ $(LIBRARIES)
@@ -41,6 +45,9 @@ $(BIN)/$(EXECUTABLE): $(SRC)/*.cpp
 clean:
 	-rm $(BIN)/*
 	# make
+
+
+
 
 ## Para point-case test, tratamento de exceções
 

@@ -1,20 +1,79 @@
-Horas Consumidas: 0
+Horas Consumidas: 7311,87minutos
 
-Gênero mais ouvido: NULL - 7.12 minutos
+Gênero mais ouvido: Comedy and humor - 420.9 minutos
 
 Mídias por Gêneros:
-NL:1
+KA:4
+SP:6
+SE:4
+AU:8
+SR:3
+AR:3
+MD:6
+BA:2
+FE:7
+AD:1
+KH:4
+HI:8
+IR:2
+CA:9
+JM:2
+IN:5
+ML:4
+SH:3
+PO:2
+ED:4
+RA:6
+LA:2
+GU:4
+SM:3
+LG:5
+FA:3
+AN:5
+TA:8
+WA:6
+TE:5
+MS:1
+VG:4
+RG:2
+PH:2
+CR:2
+PB:8
+CO:4
+DS:3
+LL:6
+KW:2
+MU:3
+CB:1
+HP:3
+HO:2
+GB:1
+OM:9
+SF:7
+PS:2
+SC:2
+GO:2
 
 Top 10 Mídias:
+Quasi:Progressive bluegrass:4
+Est facere velit labore:Automobile:4
+Dolores mollitia:Educational:4
+Qui quae totam corrupti ducimus:Educational:3
+Rem:Video game:3
+Corrupti:Go-go:3
+Rerum voluptatem:Film and television:3
+Quia quos magni ducimus:Film and television:3
+Cumque:Educational:3
+Provident porro explicabo dicta:Music drama:3
 
 Top 10 Produtores:
-:
-:
-:
-:
-:
-:
-:
-:
-:
-:
+Luana da Cruz:15
+Sra. Sophie Freitas:15
+Leandro das Neves:14
+Enzo da Cunha:14
+Srta. Mirella da Conceição:14
+Sr. Rafael Cardoso:13
+Elisa Jesus:13
+Davi Lucas Porto:13
+Augusto Teixeira:13
+Marcelo Silva:13
