@@ -118,35 +118,38 @@ void PlataformaDigital::loadFileUsuarios(std::ifstream &infile) {
         getline(ss, str, ';');
         try{
             codigo = stoi(str);
+            getline(ss, str, ';');
+            tipo = str.at(0);
+            getline(ss, nome);
+
+            // Usuario *u;
+            Usuario *u;
+            switch(tipo) {
+                case 'U':
+                case 'u':
+                    u = new Assinante(nome, codigo);
+                    this->assinantes.insert((Assinante*) u);
+                break;
+                case 'P':
+                case 'p':
+                    u = new Podcaster(nome, codigo);
+                    this->produtores.insert((Produtor*) u);
+                break;
+                case 'A':
+                case 'a':
+                    u = new Artista(nome, codigo);
+                    this->produtores.insert((Produtor*) u);
+                break;
+                default:
+                    throw '3';
+            }
         } catch(std::invalid_argument) {
             std::cerr << _BOLDRED << "Erro de formatação" << _RESET << std::endl;
             exit(2);
-        }
-        getline(ss, str, ';');
-        tipo = str.at(0);
-        getline(ss, nome);
-
-        // Usuario *u;
-        Usuario *u;
-        switch(tipo) {
-            case 'U':
-            case 'u':
-                u = new Assinante(nome, codigo);
-                this->assinantes.insert((Assinante*) u);
-            break;
-            case 'P':
-            case 'p':
-                u = new Podcaster(nome, codigo);
-                this->produtores.insert((Produtor*) u);
-            break;
-            case 'A':
-            case 'a':
-                u = new Artista(nome, codigo);
-                this->produtores.insert((Produtor*) u);
-            break;
-            default:
-                std::cerr << _BOLDRED << "Inconsistências na entrada" << _RESET << std::endl;
-                exit(3);
+        } catch(char &e) {
+                // Sempre será tipo 3
+            std::cerr << _BOLDRED << "Inconsistências na entrada" << _RESET << std::endl;
+            exit(3);
         }
     }
     infile.close();
@@ -208,155 +211,160 @@ void PlataformaDigital::loadFileMidias(std::ifstream &infile) {
 
     while(getline(infile, str)) {
         try {
-        ss = std::stringstream(str);
+            ss = std::stringstream(str);
 
-        // Lê o código
-        getline(ss, str, ';');
-        cod = std::stoi(str);
+            // Lê o código
+            getline(ss, str, ';');
+            cod = std::stoi(str);
 
-        // Lê o nome
-        getline(ss, nome, ';');
+            // Lê o nome
+            getline(ss, nome, ';');
 
-        // Lê o tipo
-        getline(ss, str, ';');
-        // Seleciona  o primeiro char de 'str'
-        type = str.at(0);
+            // Lê o tipo
+            getline(ss, str, ';');
+            // Seleciona  o primeiro char de 'str'
+            type = str.at(0);
 
-        // Cria uma lista de produtores
-        getline(ss, str, ';');
-        ss2 = std::stringstream(str);
-        while(ss2 >> str) {
-            while ((pos = str.rfind(',')) != std::string::npos) {   //acha as vírgulas
-                str.erase(pos, 1);  //apaga os caracteres não vírgula, até a última vírgula
-            }
-            codProdutores.insert(std::stoi(str));
-        }
-
-        // Lê a duração
-        getline(ss, str, ';');
-        pos = str.find(',');
-        if(pos != std::string::npos)
-            // Troca a vírgula por um ponto, para converter para float
-            str.replace(pos, 1, 1, '.');
-        duracao = std::stof(str);
-
-        // Cria uma lista de gêneros
-        getline(ss, str, ';');
-        ss2 = std::stringstream(str);
-        while(ss2 >> str) {
-            while ((pos = str.rfind(',')) != std::string::npos) {   //acha as vírgulas
-                str.erase(pos, 1);  //apaga os caracteres não vírgula, até a última vírgula
-            }
-            listGen.push_back(str);
-        }
-
-        // Lê a temporada
-        getline(ss, str, ';');
-        temp = !str.empty() ? stoi(str) : 0;
-
-        // Lê o Álbum
-        getline(ss, nomeAlbum, ';');
-
-        // Lê o código do Álbum
-        getline(ss, str, ';');
-        codAlbum = !str.empty() ? stoi(str) : 0;
-
-        // Lê o Ano de Publicação
-        getline(ss, str, '\n');
-        ano = stoi(str);
-        
-        } catch(std::invalid_argument) {
-            std::cerr << _BOLDRED << "Erro de formatação" << _RESET << std::endl;
-            exit(2);
-        }
-
-        std::set<Produtor*> setProdutores;
-        Produtor* p = NULL;
-        // Assumindo que todos os produtores da lista são diferentes
-        // (Não há dupla entrada de produtores)
-        // Para cada produtor de entrada...
-        for(int pCod : codProdutores) {
-            // ... percorre os produtores registrados...
-            for(Produtor *produtorPlataforma : this->getProdutores()) {
-                // ...e encontra o de mesmo código
-                if(produtorPlataforma->getCodigo() == pCod)
-                    p = produtorPlataforma;
-            }
-            // Caso não tenha encontrado
-            if(p == NULL) {
-                std::cerr << _BOLDRED << "Inconsistências na entrada" << _RESET << std::endl;
-                exit(3);
-            }
-            setProdutores.insert(p);
-        }
-
-        // Verifica se algum genero da lista existe
-        Midia::Genero *genre = NULL;
-            for(std::string itstr : listGen){
-                for(Midia::Genero *itgen : this->getGeneros())
-                    // Gênero encontrado
-                    if(itgen->getSigla() == itstr){
-                        genre = itgen;
-                        break;
-                    }
-                // Gênero foi encontrado
-                if(genre != NULL) break;
-            }
-            // Genero não existe
-            if(genre == NULL) {
-                std::cerr << _BOLDRED << "Inconsistências na entrada" << _RESET << std::endl;
-                exit(3);
+            // Cria uma lista de produtores
+            getline(ss, str, ';');
+            ss2 = std::stringstream(str);
+            while(ss2 >> str) {
+                while ((pos = str.rfind(',')) != std::string::npos)  //acha as vírgulas
+                    str.erase(pos, 1);  //apaga os caracteres não vírgula, até a última vírgula
+                codProdutores.insert(std::stoi(str));
             }
 
-        Midia *midia = NULL;
-        Album *albumDaMusica = NULL;
-        Musica *ptrMusica = NULL;
-        switch(type) {
-            case 'P':
-            case 'p':
-                midia = new Podcast(nome, cod, genre, duracao, ano, temp);
-            break;
-            case 'M':
-            case 'm':
-                if(codAlbum != 0) {
-                    for (Album *itAlbuns : this->getAlbumsCadastrados())
-                        if (itAlbuns->getCodigo() == codAlbum) {
-                            nomeAlbum = itAlbuns->getNome();
-                            albumDaMusica = itAlbuns;
+            // Lê a duração
+            getline(ss, str, ';');
+            pos = str.find(',');
+            if(pos != std::string::npos)
+                // Troca a vírgula por um ponto, para converter para float
+                str.replace(pos, 1, 1, '.');
+            duracao = std::stof(str);
+
+            // Cria uma lista de gêneros
+            getline(ss, str, ';');
+            ss2 = std::stringstream(str);
+            while(ss2 >> str) {
+                while ((pos = str.rfind(',')) != std::string::npos)   //acha as vírgulas
+                    str.erase(pos, 1);  //apaga os caracteres não vírgula, até a última vírgula
+                listGen.push_back(str);
+            }
+
+            // Lê a temporada
+            getline(ss, str, ';');
+            temp = !str.empty() ? stoi(str) : 0;
+
+            // Lê o Álbum
+            getline(ss, nomeAlbum, ';');
+
+            // Lê o código do Álbum
+            getline(ss, str, ';');
+            codAlbum = !str.empty() ? stoi(str) : 0;
+
+            // Lê o Ano de Publicação
+            getline(ss, str, '\n');
+            ano = stoi(str);
+
+            
+
+            std::set<Produtor*> setProdutores;
+            Produtor* p = NULL;
+            // Assumindo que todos os produtores da lista são diferentes
+            // (Não há dupla entrada de produtores)
+            // Para cada produtor de entrada...
+            for(int pCod : codProdutores) {
+                // ... percorre os produtores registrados...
+                for(Produtor *produtorPlataforma : this->getProdutores())
+                    // ...e encontra o de mesmo código
+                    if(produtorPlataforma->getCodigo() == pCod)
+                        p = produtorPlataforma;
+                // Caso não tenha encontrado
+                if(p == NULL)
+                    throw '3';
+                setProdutores.insert(p);
+            }
+
+            // Verifica se algum genero da lista existe
+            Midia::Genero *genre = NULL;
+                for(std::string itstr : listGen){
+                    for(Midia::Genero *itgen : this->getGeneros())
+                        // Gênero encontrado
+                        if(itgen->getSigla() == itstr){
+                            genre = itgen;
                             break;
                         }
+                    // Gênero foi encontrado
+                    if(genre != NULL) break;
+                }
+                // Genero não existe
+                if(genre == NULL) 
+                    throw '3';
 
-                    if (albumDaMusica == NULL && codAlbum != 0) {    // Não foi encontrado álbum já existente para a música
+            Midia *midia = NULL;
+            Album *albumDaMusica = NULL;
+            Musica *ptrMusica = NULL;
+            switch(type) {
+                case 'P':
+                case 'p':
+                    midia = new Podcast(nome, cod, genre, duracao, ano, temp);
+                break;
+                case 'M':
+                case 'm':
+                    if(codAlbum != 0) {
+                        for (Album *itAlbuns : this->getAlbumsCadastrados())
+                            if (itAlbuns->getCodigo() == codAlbum) {
+                                nomeAlbum = itAlbuns->getNome();
+                                albumDaMusica = itAlbuns;
+                                break;
+                            }
+
+                        if (albumDaMusica == NULL && codAlbum != 0) {    // Não foi encontrado álbum já existente para a música
 
                             albumDaMusica = new Album(nomeAlbum, codAlbum, duracao, ano, 1);
                             this->addAlbum(albumDaMusica);
+                        }
                     }
-                }
-                ptrMusica = new Musica(nome, cod, genre, duracao, ano);
-                midia = ptrMusica;
+                    ptrMusica = new Musica(nome, cod, genre, duracao, ano);
+                    midia = ptrMusica;
 
-                if(codAlbum != 0) 
-                    albumDaMusica->addMusic((Musica*) midia);
+                    if(codAlbum != 0) 
+                        albumDaMusica->addMusic((Musica*) midia);
 
-                ptrMusica->setAlbum(albumDaMusica);
+                    ptrMusica->setAlbum(albumDaMusica);
 
-            break;
-            default:
-                std::cerr << _BOLDRED << "Inconsistências na entrada" << _RESET << std::endl;
-                exit(3);
-        }
+                break;
+                default:
+                    throw '3';
+            }
 
-        if(!setProdutores.empty())
-            this->addProduto(midia, setProdutores);
-        else {
-            std::cerr << _BOLDRED << "Inconsistências na entrada" << _RESET << std::endl;
-            exit(3);
+            if(!setProdutores.empty())
+                this->addProduto(midia, setProdutores);
+            else
+                throw '3';
+
+            setProdutores.clear();
+
+
+        } catch(std::invalid_argument) {
+            std::cerr << _BOLDRED << "Erro de formatação" << _RESET << std::endl;
+            exit(2);
+        } catch(char &e) {
+            switch(e) {
+                case '2':
+                    std::cerr << _BOLDRED << "Erro de formatação" << _RESET << std::endl;
+                    exit(2);
+                break;
+                case '3':
+                    std::cerr << _BOLDRED << "Inconsistências na entrada" << _RESET << std::endl;
+                    exit(3);
+                break;
+            }
         }
 
         // Mídia já está pronta
 
         codProdutores.clear();
-        setProdutores.clear();
         listGen.clear();
     }
 }
