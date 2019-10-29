@@ -21,14 +21,14 @@ void Podcast::printarNoArquivo(std::ofstream &outfile) {
         exit(1);
     }   
     
-    outfile << this->getNome() << ";Música;";
+    outfile << this->getNome() << ";Podcast;";
     for(auto p : this->getProdutores()) {
         outfile << p->getCodigo();
         if(*this->getProdutores().rbegin() != p){ // Se não for o último
             outfile <<',';
         }
     }
-    outfile << ';' << this->getDuracao() << ';' << this->getGenero()->getNome() << this->getQtdTemporadas() << ";;" << this->getAnoLancamento() << '\n';
+    outfile << ';' << this->getDuracao() << ';' << this->getGenero()->getNome() << ';' << this->getQtdTemporadas() << ";;" << this->getAnoLancamento() << '\n';
 }
 
 // Overloading
