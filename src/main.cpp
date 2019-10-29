@@ -19,7 +19,7 @@ void printList(list<typeA> a) {
 int main(int argc, char* argv[]) {
     if(argc != 9){
         cout << _BOLDRED << "Checa essas entrada aí bro." << _RESET << endl;
-        exit(1);
+        exit(4);
     }
 
     char* in;
@@ -50,7 +50,7 @@ int main(int argc, char* argv[]) {
                 break;
                 default:
                     cout << _BOLDRED << "Alguma flag tá bizonha. Só aceito 'u', 'f', 'm' e 'g'!" << _RESET << endl;
-                    exit(1);
+                    exit(4);
             }
         }
     }

@@ -18,10 +18,10 @@ make run_e26 | grep 'Error 2'
 make run_e27 | grep 'Error 2'
 make run_e28 | grep 'Error 2'
 make run_e29 | grep 'Error 2'
-make run_e293 | grep 'Error 2'
 echo
 
 echo "--- ERRO 3: ---"
+make run_e31 | grep 'Error 3'
 make run_e32 | grep 'Error 3'
 make run_e33 | grep 'Error 3'
 make run_e34 | grep 'Error 3'

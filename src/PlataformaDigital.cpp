@@ -119,8 +119,8 @@ void PlataformaDigital::loadFileUsuarios(std::ifstream &infile) {
         try{
             codigo = stoi(str);
         } catch(std::invalid_argument) {
-            std::cerr << _BOLDRED << "Alguma entrada no arquivo de usuário parece estranha! Linha de código de usuário " << codigo << "ou a anterior." << _RESET << std::endl;
-            exit(1);
+            std::cerr << _BOLDRED << "Erro de formatação" << _RESET << std::endl;
+            exit(2);
         }
         getline(ss, str, ';');
         tipo = str.at(0);
@@ -145,7 +145,8 @@ void PlataformaDigital::loadFileUsuarios(std::ifstream &infile) {
                 this->produtores.insert((Produtor*) u);
             break;
             default:
-                std::cerr << _BOLDRED << "Tipo de usuário inválido! Cheque o primeiro usuário de código " << codigo << "." << std::endl;
+                std::cerr << _BOLDRED << "Inconsistências na entrada" << _RESET << std::endl;
+                exit(3);
         }
     }
     infile.close();
@@ -173,8 +174,8 @@ void PlataformaDigital::loadFileGeneros(std::ifstream &infile) {
             
         }
     } catch(std::invalid_argument) {
-            std::cerr << _BOLDRED << "Alguma entrada no arquivo de gênero parece estranha! Linha de gênero " << sigla << "ou a anterior." << _RESET << std::endl;
-            exit(1);
+            std::cerr << _BOLDRED << "Erro de formatação" << _RESET << std::endl;
+            exit(2);
     }
 }
 
@@ -265,7 +266,8 @@ void PlataformaDigital::loadFileMidias(std::ifstream &infile) {
         ano = stoi(str);
         
         } catch(std::invalid_argument) {
-            std::cerr << _BOLDRED << "Alguma entrada no arquivo de mídia parece estranha! Linha de código de mídia " << cod << "ou a anterior." << _RESET << std::endl;
+            std::cerr << _BOLDRED << "Erro de formatação" << _RESET << std::endl;
+            exit(2);
         }
 
         std::set<Produtor*> setProdutores;
@@ -283,7 +285,7 @@ void PlataformaDigital::loadFileMidias(std::ifstream &infile) {
             // Caso não tenha encontrado
             if(p == NULL) {
                 std::cerr << _BOLDRED << "Inconsistências na entrada" << _RESET << std::endl;
-                exit(1);
+                exit(3);
             }
             setProdutores.insert(p);
         }
@@ -303,10 +305,12 @@ void PlataformaDigital::loadFileMidias(std::ifstream &infile) {
             // Genero não existe
             if(genre == NULL) {
                 std::cerr << _BOLDRED << "Inconsistências na entrada" << _RESET << std::endl;
-                exit(1);
+                exit(3);
             }
 
         Midia *midia = NULL;
+        Album *albumDaMusica = NULL;
+        Musica *ptrMusica = NULL;
         switch(type) {
             case 'P':
             case 'p':
@@ -314,7 +318,6 @@ void PlataformaDigital::loadFileMidias(std::ifstream &infile) {
             break;
             case 'M':
             case 'm':
-                Album *albumDaMusica = NULL;
                 if(codAlbum != 0) {
                     for (Album *itAlbuns : this->getAlbumsCadastrados())
                         if (itAlbuns->getCodigo() == codAlbum) {
@@ -329,7 +332,7 @@ void PlataformaDigital::loadFileMidias(std::ifstream &infile) {
                             this->addAlbum(albumDaMusica);
                     }
                 }
-                Musica *ptrMusica = new Musica(nome, cod, genre, duracao, ano);
+                ptrMusica = new Musica(nome, cod, genre, duracao, ano);
                 midia = ptrMusica;
 
                 if(codAlbum != 0) 
@@ -338,13 +341,16 @@ void PlataformaDigital::loadFileMidias(std::ifstream &infile) {
                 ptrMusica->setAlbum(albumDaMusica);
 
             break;
+            default:
+                std::cerr << _BOLDRED << "Inconsistências na entrada" << _RESET << std::endl;
+                exit(3);
         }
 
         if(!setProdutores.empty())
             this->addProduto(midia, setProdutores);
         else {
             std::cerr << _BOLDRED << "Inconsistências na entrada" << _RESET << std::endl;
-            exit(1);
+            exit(3);
         }
 
         // Mídia já está pronta
@@ -387,10 +393,10 @@ void PlataformaDigital::loadFileFavoritos(std::ifstream &infile) {
 
             } catch (const std::invalid_argument& e){
                 std::cerr << _BOLDRED << "Erro de formatação" << _RESET << std::endl;
-                exit(1);
+                exit(2);
             }  catch (const std::out_of_range& e){
                 std::cerr << _BOLDRED << "Erro de formatação" << _RESET << std::endl;
-                exit(1);
+                exit(2);
             }
 
 
@@ -557,7 +563,9 @@ void PlataformaDigital::generateReports() {
             if(it.second > maisOcorre.second)
                 maisOcorre = it;
         }
-        filestats << maisOcorre.first->getNome() << ':' << maisOcorre.second << '\n';
+        if(maisOcorre.first != NULL)
+            filestats << maisOcorre.first->getNome() << ':' << maisOcorre.second << '\n';
+            filestats << ":\n";
         mapProdutores.erase(maisOcorre.first);
         cont++;
     }
