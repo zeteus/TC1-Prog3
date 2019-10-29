@@ -606,7 +606,7 @@ void PlataformaDigital::generateReports() {
                 if(m->getTipo() > midiaPrioritaria->getTipo())
                     midiaPrioritaria = m;
                 if(m->getTipo() == midiaPrioritaria->getTipo())
-                    if(midiaPrioritaria->getNome().compare(m->getNome()) < 0)
+                    if(midiaPrioritaria->getCodigo() > m->getCodigo())
                         midiaPrioritaria = m;
             }
 
@@ -614,11 +614,11 @@ void PlataformaDigital::generateReports() {
             switch(midiaPrioritaria->getTipo()) {
                 case 'p':
                 case 'P':
-                    filefavs << "Podcast" << ';' << midiaPrioritaria->getNome() << ';';
+                    filefavs << "Podcast" << ';';
                 break;
                 case 'm':
                 case 'M':
-                    filefavs << "Música" << ';' << midiaPrioritaria->getNome() << ';';
+                    filefavs << "Música" << ';';
                 break;
             }
 
